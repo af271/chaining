@@ -1,0 +1,1599 @@
+[2026-09-01 12:06:13:953] [INFO] Iteration 2: add axiom ax-mp
+[2026-09-01 12:06:13:961] [INFO] Iteration 3: add axiom ax-1
+[2026-09-01 12:06:13:962] [INFO] Iteration 4: add axiom ax-2
+[2026-09-01 12:06:13:964] [INFO] Iteration 5: add axiom ax-3
+[2026-09-01 12:06:13:965] [INFO] Iteration 6: ECAN-guided search proof of mp2 up to size 9
+[2026-09-01 12:06:18:089] [INFO]   [union] ecan=1 will=1 union=1
+[2026-09-01 12:06:18:090] [INFO]   [tier] focused=1 full=1 af-hit=true
+[2026-09-01 12:06:18:090] [INFO] Found proof: (λ mp2.3 mp2.2 mp2.1 (ax-mp (ax-mp mp2.3 mp2.1) mp2.2))
+[2026-09-01 12:06:18:098] [INFO] Iteration 7: ECAN-guided search proof of mp2b up to size 9
+[2026-09-01 12:06:18:111] [INFO]   [union] ecan=2 will=2 union=2
+[2026-09-01 12:06:18:112] [INFO]   [tier] focused=2 full=2 af-hit=true
+[2026-09-01 12:06:18:113] [INFO] Found proof: (λ mp2b.3 mp2b.2 mp2b.1 (ax-mp mp2b.3 (ax-mp mp2b.2 mp2b.1)))
+[2026-09-01 12:06:18:119] [INFO] Iteration 8: ECAN-guided search proof of a1i up to size 5
+[2026-09-01 12:06:18:133] [INFO]   [union] ecan=3 will=3 union=3
+[2026-09-01 12:06:18:133] [INFO]   [tier] focused=3 full=3 af-hit=true
+[2026-09-01 12:06:18:133] [INFO] Found proof: (λ a1i.1 (ax-mp ax-1 a1i.1))
+[2026-09-01 12:06:18:139] [INFO] Iteration 9: ECAN-guided search proof of 2a1i up to size 5
+[2026-09-01 12:06:18:153] [INFO]   [union] ecan=4 will=4 union=4
+[2026-09-01 12:06:18:153] [INFO]   [tier] focused=4 full=4 af-hit=true
+[2026-09-01 12:06:18:153] [INFO] Found proof: (λ 2a1i.1 (a1i (a1i 2a1i.1)))
+[2026-09-01 12:06:18:158] [INFO] Iteration 10: ECAN-guided search proof of mp1i up to size 7
+[2026-09-01 12:06:18:175] [INFO]   [union] ecan=5 will=5 union=5
+[2026-09-01 12:06:18:176] [INFO]   [tier] focused=5 full=5 af-hit=true
+[2026-09-01 12:06:18:176] [INFO] Found proof: (λ mp1i.2 mp1i.1 (a1i (ax-mp mp1i.2 mp1i.1)))
+[2026-09-01 12:06:18:185] [INFO] Iteration 11: ECAN-guided search proof of a2i up to size 5
+[2026-09-01 12:06:18:208] [INFO]   [union] ecan=6 will=6 union=6
+[2026-09-01 12:06:18:209] [INFO]   [tier] focused=6 full=6 af-hit=true
+[2026-09-01 12:06:18:209] [INFO] Found proof: (λ a2i.1 (ax-mp ax-2 a2i.1))
+[2026-09-01 12:06:18:221] [INFO] Iteration 12: ECAN-guided search proof of mpd up to size 7
+[2026-09-01 12:06:18:269] [INFO]   [union] ecan=7 will=7 union=7
+[2026-09-01 12:06:18:270] [INFO]   [tier] focused=7 full=7 af-hit=true
+[2026-09-01 12:06:18:273] [INFO] Found proof: (λ mpd.2 mpd.1 (ax-mp (a2i mpd.2) mpd.1))
+[2026-09-01 12:06:18:286] [INFO] Iteration 13: ECAN-guided search proof of imim2i up to size 5
+[2026-09-01 12:06:18:308] [INFO]   [union] ecan=8 will=8 union=8
+[2026-09-01 12:06:18:309] [INFO]   [tier] focused=8 full=8 af-hit=true
+[2026-09-01 12:06:18:309] [INFO] Found proof: (λ imim2i.1 (a2i (a1i imim2i.1)))
+[2026-09-01 12:06:18:318] [INFO] Iteration 14: ECAN-guided search proof of syl up to size 7
+[2026-09-01 12:06:18:343] [INFO]   [union] ecan=9 will=9 union=9
+[2026-09-01 12:06:18:344] [INFO]   [tier] focused=9 full=9 af-hit=true
+[2026-09-01 12:06:18:344] [INFO] Found proof: (λ syl.2 syl.1 (ax-mp (imim2i syl.2) syl.1))
+[2026-09-01 12:06:18:420] [INFO] Iteration 15: ECAN-guided search proof of 3syl up to size 9
+[2026-09-01 12:06:18:445] [INFO]   [union] ecan=10 will=10 union=10
+[2026-09-01 12:06:18:469] [INFO]   [tier] focused=10 full=10 af-hit=true
+[2026-09-01 12:06:18:470] [INFO] Found proof: (λ 3syl.3 3syl.2 3syl.1 (syl 3syl.3 (syl 3syl.2 3syl.1)))
+[2026-09-01 12:06:18:480] [INFO] Iteration 16: ECAN-guided search proof of 4syl up to size 11
+[2026-09-01 12:06:18:518] [INFO]   [union] ecan=11 will=11 union=11
+[2026-09-01 12:06:19:065] [INFO]   [tier] focused=11 full=11 af-hit=true
+[2026-09-01 12:06:19:066] [INFO] Found proof: (λ 4syl.4 4syl.3 4syl.2 4syl.1 (syl 4syl.4 (3syl 4syl.3 4syl.2 4syl.1)))
+[2026-09-01 12:06:19:075] [INFO] Iteration 17: ECAN-guided search proof of mpi up to size 7
+[2026-09-01 12:06:19:096] [INFO]   [union] ecan=12 will=12 union=12
+[2026-09-01 12:06:19:098] [INFO]   [tier] focused=12 full=12 af-hit=true
+[2026-09-01 12:06:19:098] [INFO] Found proof: (λ mpi.2 mpi.1 (mpd mpi.2 (a1i mpi.1)))
+[2026-09-01 12:06:19:107] [INFO] Iteration 18: ECAN-guided search proof of mpisyl up to size 9
+[2026-09-01 12:06:19:126] [INFO]   [union] ecan=13 will=13 union=13
+[2026-09-01 12:06:19:172] [INFO]   [tier] focused=13 full=13 af-hit=true
+[2026-09-01 12:06:19:172] [INFO] Found proof: (λ mpisyl.3 mpisyl.2 mpisyl.1 (syl (mpi mpisyl.3 mpisyl.2) mpisyl.1))
+[2026-09-01 12:06:19:183] [INFO] Iteration 19: ECAN-guided search proof of id up to size 3
+[2026-09-01 12:06:19:203] [INFO]   [union] ecan=14 will=14 union=14
+[2026-09-01 12:06:19:204] [INFO]   [tier] focused=14 full=14 af-hit=true
+[2026-09-01 12:06:19:204] [INFO] Found proof: (mpi ax-1 ax-1)
+[2026-09-01 12:06:19:208] [INFO] Iteration 20: ECAN-guided search proof of idALT up to size 5
+[2026-09-01 12:06:19:238] [INFO]   [union] ecan=14 will=14 union=14
+[2026-09-01 12:06:19:238] [INFO]   [tier] focused=14 full=14 af-hit=true
+[2026-09-01 12:06:19:238] [INFO] Found proof: id
+[2026-09-01 12:06:19:240] [INFO] Iteration 21: ECAN-guided search proof of idd up to size 2
+[2026-09-01 12:06:19:279] [INFO]   [union] ecan=14 will=14 union=14
+[2026-09-01 12:06:19:280] [INFO]   [tier] focused=14 full=14 af-hit=true
+[2026-09-01 12:06:19:280] [INFO] Found proof: (a1i id)
+[2026-09-01 12:06:19:320] [INFO] Iteration 22: ECAN-guided search proof of a1d up to size 5
+[2026-09-01 12:06:19:340] [INFO]   [union] ecan=14 will=14 union=14
+[2026-09-01 12:06:19:342] [INFO]   [tier] focused=14 full=14 af-hit=true
+[2026-09-01 12:06:19:342] [INFO] Found proof: (λ a1d.1 (syl ax-1 a1d.1))
+[2026-09-01 12:06:19:350] [INFO] Iteration 23: ECAN-guided search proof of 2a1d up to size 5
+[2026-09-01 12:06:19:372] [INFO]   [union] ecan=15 will=15 union=15
+[2026-09-01 12:06:19:373] [INFO]   [tier] focused=15 full=15 af-hit=true
+[2026-09-01 12:06:19:373] [INFO] Found proof: (λ 2a1d.1 (a1d (a1d 2a1d.1)))
+[2026-09-01 12:06:19:383] [INFO] Iteration 24: ECAN-guided search proof of a1i13 up to size 5
+[2026-09-01 12:06:19:404] [INFO]   [union] ecan=15 will=15 union=16
+[2026-09-01 12:06:19:404] [INFO]   [tier] focused=16 full=16 af-hit=true
+[2026-09-01 12:06:19:404] [INFO] Found proof: (λ a1i13.1 (a1i (a1d a1i13.1)))
+[2026-09-01 12:06:19:411] [INFO] Iteration 25: ECAN-guided search proof of 2a1 up to size 2
+[2026-09-01 12:06:19:433] [INFO]   [union] ecan=15 will=15 union=17
+[2026-09-01 12:06:19:433] [INFO]   [tier] focused=17 full=17 af-hit=true
+[2026-09-01 12:06:19:433] [INFO] Found proof: (a1d ax-1)
+[2026-09-01 12:06:19:437] [INFO] Iteration 26: ECAN-guided search proof of a2d up to size 5
+[2026-09-01 12:06:19:467] [INFO]   [union] ecan=15 will=15 union=17
+[2026-09-01 12:06:19:471] [INFO]   [tier] focused=17 full=17 af-hit=true
+[2026-09-01 12:06:19:473] [INFO] Found proof: (λ a2d.1 (syl ax-2 a2d.1))
+[2026-09-01 12:06:19:492] [INFO] Iteration 27: ECAN-guided search proof of sylcom up to size 7
+[2026-09-01 12:06:19:519] [INFO]   [union] ecan=15 will=15 union=17
+[2026-09-01 12:06:19:528] [INFO]   [tier] focused=17 full=18 af-hit=true
+[2026-09-01 12:06:19:528] [INFO] Found proof: (λ sylcom.2 sylcom.1 (syl (a2i sylcom.2) sylcom.1))
+[2026-09-01 12:06:19:536] [INFO] Iteration 28: ECAN-guided search proof of syl5com up to size 7
+[2026-09-01 12:06:19:560] [INFO]   [union] ecan=15 will=15 union=17
+[2026-09-01 12:06:19:579] [INFO]   [tier] focused=17 full=19 af-hit=true
+[2026-09-01 12:06:19:579] [INFO] Found proof: (λ syl5com.2 syl5com.1 (sylcom syl5com.2 (a1d syl5com.1)))
+[2026-09-01 12:06:19:608] [INFO] Iteration 29: ECAN-guided search proof of com12 up to size 5
+[2026-09-01 12:06:19:632] [INFO]   [union] ecan=15 will=15 union=19
+[2026-09-01 12:06:19:634] [INFO]   [tier] focused=19 full=20 af-hit=true
+[2026-09-01 12:06:19:634] [INFO] Found proof: (λ com12.1 (sylcom com12.1 ax-1))
+[2026-09-01 12:06:19:640] [INFO] Iteration 30: ECAN-guided search proof of syl11 up to size 7
+[2026-09-01 12:06:19:669] [INFO]   [union] ecan=15 will=15 union=17
+[2026-09-01 12:06:19:672] [INFO]   [tier] focused=17 full=21 af-hit=true
+[2026-09-01 12:06:19:672] [INFO] Found proof: (λ syl11.2 syl11.1 (com12 (syl syl11.1 syl11.2)))
+[2026-09-01 12:06:19:682] [INFO] Iteration 31: ECAN-guided search proof of syl5 up to size 7
+[2026-09-01 12:06:19:716] [INFO]   [union] ecan=15 will=15 union=18
+[2026-09-01 12:06:19:734] [INFO]   [tier] focused=18 full=22 af-hit=true
+[2026-09-01 12:06:19:735] [INFO] Found proof: (λ syl5.2 syl5.1 (com12 (syl5com syl5.2 syl5.1)))
+[2026-09-01 12:06:19:754] [INFO] Iteration 32: ECAN-guided search proof of syl6 up to size 7
+[2026-09-01 12:06:19:801] [INFO]   [union] ecan=15 will=15 union=19
+[2026-09-01 12:06:19:820] [INFO]   [tier] focused=19 full=23 af-hit=true
+[2026-09-01 12:06:19:821] [INFO] Found proof: (λ syl6.2 syl6.1 (syl (imim2i syl6.2) syl6.1))
+[2026-09-01 12:06:19:845] [INFO] Iteration 33: ECAN-guided search proof of syl56 up to size 9
+[2026-09-01 12:06:19:915] [INFO]   [union] ecan=15 will=15 union=20
+[2026-09-01 12:06:21:961] [INFO]   [tier] focused=20 full=24 af-hit=true
+[2026-09-01 12:06:21:962] [INFO] Found proof: (λ syl56.3 syl56.2 syl56.1 (syl6 syl56.3 (syl5 syl56.2 syl56.1)))
+[2026-09-01 12:06:22:029] [INFO] Iteration 34: ECAN-guided search proof of syl6com up to size 7
+[2026-09-01 12:06:22:079] [INFO]   [union] ecan=15 will=15 union=20
+[2026-09-01 12:06:22:087] [INFO]   [tier] focused=20 full=25 af-hit=true
+[2026-09-01 12:06:22:088] [INFO] Found proof: (λ syl6com.2 syl6com.1 (com12 (syl6 syl6com.2 syl6com.1)))
+[2026-09-01 12:06:22:099] [INFO] Iteration 35: ECAN-guided search proof of mpcom up to size 7
+[2026-09-01 12:06:22:148] [INFO]   [union] ecan=15 will=15 union=23
+[2026-09-01 12:06:22:182] [INFO]   [tier] focused=23 full=26 af-hit=true
+[2026-09-01 12:06:22:182] [INFO] Found proof: (λ mpcom.2 mpcom.1 (mpd (com12 mpcom.2) mpcom.1))
+[2026-09-01 12:06:22:191] [INFO] Iteration 36: ECAN-guided search proof of syli up to size 7
+[2026-09-01 12:06:22:242] [INFO]   [union] ecan=15 will=15 union=22
+[2026-09-01 12:06:22:293] [INFO]   [tier] focused=22 full=27 af-hit=true
+[2026-09-01 12:06:22:294] [INFO] Found proof: (λ syli.2 syli.1 (sylcom (com12 syli.2) syli.1))
+[2026-09-01 12:06:22:366] [INFO] Iteration 37: ECAN-guided search proof of syl2im up to size 9
+[2026-09-01 12:06:22:537] [INFO]   [union] ecan=15 will=15 union=22
+[2026-09-01 12:06:23:051] [INFO]   [tier] focused=22 full=28 af-hit=true
+[2026-09-01 12:06:23:052] [INFO] Found proof: (λ syl2im.3 syl2im.2 syl2im.1 (syl (syl5 syl2im.3 syl2im.2) syl2im.1))
+[2026-09-01 12:06:23:061] [INFO] Iteration 38: ECAN-guided search proof of syl2imc up to size 9
+[2026-09-01 12:06:23:094] [INFO]   [union] ecan=15 will=15 union=22
+[2026-09-01 12:06:23:372] [INFO]   [tier] focused=22 full=29 af-hit=true
+[2026-09-01 12:06:23:373] [INFO] Found proof: (λ syl2im.3 syl2im.2 syl2im.1 (com12 (syl2im syl2im.3 syl2im.2 syl2im.1)))
+[2026-09-01 12:06:23:384] [INFO] Iteration 39: ECAN-guided search proof of pm2.27 up to size 2
+[2026-09-01 12:06:23:454] [INFO]   [union] ecan=15 will=15 union=23
+[2026-09-01 12:06:23:455] [INFO]   [tier] focused=23 full=30 af-hit=true
+[2026-09-01 12:06:23:455] [INFO] Found proof: (com12 id)
+[2026-09-01 12:06:23:458] [INFO] Iteration 40: ECAN-guided search proof of mpdd up to size 7
+[2026-09-01 12:06:23:494] [INFO]   [union] ecan=15 will=15 union=22
+[2026-09-01 12:06:23:610] [INFO]   [tier] focused=22 full=30 af-hit=true
+[2026-09-01 12:06:23:610] [INFO] Found proof: (λ mpdd.2 mpdd.1 (mpd (a2d mpdd.2) mpdd.1))
+[2026-09-01 12:06:23:629] [INFO] Iteration 41: ECAN-guided search proof of mpid up to size 7
+[2026-09-01 12:06:23:670] [INFO]   [union] ecan=15 will=15 union=22
+[2026-09-01 12:06:23:827] [INFO]   [tier] focused=22 full=31 af-hit=true
+[2026-09-01 12:06:23:829] [INFO] Found proof: (λ mpid.2 mpid.1 (mpdd mpid.2 (a1d mpid.1)))
+[2026-09-01 12:06:23:872] [INFO] Iteration 42: ECAN-guided search proof of mpdi up to size 7
+[2026-09-01 12:06:23:920] [INFO]   [union] ecan=15 will=15 union=22
+[2026-09-01 12:06:24:008] [INFO]   [tier] focused=22 full=32 af-hit=true
+[2026-09-01 12:06:24:008] [INFO] Found proof: (λ mpdi.2 mpdi.1 (mpdd mpdi.2 (a1i mpdi.1)))
+[2026-09-01 12:06:24:018] [INFO] Iteration 43: ECAN-guided search proof of mpii up to size 7
+[2026-09-01 12:06:24:129] [INFO]   [union] ecan=15 will=15 union=23
+[2026-09-01 12:06:24:298] [INFO]   [tier] focused=23 full=33 af-hit=true
+[2026-09-01 12:06:24:298] [INFO] Found proof: (λ mpii.2 mpii.1 (mpdi mpii.2 (a1i mpii.1)))
+[2026-09-01 12:06:24:309] [INFO] Iteration 44: ECAN-guided search proof of syld up to size 7
+[2026-09-01 12:06:24:356] [INFO]   [union] ecan=15 will=15 union=25
+[2026-09-01 12:06:24:404] [INFO]   [tier] focused=25 full=34 af-hit=true
+[2026-09-01 12:06:24:404] [INFO] Found proof: (λ syld.2 syld.1 (mpdd (a1d syld.2) syld.1))
+[2026-09-01 12:06:24:414] [INFO] Iteration 45: ECAN-guided search proof of syldc up to size 7
+[2026-09-01 12:06:24:497] [INFO]   [union] ecan=15 will=15 union=24
+[2026-09-01 12:06:24:501] [INFO]   [tier] focused=24 full=35 af-hit=true
+[2026-09-01 12:06:24:502] [INFO] Found proof: (λ syld.2 syld.1 (com12 (syld syld.2 syld.1)))
+[2026-09-01 12:06:24:665] [INFO] Iteration 46: ECAN-guided search proof of mp2d up to size 9
+[2026-09-01 12:06:24:727] [INFO]   [union] ecan=15 will=15 union=24
+[2026-09-01 12:06:25:669] [INFO]   [tier] focused=24 full=36 af-hit=true
+[2026-09-01 12:06:25:676] [INFO] Found proof: (λ mp2d.3 mp2d.2 mp2d.1 (mpd (mpd mp2d.3 mp2d.1) mp2d.2))
+[2026-09-01 12:06:25:752] [INFO] Iteration 47: ECAN-guided search proof of a1dd up to size 5
+[2026-09-01 12:06:25:915] [INFO]   [union] ecan=15 will=15 union=23
+[2026-09-01 12:06:25:920] [INFO]   [tier] focused=23 full=37 af-hit=true
+[2026-09-01 12:06:25:920] [INFO] Found proof: (λ a1dd.1 (syl6 ax-1 a1dd.1))
+[2026-09-01 12:06:26:113] [INFO] Iteration 48: ECAN-guided search proof of 2a1dd up to size 5
+[2026-09-01 12:06:26:284] [INFO]   [union] ecan=15 will=15 union=23
+[2026-09-01 12:06:26:285] [INFO]   [tier] focused=23 full=38 af-hit=true
+[2026-09-01 12:06:26:286] [INFO] Found proof: (λ 2a1dd.1 (a1dd (a1dd 2a1dd.1)))
+[2026-09-01 12:06:26:297] [INFO] Iteration 49: ECAN-guided search proof of pm2.43i up to size 5
+[2026-09-01 12:06:26:353] [INFO]   [union] ecan=15 will=15 union=25
+[2026-09-01 12:06:26:357] [INFO]   [tier] focused=25 full=39 af-hit=true
+[2026-09-01 12:06:26:357] [INFO] Found proof: (λ pm2.43i.1 (mpd pm2.27 pm2.43i.1))
+[2026-09-01 12:06:26:464] [INFO] Iteration 50: ECAN-guided search proof of pm2.43d up to size 5
+[2026-09-01 12:06:26:575] [INFO]   [union] ecan=15 will=15 union=22
+[2026-09-01 12:06:26:577] [INFO]   [tier] focused=22 full=40 af-hit=true
+[2026-09-01 12:06:26:577] [INFO] Found proof: (λ pm2.43d.1 (mpdd pm2.43d.1 idd))
+[2026-09-01 12:06:26:584] [INFO] Iteration 51: ECAN-guided search proof of pm2.43a up to size 5
+[2026-09-01 12:06:26:648] [INFO]   [union] ecan=15 will=15 union=23
+[2026-09-01 12:06:26:651] [INFO]   [tier] focused=23 full=41 af-hit=true
+[2026-09-01 12:06:26:652] [INFO] Found proof: (λ pm2.43a.1 (mpdd pm2.43a.1 ax-1))
+[2026-09-01 12:06:26:659] [INFO] Iteration 52: ECAN-guided search proof of pm2.43b up to size 5
+[2026-09-01 12:06:26:702] [INFO]   [union] ecan=15 will=15 union=25
+[2026-09-01 12:06:26:702] [INFO]   [tier] focused=25 full=42 af-hit=true
+[2026-09-01 12:06:26:703] [INFO] Found proof: (λ pm2.43b.1 (com12 (pm2.43a pm2.43b.1)))
+[2026-09-01 12:06:26:772] [INFO] Iteration 53: ECAN-guided search proof of pm2.43 up to size 2
+[2026-09-01 12:06:26:838] [INFO]   [union] ecan=15 will=15 union=24
+[2026-09-01 12:06:26:842] [INFO]   [tier] focused=24 full=43 af-hit=true
+[2026-09-01 12:06:26:842] [INFO] Found proof: (a2i pm2.27)
+[2026-09-01 12:06:26:847] [INFO] Iteration 54: ECAN-guided search proof of imim2d up to size 5
+[2026-09-01 12:06:26:936] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:06:26:949] [INFO]   [tier] focused=26 full=43 af-hit=false
+[2026-09-01 12:06:26:953] [INFO] Found proof: (λ imim2d.1 (a2d (a1d imim2d.1)))
+[2026-09-01 12:06:26:968] [INFO] Iteration 55: ECAN-guided search proof of imim2 up to size 2
+[2026-09-01 12:06:27:043] [INFO]   [union] ecan=15 will=15 union=25
+[2026-09-01 12:06:27:044] [INFO]   [tier] focused=25 full=44 af-hit=false
+[2026-09-01 12:06:27:046] [INFO] Found proof: (a2d ax-1)
+[2026-09-01 12:06:27:069] [INFO] Iteration 56: ECAN-guided search proof of embantd up to size 7
+[2026-09-01 12:06:27:122] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:06:27:340] [INFO]   [tier] focused=27 full=44 af-hit=true
+[2026-09-01 12:06:27:340] [INFO] Found proof: (λ embantd.2 embantd.1 (mpid (imim2d embantd.2) embantd.1))
+[2026-09-01 12:06:27:394] [INFO] Iteration 57: ECAN-guided search proof of 3syld up to size 9
+[2026-09-01 12:06:27:473] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:06:33:799] [INFO]   [tier] focused=26 full=45 af-hit=true
+[2026-09-01 12:06:33:799] [INFO] Found proof: (λ 3syld.3 3syld.2 3syld.1 (syld 3syld.3 (syld 3syld.2 3syld.1)))
+[2026-09-01 12:06:33:811] [INFO] Iteration 58: ECAN-guided search proof of sylsyld up to size 9
+[2026-09-01 12:06:33:890] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:06:38:646] [INFO]   [tier] focused=26 full=46 af-hit=true
+[2026-09-01 12:06:38:646] [INFO] Found proof: (λ sylsyld.3 sylsyld.2 sylsyld.1 (syld (syl sylsyld.3 sylsyld.1) sylsyld.2))
+[2026-09-01 12:06:38:656] [INFO] Iteration 59: ECAN-guided search proof of imim12i up to size 7
+[2026-09-01 12:06:38:712] [INFO]   [union] ecan=15 will=15 union=24
+[2026-09-01 12:06:39:213] [INFO]   [tier] focused=24 full=47 af-hit=false
+[2026-09-01 12:06:39:830] [INFO] Found proof: (λ imim12i.2 imim12i.1 (syl5 (imim2i imim12i.2) imim12i.1))
+[2026-09-01 12:06:39:839] [INFO] Iteration 60: ECAN-guided search proof of imim1i up to size 5
+[2026-09-01 12:06:39:882] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:06:39:887] [INFO]   [tier] focused=26 full=48 af-hit=true
+[2026-09-01 12:06:39:887] [INFO] Found proof: (λ imim1i.1 (syl5 id imim1i.1))
+[2026-09-01 12:06:39:896] [INFO] Iteration 61: ECAN-guided search proof of imim3i up to size 5
+[2026-09-01 12:06:39:994] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:06:40:020] [INFO]   [tier] focused=26 full=49 af-hit=false
+[2026-09-01 12:06:40:026] [INFO] Found proof: (λ imim3i.1 (a2d (imim2i imim3i.1)))
+[2026-09-01 12:06:40:056] [INFO] Iteration 62: ECAN-guided search proof of sylc up to size 9
+[2026-09-01 12:06:40:120] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:06:40:826] [INFO]   [tier] focused=26 full=50 af-hit=true
+[2026-09-01 12:06:40:826] [INFO] Found proof: (λ sylc.3 sylc.2 sylc.1 (mpd (syl sylc.3 sylc.1) sylc.2))
+[2026-09-01 12:06:40:837] [INFO] Iteration 63: ECAN-guided search proof of syl3c up to size 11
+[2026-09-01 12:06:40:950] [INFO]   [union] ecan=15 will=15 union=28
+[2026-09-01 12:07:56:278] [INFO]   [tier] focused=28 full=51 af-hit=true
+[2026-09-01 12:07:56:279] [INFO] Found proof: (λ syl3c.4 syl3c.3 syl3c.2 syl3c.1 (mp2d (syl syl3c.4 syl3c.1) syl3c.3 syl3c.2))
+[2026-09-01 12:07:56:295] [INFO] Iteration 64: ECAN-guided search proof of syl6mpi up to size 9
+[2026-09-01 12:07:56:343] [INFO]   [union] ecan=15 will=15 union=24
+[2026-09-01 12:08:04:826] [INFO]   [tier] focused=24 full=52 af-hit=false
+[2026-09-01 12:08:58:991] [INFO] Found proof: (λ syl6mpi.3 syl6mpi.2 syl6mpi.1 (syl6 (mpi syl6mpi.3 syl6mpi.2) syl6mpi.1))
+[2026-09-01 12:08:59:002] [INFO] Iteration 65: ECAN-guided search proof of mpsyl up to size 9
+[2026-09-01 12:08:59:051] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:08:59:123] [INFO]   [tier] focused=26 full=53 af-hit=true
+[2026-09-01 12:08:59:123] [INFO] Found proof: (λ mpsyl.3 mpsyl.2 mpsyl.1 (syl (ax-mp mpsyl.3 mpsyl.1) mpsyl.2))
+[2026-09-01 12:08:59:154] [INFO] Iteration 66: ECAN-guided search proof of mpsylsyld up to size 9
+[2026-09-01 12:08:59:350] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:09:02:282] [INFO]   [tier] focused=26 full=54 af-hit=true
+[2026-09-01 12:09:02:282] [INFO] Found proof: (λ mpsylsyld.3 mpsylsyld.2 mpsylsyld.1 (syl6 (ax-mp mpsylsyld.3 mpsylsyld.1) mpsylsyld.2))
+[2026-09-01 12:09:02:293] [INFO] Iteration 67: ECAN-guided search proof of syl6c up to size 9
+[2026-09-01 12:09:02:381] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:09:05:012] [INFO]   [tier] focused=27 full=55 af-hit=true
+[2026-09-01 12:09:05:012] [INFO] Found proof: (λ syl6c.3 syl6c.2 syl6c.1 (mpdd (syl6 syl6c.3 syl6c.1) syl6c.2))
+[2026-09-01 12:09:05:024] [INFO] Iteration 68: ECAN-guided search proof of syl6ci up to size 9
+[2026-09-01 12:09:05:083] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:09:10:542] [INFO]   [tier] focused=26 full=56 af-hit=true
+[2026-09-01 12:09:10:543] [INFO] Found proof: (λ syl6ci.3 syl6ci.2 syl6ci.1 (syld (syl5com syl6ci.3 syl6ci.2) syl6ci.1))
+[2026-09-01 12:09:10:554] [INFO] Iteration 69: ECAN-guided search proof of syldd up to size 7
+[2026-09-01 12:09:10:610] [INFO]   [union] ecan=15 will=15 union=28
+[2026-09-01 12:09:10:855] [INFO]   [tier] focused=28 full=57 af-hit=true
+[2026-09-01 12:09:10:855] [INFO] Found proof: (λ syldd.2 syldd.1 (syl6c imim2 syldd.1 syldd.2))
+[2026-09-01 12:09:10:868] [INFO] Iteration 70: ECAN-guided search proof of syl5d up to size 7
+[2026-09-01 12:09:10:936] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:09:11:094] [INFO]   [tier] focused=27 full=58 af-hit=true
+[2026-09-01 12:09:11:095] [INFO] Found proof: (λ syl5d.2 syl5d.1 (syldd syl5d.2 (a1d syl5d.1)))
+[2026-09-01 12:09:11:108] [INFO] Iteration 71: ECAN-guided search proof of syl7 up to size 7
+[2026-09-01 12:09:11:215] [INFO]   [union] ecan=15 will=15 union=29
+[2026-09-01 12:09:11:517] [INFO]   [tier] focused=29 full=59 af-hit=true
+[2026-09-01 12:09:11:518] [INFO] Found proof: (λ syl7.2 syl7.1 (syl5d syl7.2 (a1i syl7.1)))
+[2026-09-01 12:09:11:530] [INFO] Iteration 72: ECAN-guided search proof of syl6d up to size 7
+[2026-09-01 12:09:11:589] [INFO]   [union] ecan=15 will=15 union=25
+[2026-09-01 12:09:11:732] [INFO]   [tier] focused=25 full=60 af-hit=true
+[2026-09-01 12:09:11:732] [INFO] Found proof: (λ syl6d.2 syl6d.1 (syld (imim2d syl6d.2) syl6d.1))
+[2026-09-01 12:09:11:745] [INFO] Iteration 73: ECAN-guided search proof of syl8 up to size 7
+[2026-09-01 12:09:11:818] [INFO]   [union] ecan=15 will=15 union=29
+[2026-09-01 12:09:12:086] [INFO]   [tier] focused=29 full=61 af-hit=true
+[2026-09-01 12:09:12:086] [INFO] Found proof: (λ syl8.2 syl8.1 (syl6d (a1i syl8.2) syl8.1))
+[2026-09-01 12:09:12:098] [INFO] Iteration 74: ECAN-guided search proof of syl9 up to size 7
+[2026-09-01 12:09:12:163] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:09:12:342] [INFO]   [tier] focused=27 full=62 af-hit=true
+[2026-09-01 12:09:12:342] [INFO] Found proof: (λ syl9.2 syl9.1 (syl5d (a1i syl9.2) syl9.1))
+[2026-09-01 12:09:12:370] [INFO] Iteration 75: ECAN-guided search proof of syl9r up to size 7
+[2026-09-01 12:09:12:434] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:09:12:620] [INFO]   [tier] focused=27 full=63 af-hit=true
+[2026-09-01 12:09:12:620] [INFO] Found proof: (λ syl9r.2 syl9r.1 (syl5 (imim2d syl9r.2) syl9r.1))
+[2026-09-01 12:09:12:664] [INFO] Iteration 76: ECAN-guided search proof of syl10 up to size 9
+[2026-09-01 12:09:12:741] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:09:18:859] [INFO]   [tier] focused=26 full=64 af-hit=true
+[2026-09-01 12:09:18:860] [INFO] Found proof: (λ syl10.3 syl10.2 syl10.1 (syldd (syl6 syl10.3 syl10.1) syl10.2))
+[2026-09-01 12:09:18:914] [INFO] Iteration 77: ECAN-guided search proof of a1ddd up to size 5
+[2026-09-01 12:09:19:009] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:09:19:016] [INFO]   [tier] focused=26 full=65 af-hit=false
+[2026-09-01 12:09:19:045] [INFO] Found proof: (λ a1ddd.1 (syl8 ax-1 a1ddd.1))
+[2026-09-01 12:09:19:061] [INFO] Iteration 78: ECAN-guided search proof of imim12d up to size 7
+[2026-09-01 12:09:19:153] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:09:19:344] [INFO]   [tier] focused=27 full=66 af-hit=true
+[2026-09-01 12:09:19:344] [INFO] Found proof: (λ imim12d.2 imim12d.1 (syl5d (imim2d imim12d.2) imim12d.1))
+[2026-09-01 12:09:19:355] [INFO] Iteration 79: ECAN-guided search proof of imim1d up to size 5
+[2026-09-01 12:09:19:417] [INFO]   [union] ecan=15 will=15 union=28
+[2026-09-01 12:09:19:422] [INFO]   [tier] focused=28 full=67 af-hit=true
+[2026-09-01 12:09:19:423] [INFO] Found proof: (λ imim1d.1 (syl5d idd imim1d.1))
+[2026-09-01 12:09:19:431] [INFO] Iteration 80: ECAN-guided search proof of imim1 up to size 2
+[2026-09-01 12:09:19:497] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:09:19:498] [INFO]   [tier] focused=27 full=68 af-hit=true
+[2026-09-01 12:09:19:499] [INFO] Found proof: (com12 imim2)
+[2026-09-01 12:09:19:641] [INFO] Iteration 81: ECAN-guided search proof of pm2.83 up to size 2
+[2026-09-01 12:09:19:716] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:09:19:717] [INFO]   [tier] focused=26 full=68 af-hit=true
+[2026-09-01 12:09:19:717] [INFO] Found proof: (imim3i imim1)
+[2026-09-01 12:09:19:773] [INFO] Iteration 82: ECAN-guided search proof of peirceroll up to size 3
+[2026-09-01 12:09:19:878] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:09:19:885] [INFO]   [tier] focused=26 full=68 af-hit=true
+[2026-09-01 12:09:19:885] [INFO] Found proof: (syl5 imim2 imim1)
+[2026-09-01 12:09:20:002] [INFO] Iteration 83: ECAN-guided search proof of com23 up to size 5
+[2026-09-01 12:09:20:089] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:09:20:096] [INFO]   [tier] focused=27 full=68 af-hit=false
+[2026-09-01 12:09:20:118] [INFO] Found proof: (λ com3.1 (syl9 pm2.27 com3.1))
+[2026-09-01 12:09:20:127] [INFO] Iteration 84: ECAN-guided search proof of com3r up to size 5
+[2026-09-01 12:09:20:226] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:09:20:228] [INFO]   [tier] focused=27 full=69 af-hit=true
+[2026-09-01 12:09:20:229] [INFO] Found proof: (λ com3.1 (com12 (com23 com3.1)))
+[2026-09-01 12:09:20:239] [INFO] Iteration 85: ECAN-guided search proof of com13 up to size 5
+[2026-09-01 12:09:20:365] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:09:20:367] [INFO]   [tier] focused=27 full=70 af-hit=true
+[2026-09-01 12:09:20:368] [INFO] Found proof: (λ com3.1 (com23 (com3r com3.1)))
+[2026-09-01 12:09:20:384] [INFO] Iteration 86: ECAN-guided search proof of com3l up to size 5
+[2026-09-01 12:09:20:465] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:09:20:466] [INFO]   [tier] focused=27 full=71 af-hit=true
+[2026-09-01 12:09:20:466] [INFO] Found proof: (λ com3.1 (com12 (com13 com3.1)))
+[2026-09-01 12:09:20:475] [INFO] Iteration 87: ECAN-guided search proof of pm2.04 up to size 2
+[2026-09-01 12:09:20:563] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:09:20:564] [INFO]   [tier] focused=27 full=72 af-hit=true
+[2026-09-01 12:09:20:565] [INFO] Found proof: (com23 id)
+[2026-09-01 12:09:20:569] [INFO] Iteration 88: ECAN-guided search proof of com34 up to size 5
+[2026-09-01 12:09:20:788] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:09:20:792] [INFO]   [tier] focused=27 full=72 af-hit=true
+[2026-09-01 12:09:20:792] [INFO] Found proof: (λ com4.1 (syl6 pm2.04 com4.1))
+[2026-09-01 12:09:20:802] [INFO] Iteration 89: ECAN-guided search proof of com4l up to size 5
+[2026-09-01 12:09:20:878] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:09:20:887] [INFO]   [tier] focused=27 full=73 af-hit=false
+[2026-09-01 12:09:20:892] [INFO] Found proof: (λ com4.1 (com34 (com3l com4.1)))
+[2026-09-01 12:09:20:903] [INFO] Iteration 90: ECAN-guided search proof of com4t up to size 5
+[2026-09-01 12:09:20:999] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:09:21:001] [INFO]   [tier] focused=27 full=74 af-hit=true
+[2026-09-01 12:09:21:001] [INFO] Found proof: (λ com4.1 (com4l (com4l com4.1)))
+[2026-09-01 12:09:21:114] [INFO] Iteration 91: ECAN-guided search proof of com4r up to size 5
+[2026-09-01 12:09:21:270] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:09:21:272] [INFO]   [tier] focused=26 full=75 af-hit=true
+[2026-09-01 12:09:21:272] [INFO] Found proof: (λ com4.1 (com4l (com4t com4.1)))
+[2026-09-01 12:09:21:282] [INFO] Iteration 92: ECAN-guided search proof of com24 up to size 5
+[2026-09-01 12:09:21:352] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:09:21:361] [INFO]   [tier] focused=26 full=76 af-hit=false
+[2026-09-01 12:09:21:366] [INFO] Found proof: (λ com4.1 (com13 (com4t com4.1)))
+[2026-09-01 12:09:21:433] [INFO] Iteration 93: ECAN-guided search proof of com14 up to size 5
+[2026-09-01 12:09:21:552] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:09:21:577] [INFO]   [tier] focused=26 full=77 af-hit=false
+[2026-09-01 12:09:21:587] [INFO] Found proof: (λ com4.1 (com3r (com4l com4.1)))
+[2026-09-01 12:09:21:597] [INFO] Iteration 94: ECAN-guided search proof of com45 up to size 5
+[2026-09-01 12:09:21:672] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:09:21:689] [INFO]   [tier] focused=27 full=78 af-hit=false
+[2026-09-01 12:09:21:836] [INFO] Found proof: (λ com5.1 (syl8 pm2.04 com5.1))
+[2026-09-01 12:09:21:952] [INFO] Iteration 95: ECAN-guided search proof of com35 up to size 6
+[2026-09-01 12:09:22:140] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:09:22:172] [INFO]   [tier] focused=27 full=79 af-hit=true
+[2026-09-01 12:09:22:172] [INFO] Found proof: (λ com5.1 (com4l (com45 (com4r com5.1))))
+[2026-09-01 12:09:22:183] [INFO] Iteration 96: ECAN-guided search proof of com25 up to size 6
+[2026-09-01 12:09:22:258] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:09:22:291] [INFO]   [tier] focused=27 full=80 af-hit=true
+[2026-09-01 12:09:22:291] [INFO] Found proof: (λ com5.1 (com4l (com35 (com4r com5.1))))
+[2026-09-01 12:09:22:306] [INFO] Iteration 97: ECAN-guided search proof of com5l up to size 5
+[2026-09-01 12:09:22:473] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:09:22:477] [INFO]   [tier] focused=26 full=81 af-hit=true
+[2026-09-01 12:09:22:478] [INFO] Found proof: (λ com5.1 (com45 (com4l com5.1)))
+[2026-09-01 12:09:22:501] [INFO] Iteration 98: ECAN-guided search proof of com15 up to size 5
+[2026-09-01 12:09:22:590] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:09:22:595] [INFO]   [tier] focused=26 full=82 af-hit=true
+[2026-09-01 12:09:22:595] [INFO] Found proof: (λ com5.1 (com4r (com5l com5.1)))
+[2026-09-01 12:09:22:606] [INFO] Iteration 99: ECAN-guided search proof of com52l up to size 5
+[2026-09-01 12:09:22:737] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:09:22:741] [INFO]   [tier] focused=26 full=83 af-hit=true
+[2026-09-01 12:09:22:741] [INFO] Found proof: (λ com5.1 (com5l (com5l com5.1)))
+[2026-09-01 12:09:22:824] [INFO] Iteration 100: ECAN-guided search proof of com52r up to size 5
+[2026-09-01 12:09:22:934] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:09:22:936] [INFO]   [tier] focused=26 full=84 af-hit=true
+[2026-09-01 12:09:22:936] [INFO] Found proof: (λ com5.1 (com5l (com52l com5.1)))
+[2026-09-01 12:09:22:947] [INFO] Iteration 101: ECAN-guided search proof of com5r up to size 5
+[2026-09-01 12:09:23:108] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:09:23:111] [INFO]   [tier] focused=26 full=85 af-hit=true
+[2026-09-01 12:09:23:112] [INFO] Found proof: (λ com5.1 (com5l (com52r com5.1)))
+[2026-09-01 12:09:23:142] [INFO] Iteration 102: ECAN-guided search proof of imim12 up to size 3
+[2026-09-01 12:09:23:217] [INFO]   [union] ecan=15 will=15 union=29
+[2026-09-01 12:09:23:229] [INFO]   [tier] focused=29 full=86 af-hit=true
+[2026-09-01 12:09:23:230] [INFO] Found proof: (syl9 imim2 imim1)
+[2026-09-01 12:09:23:236] [INFO] Iteration 103: ECAN-guided search proof of jarr up to size 2
+[2026-09-01 12:09:23:374] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:09:23:376] [INFO]   [tier] focused=27 full=86 af-hit=true
+[2026-09-01 12:09:23:376] [INFO] Found proof: (imim1i ax-1)
+[2026-09-01 12:09:23:381] [INFO] Iteration 104: ECAN-guided search proof of jarri up to size 5
+[2026-09-01 12:09:23:470] [INFO]   [union] ecan=15 will=15 union=28
+[2026-09-01 12:09:23:471] [INFO]   [tier] focused=28 full=86 af-hit=true
+[2026-09-01 12:09:23:471] [INFO] Found proof: (λ jarri.1 (syl jarri.1 ax-1))
+[2026-09-01 12:09:23:480] [INFO] Iteration 105: ECAN-guided search proof of pm2.86d up to size 6
+[2026-09-01 12:09:23:625] [INFO]   [union] ecan=15 will=15 union=30
+[2026-09-01 12:09:23:668] [INFO]   [tier] focused=30 full=87 af-hit=true
+[2026-09-01 12:09:23:668] [INFO] Found proof: (λ pm2.86d.1 (com23 (syl jarr pm2.86d.1)))
+[2026-09-01 12:09:23:678] [INFO] Iteration 106: ECAN-guided search proof of pm2.86 up to size 2
+[2026-09-01 12:09:23:921] [INFO]   [union] ecan=15 will=15 union=29
+[2026-09-01 12:09:23:923] [INFO]   [tier] focused=29 full=88 af-hit=true
+[2026-09-01 12:09:23:923] [INFO] Found proof: (com23 jarr)
+[2026-09-01 12:09:23:928] [INFO] Iteration 107: ECAN-guided search proof of pm2.86i up to size 5
+[2026-09-01 12:09:24:015] [INFO]   [union] ecan=15 will=15 union=28
+[2026-09-01 12:09:24:018] [INFO]   [tier] focused=28 full=88 af-hit=true
+[2026-09-01 12:09:24:019] [INFO] Found proof: (λ pm2.86i.1 (ax-mp pm2.86 pm2.86i.1))
+[2026-09-01 12:09:24:120] [INFO] Iteration 108: ECAN-guided search proof of loolin up to size 2
+[2026-09-01 12:09:24:478] [INFO]   [union] ecan=15 will=15 union=28
+[2026-09-01 12:09:24:488] [INFO]   [tier] focused=28 full=89 af-hit=true
+[2026-09-01 12:09:24:493] [INFO] Found proof: (pm2.43d jarr)
+[2026-09-01 12:09:24:671] [INFO] Iteration 109: ECAN-guided search proof of loowoz up to size 2
+[2026-09-01 12:09:25:526] [INFO]   [union] ecan=15 will=15 union=29
+[2026-09-01 12:09:25:537] [INFO]   [tier] focused=29 full=89 af-hit=true
+[2026-09-01 12:09:25:541] [INFO] Found proof: (a2d jarr)
+[2026-09-01 12:09:25:630] [INFO] Iteration 110: ECAN-guided search proof of con4 up to size 1
+[2026-09-01 12:09:26:398] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:09:26:408] [INFO]   [tier] focused=27 full=89 af-hit=true
+[2026-09-01 12:09:26:409] [INFO] Found proof: ax-3
+[2026-09-01 12:09:26:514] [INFO] Iteration 111: ECAN-guided search proof of con4i up to size 5
+[2026-09-01 12:09:26:973] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:09:26:976] [INFO]   [tier] focused=26 full=89 af-hit=true
+[2026-09-01 12:09:26:977] [INFO] Found proof: (λ con4i.1 (ax-mp ax-3 con4i.1))
+[2026-09-01 12:09:27:053] [INFO] Iteration 112: ECAN-guided search proof of con4d up to size 5
+[2026-09-01 12:09:27:205] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:09:27:206] [INFO]   [tier] focused=26 full=90 af-hit=true
+[2026-09-01 12:09:27:206] [INFO] Found proof: (λ con4d.1 (syl ax-3 con4d.1))
+[2026-09-01 12:09:27:215] [INFO] Iteration 113: ECAN-guided search proof of mt4 up to size 7
+[2026-09-01 12:09:27:478] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:09:27:479] [INFO]   [tier] focused=26 full=91 af-hit=true
+[2026-09-01 12:09:27:479] [INFO] Found proof: (λ mt4.2 mt4.1 (ax-mp (con4i mt4.2) mt4.1))
+[2026-09-01 12:09:27:490] [INFO] Iteration 114: ECAN-guided search proof of mt4d up to size 7
+[2026-09-01 12:09:27:578] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:09:27:640] [INFO]   [tier] focused=27 full=92 af-hit=true
+[2026-09-01 12:09:27:641] [INFO] Found proof: (λ mt4d.2 mt4d.1 (mpd (con4d mt4d.2) mt4d.1))
+[2026-09-01 12:09:27:652] [INFO] Iteration 115: ECAN-guided search proof of mt4i up to size 7
+[2026-09-01 12:09:27:898] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:09:27:976] [INFO]   [tier] focused=27 full=93 af-hit=true
+[2026-09-01 12:09:27:977] [INFO] Found proof: (λ mt4i.2 mt4i.1 (mt4d mt4i.2 (a1i mt4i.1)))
+[2026-09-01 12:09:27:990] [INFO] Iteration 116: ECAN-guided search proof of pm2.21i up to size 5
+[2026-09-01 12:09:28:125] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:09:28:127] [INFO]   [tier] focused=26 full=94 af-hit=true
+[2026-09-01 12:09:28:127] [INFO] Found proof: (λ pm2.21i.1 (con4i (a1i pm2.21i.1)))
+[2026-09-01 12:09:28:215] [INFO] Iteration 117: ECAN-guided search proof of pm2.24ii up to size 7
+[2026-09-01 12:09:28:342] [INFO]   [union] ecan=16 will=16 union=26
+[2026-09-01 12:09:28:344] [INFO]   [tier] focused=26 full=95 af-hit=true
+[2026-09-01 12:09:28:345] [INFO] Found proof: (λ pm2.24ii.2 pm2.24ii.1 (ax-mp (pm2.21i pm2.24ii.2) pm2.24ii.1))
+[2026-09-01 12:09:28:355] [INFO] Iteration 118: ECAN-guided search proof of pm2.21d up to size 5
+[2026-09-01 12:09:28:447] [INFO]   [union] ecan=16 will=16 union=28
+[2026-09-01 12:09:28:448] [INFO]   [tier] focused=28 full=96 af-hit=true
+[2026-09-01 12:09:28:448] [INFO] Found proof: (λ pm2.21d.1 (con4d (a1d pm2.21d.1)))
+[2026-09-01 12:09:28:528] [INFO] Iteration 119: ECAN-guided search proof of pm2.21ddALT up to size 7
+[2026-09-01 12:09:28:652] [INFO]   [union] ecan=16 will=16 union=28
+[2026-09-01 12:09:28:723] [INFO]   [tier] focused=28 full=97 af-hit=true
+[2026-09-01 12:09:28:723] [INFO] Found proof: (λ pm2.21ddALT.2 pm2.21ddALT.1 (mpd (pm2.21d pm2.21ddALT.2) pm2.21ddALT.1))
+[2026-09-01 12:09:28:740] [INFO] Iteration 120: ECAN-guided search proof of pm2.21 up to size 2
+[2026-09-01 12:09:28:869] [INFO]   [union] ecan=16 will=16 union=28
+[2026-09-01 12:09:28:870] [INFO]   [tier] focused=28 full=98 af-hit=true
+[2026-09-01 12:09:28:870] [INFO] Found proof: (con4d ax-1)
+[2026-09-01 12:09:28:944] [INFO] Iteration 121: ECAN-guided search proof of pm2.24 up to size 2
+[2026-09-01 12:09:29:055] [INFO]   [union] ecan=16 will=16 union=27
+[2026-09-01 12:09:29:056] [INFO]   [tier] focused=27 full=98 af-hit=true
+[2026-09-01 12:09:29:056] [INFO] Found proof: (com12 pm2.21)
+[2026-09-01 12:09:29:059] [INFO] Iteration 122: ECAN-guided search proof of jarl up to size 2
+[2026-09-01 12:09:29:133] [INFO]   [union] ecan=16 will=16 union=28
+[2026-09-01 12:09:29:134] [INFO]   [tier] focused=28 full=98 af-hit=true
+[2026-09-01 12:09:29:134] [INFO] Found proof: (imim1i pm2.21)
+[2026-09-01 12:09:29:139] [INFO] Iteration 123: ECAN-guided search proof of jarli up to size 5
+[2026-09-01 12:09:29:230] [INFO]   [union] ecan=16 will=16 union=28
+[2026-09-01 12:09:29:231] [INFO]   [tier] focused=28 full=98 af-hit=true
+[2026-09-01 12:09:29:231] [INFO] Found proof: (λ jarli.1 (syl jarli.1 pm2.21))
+[2026-09-01 12:09:29:348] [INFO] Iteration 124: ECAN-guided search proof of pm2.18d up to size 7
+[2026-09-01 12:09:29:420] [INFO]   [union] ecan=16 will=16 union=28
+[2026-09-01 12:09:37:659] [INFO]   [tier] focused=28 full=99 af-hit=false
+[2026-09-01 12:09:39:026] [INFO] Found proof: (λ pm2.18d.1 (pm2.43i (con4d (sylcom pm2.21 pm2.18d.1))))
+[2026-09-01 12:09:39:041] [INFO] Iteration 125: ECAN-guided search proof of pm2.18 up to size 2
+[2026-09-01 12:09:39:124] [INFO]   [union] ecan=17 will=17 union=31
+[2026-09-01 12:09:39:125] [INFO]   [tier] focused=31 full=100 af-hit=false
+[2026-09-01 12:09:39:126] [INFO] Found proof: (pm2.18d id)
+[2026-09-01 12:09:39:297] [INFO] Iteration 126: ECAN-guided search proof of pm2.18i up to size 5
+[2026-09-01 12:09:39:732] [INFO]   [union] ecan=17 will=17 union=30
+[2026-09-01 12:09:39:733] [INFO]   [tier] focused=30 full=100 af-hit=true
+[2026-09-01 12:09:39:733] [INFO] Found proof: (λ pm2.18i.1 (ax-mp pm2.18 pm2.18i.1))
+[2026-09-01 12:09:39:741] [INFO] Iteration 127: ECAN-guided search proof of notnotr up to size 2
+[2026-09-01 12:09:39:886] [INFO]   [union] ecan=17 will=17 union=30
+[2026-09-01 12:09:39:887] [INFO]   [tier] focused=30 full=101 af-hit=true
+[2026-09-01 12:09:39:887] [INFO] Found proof: (pm2.18d pm2.21)
+[2026-09-01 12:09:39:896] [INFO] Iteration 128: ECAN-guided search proof of notnotri up to size 6
+[2026-09-01 12:09:40:086] [INFO]   [union] ecan=17 will=17 union=30
+[2026-09-01 12:09:40:090] [INFO]   [tier] focused=30 full=101 af-hit=true
+[2026-09-01 12:09:40:090] [INFO] Found proof: (λ notnotri.1 (ax-mp notnotr notnotri.1))
+[2026-09-01 12:09:40:112] [INFO] Iteration 129: ECAN-guided search proof of notnotriALT up to size 5
+[2026-09-01 12:09:40:202] [INFO]   [union] ecan=17 will=17 union=30
+[2026-09-01 12:09:40:203] [INFO]   [tier] focused=30 full=102 af-hit=true
+[2026-09-01 12:09:40:203] [INFO] Found proof: (λ notnotri.1 (ax-mp notnotr notnotri.1))
+[2026-09-01 12:09:40:212] [INFO] Iteration 130: ECAN-guided search proof of notnotrd up to size 5
+[2026-09-01 12:09:40:319] [INFO]   [union] ecan=17 will=17 union=32
+[2026-09-01 12:09:40:320] [INFO]   [tier] focused=32 full=103 af-hit=true
+[2026-09-01 12:09:40:320] [INFO] Found proof: (λ notnotrd.1 (pm2.18d (pm2.21d notnotrd.1)))
+[2026-09-01 12:09:40:329] [INFO] Iteration 131: ECAN-guided search proof of con2d up to size 6
+[2026-09-01 12:09:40:458] [INFO]   [union] ecan=17 will=17 union=29
+[2026-09-01 12:09:40:572] [INFO]   [tier] focused=29 full=104 af-hit=true
+[2026-09-01 12:09:40:579] [INFO] Found proof: (λ con2d.1 (con4d (syl5 con2d.1 notnotr)))
+[2026-09-01 12:09:40:601] [INFO] Iteration 132: ECAN-guided search proof of con2 up to size 2
+[2026-09-01 12:09:40:706] [INFO]   [union] ecan=17 will=17 union=30
+[2026-09-01 12:09:40:707] [INFO]   [tier] focused=30 full=105 af-hit=true
+[2026-09-01 12:09:40:707] [INFO] Found proof: (con2d id)
+[2026-09-01 12:09:40:712] [INFO] Iteration 133: ECAN-guided search proof of mt2d up to size 7
+[2026-09-01 12:09:40:824] [INFO]   [union] ecan=17 will=17 union=28
+[2026-09-01 12:09:41:013] [INFO]   [tier] focused=28 full=105 af-hit=true
+[2026-09-01 12:09:41:013] [INFO] Found proof: (λ mt2d.2 mt2d.1 (mpd (con2d mt2d.2) mt2d.1))
+[2026-09-01 12:09:41:024] [INFO] Iteration 134: ECAN-guided search proof of mt2i up to size 7
+[2026-09-01 12:09:41:379] [INFO]   [union] ecan=18 will=18 union=30
+[2026-09-01 12:09:41:663] [INFO]   [tier] focused=30 full=106 af-hit=true
+[2026-09-01 12:09:41:663] [INFO] Found proof: (λ mt2i.2 mt2i.1 (mt2d mt2i.2 (a1i mt2i.1)))
+[2026-09-01 12:09:41:703] [INFO] Iteration 135: ECAN-guided search proof of nsyl3 up to size 7
+[2026-09-01 12:09:41:799] [INFO]   [union] ecan=18 will=18 union=29
+[2026-09-01 12:09:42:135] [INFO]   [tier] focused=29 full=107 af-hit=true
+[2026-09-01 12:09:42:136] [INFO] Found proof: (λ nsyl3.2 nsyl3.1 (mt2d (a1i nsyl3.1) nsyl3.2))
+[2026-09-01 12:09:42:266] [INFO] Iteration 136: ECAN-guided search proof of con2i up to size 5
+[2026-09-01 12:09:42:483] [INFO]   [union] ecan=18 will=18 union=31
+[2026-09-01 12:09:42:486] [INFO]   [tier] focused=31 full=108 af-hit=true
+[2026-09-01 12:09:42:488] [INFO] Found proof: (λ con2i.a (ax-mp con2 con2i.a))
+[2026-09-01 12:09:42:578] [INFO] Iteration 137: ECAN-guided search proof of nsyl up to size 7
+[2026-09-01 12:09:43:008] [INFO]   [union] ecan=18 will=18 union=30
+[2026-09-01 12:09:43:145] [INFO]   [tier] focused=30 full=109 af-hit=true
+[2026-09-01 12:09:43:149] [INFO] Found proof: (λ nsyl.2 nsyl.1 (con2i (nsyl3 nsyl.2 nsyl.1)))
+[2026-09-01 12:09:43:191] [INFO] Iteration 138: ECAN-guided search proof of nsyl2 up to size 7
+[2026-09-01 12:09:43:487] [INFO]   [union] ecan=18 will=18 union=29
+[2026-09-01 12:09:43:544] [INFO]   [tier] focused=29 full=110 af-hit=true
+[2026-09-01 12:09:43:546] [INFO] Found proof: (λ nsyl2.2 nsyl2.1 (con4i (nsyl3 nsyl2.2 nsyl2.1)))
+[2026-09-01 12:09:43:658] [INFO] Iteration 139: ECAN-guided search proof of notnot up to size 2
+[2026-09-01 12:09:43:906] [INFO]   [union] ecan=18 will=18 union=32
+[2026-09-01 12:09:43:907] [INFO]   [tier] focused=32 full=111 af-hit=true
+[2026-09-01 12:09:43:907] [INFO] Found proof: (con2i id)
+[2026-09-01 12:09:44:007] [INFO] Iteration 140: ECAN-guided search proof of notnoti up to size 5
+[2026-09-01 12:09:44:109] [INFO]   [union] ecan=18 will=18 union=32
+[2026-09-01 12:09:44:111] [INFO]   [tier] focused=32 full=111 af-hit=true
+[2026-09-01 12:09:44:111] [INFO] Found proof: (λ notnoti.1 (ax-mp notnot notnoti.1))
+[2026-09-01 12:09:44:130] [INFO] Iteration 141: ECAN-guided search proof of notnotd up to size 5
+[2026-09-01 12:09:44:420] [INFO]   [union] ecan=19 will=19 union=31
+[2026-09-01 12:09:44:423] [INFO]   [tier] focused=31 full=112 af-hit=true
+[2026-09-01 12:09:44:423] [INFO] Found proof: (λ notnotd.1 (syl notnot notnotd.1))
+[2026-09-01 12:09:44:485] [INFO] Iteration 142: ECAN-guided search proof of con1d up to size 6
+[2026-09-01 12:09:44:655] [INFO]   [union] ecan=19 will=19 union=31
+[2026-09-01 12:09:44:723] [INFO]   [tier] focused=31 full=113 af-hit=true
+[2026-09-01 12:09:44:723] [INFO] Found proof: (λ con1d.1 (con4d (syl6 notnot con1d.1)))
+[2026-09-01 12:09:44:873] [INFO] Iteration 143: ECAN-guided search proof of con1 up to size 2
+[2026-09-01 12:09:44:978] [INFO]   [union] ecan=19 will=19 union=31
+[2026-09-01 12:09:44:979] [INFO]   [tier] focused=31 full=114 af-hit=true
+[2026-09-01 12:09:44:979] [INFO] Found proof: (con1d id)
+[2026-09-01 12:09:44:982] [INFO] Iteration 144: ECAN-guided search proof of con1i up to size 5
+[2026-09-01 12:09:45:106] [INFO]   [union] ecan=19 will=19 union=32
+[2026-09-01 12:09:45:108] [INFO]   [tier] focused=32 full=114 af-hit=true
+[2026-09-01 12:09:45:108] [INFO] Found proof: (λ con1i.1 (con4i (notnotd con1i.1)))
+[2026-09-01 12:09:45:215] [INFO] Iteration 145: ECAN-guided search proof of mt3d up to size 7
+[2026-09-01 12:09:45:338] [INFO]   [union] ecan=19 will=19 union=30
+[2026-09-01 12:09:45:808] [INFO]   [tier] focused=30 full=115 af-hit=true
+[2026-09-01 12:09:45:809] [INFO] Found proof: (λ mt3d.2 mt3d.1 (mpd (con1d mt3d.2) mt3d.1))
+[2026-09-01 12:09:45:836] [INFO] Iteration 146: ECAN-guided search proof of mt3i up to size 7
+[2026-09-01 12:09:46:111] [INFO]   [union] ecan=19 will=19 union=30
+[2026-09-01 12:09:46:741] [INFO]   [tier] focused=30 full=116 af-hit=true
+[2026-09-01 12:09:46:744] [INFO] Found proof: (λ mt3i.2 mt3i.1 (mt3d mt3i.2 (a1i mt3i.1)))
+[2026-09-01 12:09:46:867] [INFO] Iteration 147: ECAN-guided search proof of pm2.24i up to size 5
+[2026-09-01 12:09:47:102] [INFO]   [union] ecan=19 will=19 union=33
+[2026-09-01 12:09:47:105] [INFO]   [tier] focused=33 full=117 af-hit=true
+[2026-09-01 12:09:47:107] [INFO] Found proof: (λ pm2.24i.1 (pm2.21i (notnoti pm2.24i.1)))
+[2026-09-01 12:09:47:351] [INFO] Iteration 148: ECAN-guided search proof of pm2.24d up to size 5
+[2026-09-01 12:09:47:461] [INFO]   [union] ecan=20 will=20 union=32
+[2026-09-01 12:09:47:464] [INFO]   [tier] focused=32 full=118 af-hit=true
+[2026-09-01 12:09:47:464] [INFO] Found proof: (λ pm2.24d.1 (con1d (a1d pm2.24d.1)))
+[2026-09-01 12:09:47:473] [INFO] Iteration 149: ECAN-guided search proof of con3d up to size 6
+[2026-09-01 12:09:47:618] [INFO]   [union] ecan=20 will=20 union=31
+[2026-09-01 12:09:47:704] [INFO]   [tier] focused=31 full=119 af-hit=true
+[2026-09-01 12:09:47:705] [INFO] Found proof: (λ con3d.1 (con1d (syl5 con3d.1 notnotr)))
+[2026-09-01 12:09:47:717] [INFO] Iteration 150: ECAN-guided search proof of con3 up to size 2
+[2026-09-01 12:09:47:829] [INFO]   [union] ecan=20 will=20 union=31
+[2026-09-01 12:09:47:831] [INFO]   [tier] focused=31 full=120 af-hit=true
+[2026-09-01 12:09:47:832] [INFO] Found proof: (con3d id)
+[2026-09-01 12:09:47:841] [INFO] Iteration 151: ECAN-guided search proof of con3i up to size 5
+[2026-09-01 12:09:47:979] [INFO]   [union] ecan=20 will=20 union=32
+[2026-09-01 12:09:47:980] [INFO]   [tier] focused=32 full=120 af-hit=true
+[2026-09-01 12:09:47:980] [INFO] Found proof: (λ con3i.a (con2i (notnotd con3i.a)))
+[2026-09-01 12:09:48:492] [INFO] Iteration 152: ECAN-guided search proof of con3rr3 up to size 5
+[2026-09-01 12:09:48:925] [INFO]   [union] ecan=20 will=20 union=31
+[2026-09-01 12:09:48:934] [INFO]   [tier] focused=31 full=121 af-hit=true
+[2026-09-01 12:09:48:935] [INFO] Found proof: (λ con3rr3.1 (com12 (con3d con3rr3.1)))
+[2026-09-01 12:09:49:000] [INFO] Iteration 153: ECAN-guided search proof of nsyld up to size 7
+[2026-09-01 12:09:49:292] [INFO]   [union] ecan=20 will=20 union=36
+[2026-09-01 12:09:50:180] [INFO]   [tier] focused=36 full=122 af-hit=true
+[2026-09-01 12:09:50:181] [INFO] Found proof: (λ nsyld.2 nsyld.1 (syld (con3d nsyld.2) nsyld.1))
+[2026-09-01 12:09:50:193] [INFO] Iteration 154: ECAN-guided search proof of nsyli up to size 7
+[2026-09-01 12:09:50:474] [INFO]   [union] ecan=20 will=20 union=34
+[2026-09-01 12:09:51:488] [INFO]   [tier] focused=34 full=123 af-hit=true
+[2026-09-01 12:09:51:488] [INFO] Found proof: (λ nsyli.2 nsyli.1 (syl5 (con3d nsyli.1) nsyli.2))
+[2026-09-01 12:09:51:497] [INFO] Iteration 155: ECAN-guided search proof of nsyl4 up to size 7
+[2026-09-01 12:09:51:577] [INFO]   [union] ecan=21 will=21 union=34
+[2026-09-01 12:09:51:699] [INFO]   [tier] focused=34 full=124 af-hit=true
+[2026-09-01 12:09:51:699] [INFO] Found proof: (λ nsyl4.2 nsyl4.1 (syl nsyl4.1 (con1i nsyl4.2)))
+[2026-09-01 12:09:51:846] [INFO] Iteration 156: ECAN-guided search proof of nsyl5 up to size 7
+[2026-09-01 12:09:51:930] [INFO]   [union] ecan=21 will=21 union=35
+[2026-09-01 12:09:51:985] [INFO]   [tier] focused=35 full=125 af-hit=true
+[2026-09-01 12:09:51:986] [INFO] Found proof: (λ nsyl4.2 nsyl4.1 (con1i (nsyl4 nsyl4.2 nsyl4.1)))
+[2026-09-01 12:09:51:996] [INFO] Iteration 157: ECAN-guided search proof of pm3.2im up to size 2
+[2026-09-01 12:09:52:216] [INFO]   [union] ecan=21 will=21 union=34
+[2026-09-01 12:09:52:220] [INFO]   [tier] focused=34 full=126 af-hit=true
+[2026-09-01 12:09:52:220] [INFO] Found proof: (con2d pm2.27)
+[2026-09-01 12:09:52:270] [INFO] Iteration 158: ECAN-guided search proof of jc up to size 7
+[2026-09-01 12:09:52:372] [INFO]   [union] ecan=21 will=21 union=35
+[2026-09-01 12:09:53:626] [INFO]   [tier] focused=35 full=126 af-hit=false
+[2026-09-01 12:10:11:880] [INFO] Found proof: (λ jc.2 jc.1 (sylc pm3.2im jc.2 jc.1))
+[2026-09-01 12:10:11:926] [INFO] Iteration 159: ECAN-guided search proof of jcn up to size 2
+[2026-09-01 12:10:12:062] [INFO]   [union] ecan=21 will=21 union=37
+[2026-09-01 12:10:12:063] [INFO]   [tier] focused=37 full=127 af-hit=true
+[2026-09-01 12:10:12:063] [INFO] Found proof: (con3d pm2.27)
+[2026-09-01 12:10:12:067] [INFO] Iteration 160: ECAN-guided search proof of jcnd up to size 7
+[2026-09-01 12:10:12:164] [INFO]   [union] ecan=21 will=21 union=37
+[2026-09-01 12:10:13:433] [INFO]   [tier] focused=37 full=127 af-hit=false
+[2026-09-01 12:10:37:512] [INFO] Found proof: (λ jcnd.2 jcnd.1 (sylc jcn jcnd.2 jcnd.1))
+[2026-09-01 12:10:37:691] [INFO] Iteration 161: ECAN-guided search proof of impi up to size 5
+[2026-09-01 12:10:37:883] [INFO]   [union] ecan=21 will=21 union=39
+[2026-09-01 12:10:37:887] [INFO]   [tier] focused=39 full=128 af-hit=true
+[2026-09-01 12:10:37:889] [INFO] Found proof: (λ impi.1 (con1i (con3rr3 impi.1)))
+[2026-09-01 12:10:37:923] [INFO] Iteration 162: ECAN-guided search proof of expi up to size 5
+[2026-09-01 12:10:38:639] [INFO]   [union] ecan=21 will=21 union=39
+[2026-09-01 12:10:38:650] [INFO]   [tier] focused=39 full=129 af-hit=true
+[2026-09-01 12:10:38:650] [INFO] Found proof: (λ expi.1 (syl6 expi.1 pm3.2im))
+[2026-09-01 12:10:38:662] [INFO] Iteration 163: ECAN-guided search proof of simprim up to size 2
+[2026-09-01 12:10:38:804] [INFO]   [union] ecan=22 will=22 union=42
+[2026-09-01 12:10:38:806] [INFO]   [tier] focused=42 full=130 af-hit=true
+[2026-09-01 12:10:38:807] [INFO] Found proof: (con1i ax-1)
+[2026-09-01 12:10:39:072] [INFO] Iteration 164: ECAN-guided search proof of simplim up to size 2
+[2026-09-01 12:10:39:200] [INFO]   [union] ecan=22 will=22 union=43
+[2026-09-01 12:10:39:204] [INFO]   [tier] focused=43 full=130 af-hit=true
+[2026-09-01 12:10:39:205] [INFO] Found proof: (con1i pm2.21)
+[2026-09-01 12:10:39:218] [INFO] Iteration 165: ECAN-guided search proof of pm2.5g up to size 2
+[2026-09-01 12:10:39:599] [INFO]   [union] ecan=22 will=22 union=42
+[2026-09-01 12:10:39:600] [INFO]   [tier] focused=42 full=130 af-hit=true
+[2026-09-01 12:10:39:603] [INFO] Found proof: (jarli jarl)
+[2026-09-01 12:10:39:659] [INFO] Iteration 166: ECAN-guided search proof of pm2.5 up to size 1
+[2026-09-01 12:10:40:062] [INFO]   [union] ecan=22 will=22 union=42
+[2026-09-01 12:10:40:063] [INFO]   [tier] focused=42 full=130 af-hit=true
+[2026-09-01 12:10:40:065] [INFO] Found proof: pm2.5g
+[2026-09-01 12:10:40:187] [INFO] Iteration 167: ECAN-guided search proof of conax1 up to size 2
+[2026-09-01 12:10:40:330] [INFO]   [union] ecan=22 will=22 union=41
+[2026-09-01 12:10:40:331] [INFO]   [tier] focused=41 full=130 af-hit=true
+[2026-09-01 12:10:40:332] [INFO] Found proof: (con3i ax-1)
+[2026-09-01 12:10:40:337] [INFO] Iteration 168: ECAN-guided search proof of conax1k up to size 2
+[2026-09-01 12:10:40:437] [INFO]   [union] ecan=22 will=22 union=40
+[2026-09-01 12:10:40:437] [INFO]   [tier] focused=40 full=130 af-hit=true
+[2026-09-01 12:10:40:438] [INFO] Found proof: (a1d conax1)
+[2026-09-01 12:10:40:635] [INFO] Iteration 169: ECAN-guided search proof of pm2.51 up to size 1
+[2026-09-01 12:10:40:735] [INFO]   [union] ecan=22 will=22 union=40
+[2026-09-01 12:10:40:736] [INFO]   [tier] focused=40 full=130 af-hit=true
+[2026-09-01 12:10:40:736] [INFO] Found proof: conax1k
+[2026-09-01 12:10:40:740] [INFO] Iteration 170: ECAN-guided search proof of pm2.52 up to size 1
+[2026-09-01 12:10:40:883] [INFO]   [union] ecan=22 will=22 union=40
+[2026-09-01 12:10:40:884] [INFO]   [tier] focused=40 full=130 af-hit=true
+[2026-09-01 12:10:40:884] [INFO] Found proof: pm2.5g
+[2026-09-01 12:10:41:017] [INFO] Iteration 171: ECAN-guided search proof of pm2.521g up to size 2
+[2026-09-01 12:10:41:186] [INFO]   [union] ecan=22 will=22 union=41
+[2026-09-01 12:10:41:187] [INFO]   [tier] focused=41 full=130 af-hit=true
+[2026-09-01 12:10:41:187] [INFO] Found proof: (con4d conax1k)
+[2026-09-01 12:10:41:191] [INFO] Iteration 172: ECAN-guided search proof of pm2.521g2 up to size 2
+[2026-09-01 12:10:41:425] [INFO]   [union] ecan=22 will=22 union=42
+[2026-09-01 12:10:41:430] [INFO]   [tier] focused=42 full=130 af-hit=true
+[2026-09-01 12:10:41:431] [INFO] Found proof: (a1d simplim)
+[2026-09-01 12:10:41:688] [INFO] Iteration 173: ECAN-guided search proof of pm2.521 up to size 1
+[2026-09-01 12:10:41:808] [INFO]   [union] ecan=22 will=22 union=42
+[2026-09-01 12:10:41:809] [INFO]   [tier] focused=42 full=130 af-hit=true
+[2026-09-01 12:10:41:809] [INFO] Found proof: pm2.521g
+[2026-09-01 12:10:41:825] [INFO] Iteration 174: ECAN-guided search proof of expt up to size 3
+[2026-09-01 12:10:42:032] [INFO]   [union] ecan=22 will=22 union=40
+[2026-09-01 12:10:42:054] [INFO]   [tier] focused=40 full=130 af-hit=true
+[2026-09-01 12:10:42:054] [INFO] Found proof: (syl5 imim2 pm3.2im)
+[2026-09-01 12:10:42:201] [INFO] Iteration 175: ECAN-guided search proof of impt up to size 4
+[2026-09-01 12:10:42:317] [INFO]   [union] ecan=22 will=22 union=40
+[2026-09-01 12:10:42:335] [INFO]   [tier] focused=40 full=130 af-hit=true
+[2026-09-01 12:10:42:336] [INFO] Found proof: (com12 (impi (com23 pm2.27)))
+[2026-09-01 12:10:42:356] [INFO] Iteration 176: ECAN-guided search proof of pm2.61d up to size 8
+[2026-09-01 12:10:42:495] [INFO]   [union] ecan=22 will=22 union=39
+[2026-09-01 12:10:44:003] [INFO]   [tier] focused=39 full=130 af-hit=true
+[2026-09-01 12:10:44:003] [INFO] Found proof: (λ pm2.61d.2 pm2.61d.1 (pm2.18d (syld pm2.61d.2 (con3d pm2.61d.1))))
+[2026-09-01 12:10:44:134] [INFO] Iteration 177: ECAN-guided search proof of pm2.61d1 up to size 7
+[2026-09-01 12:10:44:241] [INFO]   [union] ecan=22 will=22 union=40
+[2026-09-01 12:10:45:477] [INFO]   [tier] focused=40 full=131 af-hit=false
+[2026-09-01 12:10:56:241] [INFO] Found proof: (λ pm2.61d1.2 pm2.61d1.1 (pm2.61d (a1i pm2.61d1.2) pm2.61d1.1))
+[2026-09-01 12:10:56:253] [INFO] Iteration 178: ECAN-guided search proof of pm2.61d2 up to size 7
+[2026-09-01 12:10:56:484] [INFO]   [union] ecan=22 will=22 union=40
+[2026-09-01 12:10:57:426] [INFO]   [tier] focused=40 full=132 af-hit=false
+[2026-09-01 12:11:08:491] [INFO] Found proof: (λ pm2.61d2.2 pm2.61d2.1 (pm2.61d pm2.61d2.1 (a1i pm2.61d2.2)))
+[2026-09-01 12:11:08:512] [INFO] Iteration 179: ECAN-guided search proof of pm2.61i up to size 7
+[2026-09-01 12:11:09:003] [INFO]   [union] ecan=22 will=22 union=43
+[2026-09-01 12:11:09:029] [INFO]   [tier] focused=43 full=133 af-hit=true
+[2026-09-01 12:11:09:029] [INFO] Found proof: (λ pm2.61i.2 pm2.61i.1 (pm2.18i (nsyl4 pm2.61i.2 pm2.61i.1)))
+[2026-09-01 12:11:09:040] [INFO] Iteration 180: ECAN-guided search proof of pm2.61ii up to size 9
+[2026-09-01 12:11:09:275] [INFO]   [union] ecan=22 will=22 union=42
+[2026-09-01 12:11:20:122] [INFO]   [tier] focused=42 full=134 af-hit=true
+[2026-09-01 12:11:20:123] [INFO] Found proof: (λ pm2.61ii.3 pm2.61ii.2 pm2.61ii.1 (pm2.61i (pm2.61d2 pm2.61ii.3 pm2.61ii.1) pm2.61ii.2))
+[2026-09-01 12:11:20:135] [INFO] Iteration 181: ECAN-guided search proof of pm2.61nii up to size 9
+[2026-09-01 12:11:20:324] [INFO]   [union] ecan=22 will=22 union=40
+[2026-09-01 12:11:27:603] [INFO]   [tier] focused=40 full=135 af-hit=true
+[2026-09-01 12:11:27:604] [INFO] Found proof: (λ pm2.61nii.3 pm2.61nii.2 pm2.61nii.1 (pm2.61i pm2.61nii.2 (pm2.61d1 pm2.61nii.3 pm2.61nii.1)))
+[2026-09-01 12:11:27:852] [INFO] [bg] daemon sweeps=897 final-funds=187435.00181701386
+[2026-09-01 12:11:27:854] [DEBUG] pc-rb: (: ax-mp (-> (→ $_151930 $_151936) $_151930 $_151936))
+[2026-09-01 12:11:27:854] [DEBUG] pc-rb: (: mp2 (-> (→ $_151930 (→ $_151948 $_151954)) $_151948 $_151930 $_151954))
+[2026-09-01 12:11:27:857] [DEBUG] pc-rb: (: mp2b (-> (→ $_151930 $_151936) (→ $_151954 $_151930) $_151954 $_151936))
+[2026-09-01 12:11:27:857] [DEBUG] pc-rb: (: a1i (-> $_151918 (→ $_151936 $_151918)))
+[2026-09-01 12:11:27:858] [DEBUG] pc-rb: (: 2a1i (-> $_151918 (→ $_151936 (→ $_151954 $_151918))))
+[2026-09-01 12:11:27:858] [DEBUG] pc-rb: (: mp1i (-> (→ $_151930 $_151936) $_151930 (→ $_151960 $_151936)))
+[2026-09-01 12:11:27:859] [DEBUG] pc-rb: (: a2i (-> (→ $_151930 (→ $_151948 $_151954)) (→ (→ $_151930 $_151948) (→ $_151930 $_151954))))
+[2026-09-01 12:11:27:859] [DEBUG] pc-rb: (: mpd (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151930 $_151948) (→ $_151930 $_151954)))
+[2026-09-01 12:11:27:860] [DEBUG] pc-rb: (: imim2i (-> (→ $_151930 $_151936) (→ (→ $_151966 $_151930) (→ $_151966 $_151936))))
+[2026-09-01 12:11:27:862] [DEBUG] pc-rb: (: syl (-> (→ $_151930 $_151936) (→ $_151954 $_151930) (→ $_151954 $_151936)))
+[2026-09-01 12:11:27:866] [DEBUG] pc-rb: (: 3syl (-> (→ $_151930 $_151936) (→ $_151954 $_151930) (→ $_151978 $_151954) (→ $_151978 $_151936)))
+[2026-09-01 12:11:27:867] [DEBUG] pc-rb: (: 4syl (-> (→ $_151930 $_151936) (→ $_151954 $_151930) (→ $_151978 $_151954) (→ $_152002 $_151978) (→ $_152002 $_151936)))
+[2026-09-01 12:11:27:868] [DEBUG] pc-rb: (: mpi (-> (→ $_151930 (→ $_151948 $_151954)) $_151948 (→ $_151930 $_151954)))
+[2026-09-01 12:11:27:869] [DEBUG] pc-rb: (: mpisyl (-> (→ $_151930 (→ $_151948 $_151954)) $_151948 (→ $_151978 $_151930) (→ $_151978 $_151954)))
+[2026-09-01 12:11:27:870] [DEBUG] pc-rb: (: a1d (-> (→ $_151930 $_151936) (→ $_151930 (→ $_151972 $_151936))))
+[2026-09-01 12:11:27:870] [DEBUG] pc-rb: (: 2a1d (-> (→ $_151930 $_151936) (→ $_151930 (→ $_151972 (→ $_151990 $_151936)))))
+[2026-09-01 12:11:27:871] [DEBUG] pc-rb: (: a1i13 (-> (→ $_151930 $_151936) (→ $_151954 (→ $_151930 (→ $_151990 $_151936)))))
+[2026-09-01 12:11:27:872] [DEBUG] pc-rb: (: a2d (-> (→ $_151930 (→ $_151948 (→ $_151966 $_151972))) (→ $_151930 (→ (→ $_151948 $_151966) (→ $_151948 $_151972)))))
+[2026-09-01 12:11:27:873] [DEBUG] pc-rb: (: sylcom (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151972 (→ $_151930 $_151948)) (→ $_151972 (→ $_151930 $_151954))))
+[2026-09-01 12:11:27:873] [DEBUG] pc-rb: (: syl5com (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151972 $_151948) (→ $_151972 (→ $_151930 $_151954))))
+[2026-09-01 12:11:27:874] [DEBUG] pc-rb: (: com12 (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151948 (→ $_151930 $_151954))))
+[2026-09-01 12:11:27:875] [DEBUG] pc-rb: (: syl11 (-> (→ $_151930 $_151936) (→ $_151936 (→ $_151972 $_151978)) (→ $_151972 (→ $_151930 $_151978))))
+[2026-09-01 12:11:27:875] [DEBUG] pc-rb: (: syl5 (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151972 $_151948) (→ $_151930 (→ $_151972 $_151954))))
+[2026-09-01 12:11:27:876] [DEBUG] pc-rb: (: syl6 (-> (→ $_151930 $_151936) (→ $_151954 (→ $_151972 $_151930)) (→ $_151954 (→ $_151972 $_151936))))
+[2026-09-01 12:11:27:876] [DEBUG] pc-rb: (: syl56 (-> (→ $_151930 $_151936) (→ $_151954 (→ $_151972 $_151930)) (→ $_151996 $_151972) (→ $_151954 (→ $_151996 $_151936))))
+[2026-09-01 12:11:27:877] [DEBUG] pc-rb: (: syl6com (-> (→ $_151930 $_151936) (→ $_151954 (→ $_151972 $_151930)) (→ $_151972 (→ $_151954 $_151936))))
+[2026-09-01 12:11:27:878] [DEBUG] pc-rb: (: mpcom (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151948 $_151930) (→ $_151948 $_151954)))
+[2026-09-01 12:11:27:878] [DEBUG] pc-rb: (: syli (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151972 (→ $_151948 $_151930)) (→ $_151972 (→ $_151948 $_151954))))
+[2026-09-01 12:11:27:879] [DEBUG] pc-rb: (: syl2im (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151972 $_151948) (→ $_151996 $_151930) (→ $_151996 (→ $_151972 $_151954))))
+[2026-09-01 12:11:27:879] [DEBUG] pc-rb: (: syl2imc (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151972 $_151948) (→ $_151996 $_151930) (→ $_151972 (→ $_151996 $_151954))))
+[2026-09-01 12:11:27:880] [DEBUG] pc-rb: (: mpdd (-> (→ $_151930 (→ $_151948 (→ $_151966 $_151972))) (→ $_151930 (→ $_151948 $_151966)) (→ $_151930 (→ $_151948 $_151972))))
+[2026-09-01 12:11:27:881] [DEBUG] pc-rb: (: mpid (-> (→ $_151930 (→ $_151948 (→ $_151966 $_151972))) (→ $_151930 $_151966) (→ $_151930 (→ $_151948 $_151972))))
+[2026-09-01 12:11:27:882] [DEBUG] pc-rb: (: mpdi (-> (→ $_151930 (→ $_151948 (→ $_151966 $_151972))) (→ $_151948 $_151966) (→ $_151930 (→ $_151948 $_151972))))
+[2026-09-01 12:11:27:883] [DEBUG] pc-rb: (: mpii (-> (→ $_151930 (→ $_151948 (→ $_151966 $_151972))) $_151966 (→ $_151930 (→ $_151948 $_151972))))
+[2026-09-01 12:11:27:884] [DEBUG] pc-rb: (: syld (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151930 (→ $_151990 $_151948)) (→ $_151930 (→ $_151990 $_151954))))
+[2026-09-01 12:11:27:884] [DEBUG] pc-rb: (: syldc (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151930 (→ $_151990 $_151948)) (→ $_151990 (→ $_151930 $_151954))))
+[2026-09-01 12:11:27:886] [DEBUG] pc-rb: (: mp2d (-> (→ $_151930 (→ $_151948 (→ $_151966 $_151972))) (→ $_151930 $_151966) (→ $_151930 $_151948) (→ $_151930 $_151972)))
+[2026-09-01 12:11:27:887] [DEBUG] pc-rb: (: a1dd (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151930 (→ $_151948 (→ $_152008 $_151954)))))
+[2026-09-01 12:11:27:888] [DEBUG] pc-rb: (: 2a1dd (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151930 (→ $_151948 (→ $_152008 (→ $_152026 $_151954))))))
+[2026-09-01 12:11:27:889] [DEBUG] pc-rb: (: pm2.43i (-> (→ $_151930 (→ $_151930 $_151954)) (→ $_151930 $_151954)))
+[2026-09-01 12:11:27:890] [DEBUG] pc-rb: (: pm2.43d (-> (→ $_151930 (→ $_151948 (→ $_151948 $_151972))) (→ $_151930 (→ $_151948 $_151972))))
+[2026-09-01 12:11:27:891] [DEBUG] pc-rb: (: pm2.43a (-> (→ $_151930 (→ $_151948 (→ $_151930 $_151972))) (→ $_151930 (→ $_151948 $_151972))))
+[2026-09-01 12:11:27:891] [DEBUG] pc-rb: (: pm2.43b (-> (→ $_151930 (→ $_151948 (→ $_151930 $_151972))) (→ $_151948 (→ $_151930 $_151972))))
+[2026-09-01 12:11:27:892] [DEBUG] pc-rb: (: imim2d (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151930 (→ (→ $_152002 $_151948) (→ $_152002 $_151954)))))
+[2026-09-01 12:11:27:893] [DEBUG] pc-rb: (: embantd (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151930 $_151978) (→ $_151930 (→ (→ $_151978 $_151948) $_151954))))
+[2026-09-01 12:11:27:894] [DEBUG] pc-rb: (: 3syld (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151930 (→ $_151990 $_151948)) (→ $_151930 (→ $_152032 $_151990)) (→ $_151930 (→ $_152032 $_151954))))
+[2026-09-01 12:11:27:895] [DEBUG] pc-rb: (: sylsyld (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151972 (→ $_151990 $_151948)) (→ $_151972 $_151930) (→ $_151972 (→ $_151990 $_151954))))
+[2026-09-01 12:11:27:895] [DEBUG] pc-rb: (: imim12i (-> (→ $_151930 $_151936) (→ $_151954 $_151960) (→ (→ $_151960 $_151930) (→ $_151954 $_151936))))
+[2026-09-01 12:11:27:896] [DEBUG] pc-rb: (: imim1i (-> (→ $_151930 $_151936) (→ (→ $_151936 $_151972) (→ $_151930 $_151972))))
+[2026-09-01 12:11:27:896] [DEBUG] pc-rb: (: imim3i (-> (→ $_151930 (→ $_151948 $_151954)) (→ (→ $_151984 $_151930) (→ (→ $_151984 $_151948) (→ $_151984 $_151954)))))
+[2026-09-01 12:11:27:897] [DEBUG] pc-rb: (: sylc (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151972 $_151948) (→ $_151972 $_151930) (→ $_151972 $_151954)))
+[2026-09-01 12:11:27:898] [DEBUG] pc-rb: (: syl3c (-> (→ $_151930 (→ $_151948 (→ $_151966 $_151972))) (→ $_151990 $_151966) (→ $_151990 $_151948) (→ $_151990 $_151930) (→ $_151990 $_151972)))
+[2026-09-01 12:11:27:899] [DEBUG] pc-rb: (: syl6mpi (-> (→ $_151930 (→ $_151948 $_151954)) $_151948 (→ $_151978 (→ $_151996 $_151930)) (→ $_151978 (→ $_151996 $_151954))))
+[2026-09-01 12:11:27:899] [DEBUG] pc-rb: (: mpsyl (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151972 $_151948) $_151930 (→ $_151972 $_151954)))
+[2026-09-01 12:11:27:901] [DEBUG] pc-rb: (: mpsylsyld (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151972 (→ $_151990 $_151948)) $_151930 (→ $_151972 (→ $_151990 $_151954))))
+[2026-09-01 12:11:27:902] [DEBUG] pc-rb: (: syl6c (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151972 (→ $_151990 $_151948)) (→ $_151972 (→ $_151990 $_151930)) (→ $_151972 (→ $_151990 $_151954))))
+[2026-09-01 12:11:27:904] [DEBUG] pc-rb: (: syl6ci (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151972 $_151948) (→ $_151972 (→ $_152014 $_151930)) (→ $_151972 (→ $_152014 $_151954))))
+[2026-09-01 12:11:27:904] [DEBUG] pc-rb: (: syldd (-> (→ $_151930 (→ $_151948 (→ $_151966 $_151972))) (→ $_151930 (→ $_151948 (→ $_152026 $_151966))) (→ $_151930 (→ $_151948 (→ $_152026 $_151972)))))
+[2026-09-01 12:11:27:906] [DEBUG] pc-rb: (: syl5d (-> (→ $_151930 (→ $_151948 (→ $_151966 $_151972))) (→ $_151930 (→ $_152008 $_151966)) (→ $_151930 (→ $_151948 (→ $_152008 $_151972)))))
+[2026-09-01 12:11:27:907] [DEBUG] pc-rb: (: syl7 (-> (→ $_151930 (→ $_151948 (→ $_151966 $_151972))) (→ $_151990 $_151966) (→ $_151930 (→ $_151948 (→ $_151990 $_151972)))))
+[2026-09-01 12:11:27:908] [DEBUG] pc-rb: (: syl6d (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151930 (→ $_151990 (→ $_152008 $_151948))) (→ $_151930 (→ $_151990 (→ $_152008 $_151954)))))
+[2026-09-01 12:11:27:909] [DEBUG] pc-rb: (: syl8 (-> (→ $_151930 $_151936) (→ $_151954 (→ $_151972 (→ $_151990 $_151930))) (→ $_151954 (→ $_151972 (→ $_151990 $_151936)))))
+[2026-09-01 12:11:27:910] [DEBUG] pc-rb: (: syl9 (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151972 (→ $_151990 $_151948)) (→ $_151972 (→ $_151930 (→ $_151990 $_151954)))))
+[2026-09-01 12:11:27:911] [DEBUG] pc-rb: (: syl9r (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151972 (→ $_151990 $_151948)) (→ $_151930 (→ $_151972 (→ $_151990 $_151954)))))
+[2026-09-01 12:11:27:912] [DEBUG] pc-rb: (: syl10 (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151972 (→ $_151990 (→ $_152008 $_151948))) (→ $_151972 (→ $_151990 $_151930)) (→ $_151972 (→ $_151990 (→ $_152008 $_151954)))))
+[2026-09-01 12:11:27:913] [DEBUG] pc-rb: (: a1ddd (-> (→ $_151930 (→ $_151948 (→ $_151966 $_151972))) (→ $_151930 (→ $_151948 (→ $_151966 (→ $_152044 $_151972))))))
+[2026-09-01 12:11:27:914] [DEBUG] pc-rb: (: imim12d (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151930 (→ $_151990 $_151996)) (→ $_151930 (→ (→ $_151996 $_151948) (→ $_151990 $_151954)))))
+[2026-09-01 12:11:27:915] [DEBUG] pc-rb: (: imim1d (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151930 (→ (→ $_151954 $_152008) (→ $_151948 $_152008)))))
+[2026-09-01 12:11:27:916] [DEBUG] pc-rb: (: com23 (-> (→ $_151930 (→ $_151948 (→ $_151966 $_151972))) (→ $_151930 (→ $_151966 (→ $_151948 $_151972)))))
+[2026-09-01 12:11:27:917] [DEBUG] pc-rb: (: com3r (-> (→ $_151930 (→ $_151948 (→ $_151966 $_151972))) (→ $_151966 (→ $_151930 (→ $_151948 $_151972)))))
+[2026-09-01 12:11:27:918] [DEBUG] pc-rb: (: com13 (-> (→ $_151930 (→ $_151948 (→ $_151966 $_151972))) (→ $_151966 (→ $_151948 (→ $_151930 $_151972)))))
+[2026-09-01 12:11:27:919] [DEBUG] pc-rb: (: com3l (-> (→ $_151930 (→ $_151948 (→ $_151966 $_151972))) (→ $_151948 (→ $_151966 (→ $_151930 $_151972)))))
+[2026-09-01 12:11:27:921] [DEBUG] pc-rb: (: com34 (-> (→ $_151930 (→ $_151948 (→ $_151966 (→ $_151984 $_151990)))) (→ $_151930 (→ $_151948 (→ $_151984 (→ $_151966 $_151990))))))
+[2026-09-01 12:11:27:923] [DEBUG] pc-rb: (: com4l (-> (→ $_151930 (→ $_151948 (→ $_151966 (→ $_151984 $_151990)))) (→ $_151948 (→ $_151966 (→ $_151984 (→ $_151930 $_151990))))))
+[2026-09-01 12:11:27:925] [DEBUG] pc-rb: (: com4t (-> (→ $_151930 (→ $_151948 (→ $_151966 (→ $_151984 $_151990)))) (→ $_151966 (→ $_151984 (→ $_151930 (→ $_151948 $_151990))))))
+[2026-09-01 12:11:27:926] [DEBUG] pc-rb: (: com4r (-> (→ $_151930 (→ $_151948 (→ $_151966 (→ $_151984 $_151990)))) (→ $_151984 (→ $_151930 (→ $_151948 (→ $_151966 $_151990))))))
+[2026-09-01 12:11:27:928] [DEBUG] pc-rb: (: com24 (-> (→ $_151930 (→ $_151948 (→ $_151966 (→ $_151984 $_151990)))) (→ $_151930 (→ $_151984 (→ $_151966 (→ $_151948 $_151990))))))
+[2026-09-01 12:11:27:930] [DEBUG] pc-rb: (: com14 (-> (→ $_151930 (→ $_151948 (→ $_151966 (→ $_151984 $_151990)))) (→ $_151984 (→ $_151948 (→ $_151966 (→ $_151930 $_151990))))))
+[2026-09-01 12:11:27:932] [DEBUG] pc-rb: (: com45 (-> (→ $_151930 (→ $_151948 (→ $_151966 (→ $_151984 (→ $_152002 $_152008))))) (→ $_151930 (→ $_151948 (→ $_151966 (→ $_152002 (→ $_151984 $_152008)))))))
+[2026-09-01 12:11:27:935] [DEBUG] pc-rb: (: com35 (-> (→ $_151930 (→ $_151948 (→ $_151966 (→ $_151984 (→ $_152002 $_152008))))) (→ $_151930 (→ $_151948 (→ $_152002 (→ $_151984 (→ $_151966 $_152008)))))))
+[2026-09-01 12:11:27:940] [DEBUG] pc-rb: (: com25 (-> (→ $_151930 (→ $_151948 (→ $_151966 (→ $_151984 (→ $_152002 $_152008))))) (→ $_151930 (→ $_152002 (→ $_151966 (→ $_151984 (→ $_151948 $_152008)))))))
+[2026-09-01 12:11:27:943] [DEBUG] pc-rb: (: com5l (-> (→ $_151930 (→ $_151948 (→ $_151966 (→ $_151984 (→ $_152002 $_152008))))) (→ $_151948 (→ $_151966 (→ $_151984 (→ $_152002 (→ $_151930 $_152008)))))))
+[2026-09-01 12:11:27:947] [DEBUG] pc-rb: (: com15 (-> (→ $_151930 (→ $_151948 (→ $_151966 (→ $_151984 (→ $_152002 $_152008))))) (→ $_152002 (→ $_151948 (→ $_151966 (→ $_151984 (→ $_151930 $_152008)))))))
+[2026-09-01 12:11:27:950] [DEBUG] pc-rb: (: com52l (-> (→ $_151930 (→ $_151948 (→ $_151966 (→ $_151984 (→ $_152002 $_152008))))) (→ $_151966 (→ $_151984 (→ $_152002 (→ $_151930 (→ $_151948 $_152008)))))))
+[2026-09-01 12:11:27:957] [DEBUG] pc-rb: (: com52r (-> (→ $_151930 (→ $_151948 (→ $_151966 (→ $_151984 (→ $_152002 $_152008))))) (→ $_151984 (→ $_152002 (→ $_151930 (→ $_151948 (→ $_151966 $_152008)))))))
+[2026-09-01 12:11:27:960] [DEBUG] pc-rb: (: com5r (-> (→ $_151930 (→ $_151948 (→ $_151966 (→ $_151984 (→ $_152002 $_152008))))) (→ $_152002 (→ $_151930 (→ $_151948 (→ $_151966 (→ $_151984 $_152008)))))))
+[2026-09-01 12:11:27:964] [DEBUG] pc-rb: (: jarri (-> (→ (→ $_151942 $_151948) $_151954) (→ $_151948 $_151954)))
+[2026-09-01 12:11:27:965] [DEBUG] pc-rb: (: pm2.86d (-> (→ $_151930 (→ (→ $_151960 $_151966) (→ $_151960 $_151990))) (→ $_151930 (→ $_151960 (→ $_151966 $_151990)))))
+[2026-09-01 12:11:27:966] [DEBUG] pc-rb: (: pm2.86i (-> (→ (→ $_151942 $_151948) (→ $_151942 $_151972)) (→ $_151942 (→ $_151948 $_151972))))
+[2026-09-01 12:11:27:966] [DEBUG] pc-rb: (: con4i (-> (→ (¬ $_151942) (¬ $_151960)) (→ $_151960 $_151942)))
+[2026-09-01 12:11:27:967] [DEBUG] pc-rb: (: con4d (-> (→ $_151930 (→ (¬ $_151960) (¬ $_151978))) (→ $_151930 (→ $_151978 $_151960))))
+[2026-09-01 12:11:27:967] [DEBUG] pc-rb: (: mt4 (-> (→ (¬ $_151942) (¬ $_151960)) $_151960 $_151942))
+[2026-09-01 12:11:27:967] [DEBUG] pc-rb: (: mt4d (-> (→ $_151930 (→ (¬ $_151960) (¬ $_151978))) (→ $_151930 $_151978) (→ $_151930 $_151960)))
+[2026-09-01 12:11:27:968] [DEBUG] pc-rb: (: mt4i (-> (→ $_151930 (→ (¬ $_151960) (¬ $_151978))) $_151978 (→ $_151930 $_151960)))
+[2026-09-01 12:11:27:968] [DEBUG] pc-rb: (: pm2.21i (-> (¬ $_151930) (→ $_151930 $_151954)))
+[2026-09-01 12:11:27:969] [DEBUG] pc-rb: (: pm2.24ii (-> (¬ $_151930) $_151930 $_151942))
+[2026-09-01 12:11:27:969] [DEBUG] pc-rb: (: pm2.21d (-> (→ $_151930 (¬ $_151948)) (→ $_151930 (→ $_151948 $_151990))))
+[2026-09-01 12:11:27:969] [DEBUG] pc-rb: (: pm2.21ddALT (-> (→ $_151930 (¬ $_151948)) (→ $_151930 $_151948) (→ $_151930 $_151996)))
+[2026-09-01 12:11:27:970] [DEBUG] pc-rb: (: jarli (-> (→ (→ $_151942 $_151948) $_151954) (→ (¬ $_151942) $_151954)))
+[2026-09-01 12:11:27:970] [DEBUG] pc-rb: (: pm2.18d (-> (→ $_151930 (→ (¬ $_151960) $_151960)) (→ $_151930 $_151960)))
+[2026-09-01 12:11:27:970] [DEBUG] pc-rb: (: pm2.18i (-> (→ (¬ $_151942) $_151942) $_151942))
+[2026-09-01 12:11:27:970] [DEBUG] pc-rb: (: notnotri (-> (¬ (¬ $_151942)) $_151942))
+[2026-09-01 12:11:27:971] [DEBUG] pc-rb: (: notnotriALT (-> (¬ (¬ $_151942)) $_151942))
+[2026-09-01 12:11:27:971] [DEBUG] pc-rb: (: notnotrd (-> (→ $_151930 (¬ (¬ $_151960))) (→ $_151930 $_151960)))
+[2026-09-01 12:11:27:972] [DEBUG] pc-rb: (: con2d (-> (→ $_151930 (→ $_151948 (¬ $_151966))) (→ $_151930 (→ $_151966 (¬ $_151948)))))
+[2026-09-01 12:11:27:973] [DEBUG] pc-rb: (: mt2d (-> (→ $_151930 (→ $_151948 (¬ $_151966))) (→ $_151930 $_151966) (→ $_151930 (¬ $_151948))))
+[2026-09-01 12:11:27:974] [DEBUG] pc-rb: (: mt2i (-> (→ $_151930 (→ $_151948 (¬ $_151966))) $_151966 (→ $_151930 (¬ $_151948))))
+[2026-09-01 12:11:27:974] [DEBUG] pc-rb: (: nsyl3 (-> (→ $_151930 $_151936) (→ $_151954 (¬ $_151936)) (→ $_151930 (¬ $_151954))))
+[2026-09-01 12:11:27:975] [DEBUG] pc-rb: (: con2i (-> (→ $_151930 (¬ $_151948)) (→ $_151948 (¬ $_151930))))
+[2026-09-01 12:11:27:975] [DEBUG] pc-rb: (: nsyl (-> (→ $_151930 $_151936) (→ $_151954 (¬ $_151936)) (→ $_151954 (¬ $_151930))))
+[2026-09-01 12:11:27:975] [DEBUG] pc-rb: (: nsyl2 (-> (→ (¬ $_151942) $_151948) (→ $_151966 (¬ $_151948)) (→ $_151966 $_151942)))
+[2026-09-01 12:11:27:976] [DEBUG] pc-rb: (: notnoti (-> $_151918 (¬ (¬ $_151918))))
+[2026-09-01 12:11:27:976] [DEBUG] pc-rb: (: notnotd (-> (→ $_151930 $_151936) (→ $_151930 (¬ (¬ $_151936)))))
+[2026-09-01 12:11:27:977] [DEBUG] pc-rb: (: con1d (-> (→ $_151930 (→ (¬ $_151960) $_151966)) (→ $_151930 (→ (¬ $_151966) $_151960))))
+[2026-09-01 12:11:27:977] [DEBUG] pc-rb: (: con1i (-> (→ (¬ $_151942) $_151948) (→ (¬ $_151948) $_151942)))
+[2026-09-01 12:11:27:977] [DEBUG] pc-rb: (: mt3d (-> (→ $_151930 (→ (¬ $_151960) $_151966)) (→ $_151930 (¬ $_151966)) (→ $_151930 $_151960)))
+[2026-09-01 12:11:27:978] [DEBUG] pc-rb: (: mt3i (-> (→ $_151930 (→ (¬ $_151960) $_151966)) (¬ $_151966) (→ $_151930 $_151960)))
+[2026-09-01 12:11:27:978] [DEBUG] pc-rb: (: pm2.24i (-> $_151918 (→ (¬ $_151918) $_151954)))
+[2026-09-01 12:11:27:979] [DEBUG] pc-rb: (: pm2.24d (-> (→ $_151930 $_151936) (→ $_151930 (→ (¬ $_151936) $_151990))))
+[2026-09-01 12:11:27:979] [DEBUG] pc-rb: (: con3d (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151930 (→ (¬ $_151954) (¬ $_151948)))))
+[2026-09-01 12:11:27:980] [DEBUG] pc-rb: (: con3i (-> (→ $_151930 $_151936) (→ (¬ $_151936) (¬ $_151930))))
+[2026-09-01 12:11:27:981] [DEBUG] pc-rb: (: con3rr3 (-> (→ $_151930 (→ $_151948 $_151954)) (→ (¬ $_151954) (→ $_151930 (¬ $_151948)))))
+[2026-09-01 12:11:27:981] [DEBUG] pc-rb: (: nsyld (-> (→ $_151930 (→ $_151948 $_151954)) (→ $_151930 (→ $_151990 (¬ $_151954))) (→ $_151930 (→ $_151990 (¬ $_151948)))))
+[2026-09-01 12:11:27:982] [DEBUG] pc-rb: (: nsyli (-> (→ $_151930 (¬ $_151948)) (→ $_151966 (→ $_151984 $_151948)) (→ $_151966 (→ $_151930 (¬ $_151984)))))
+[2026-09-01 12:11:27:983] [DEBUG] pc-rb: (: nsyl4 (-> (→ (¬ $_151942) $_151948) (→ $_151942 $_151972) (→ (¬ $_151948) $_151972)))
+[2026-09-01 12:11:27:983] [DEBUG] pc-rb: (: nsyl5 (-> (→ (¬ $_151942) $_151948) (→ $_151942 $_151972) (→ (¬ $_151972) $_151948)))
+[2026-09-01 12:11:27:984] [DEBUG] pc-rb: (: jc (-> (→ $_151930 $_151936) (→ $_151930 $_151960) (→ $_151930 (¬ (→ $_151960 (¬ $_151936))))))
+[2026-09-01 12:11:27:985] [DEBUG] pc-rb: (: jcnd (-> (→ $_151930 (¬ $_151948)) (→ $_151930 $_151972) (→ $_151930 (¬ (→ $_151972 $_151948)))))
+[2026-09-01 12:11:27:986] [DEBUG] pc-rb: (: impi (-> (→ $_151930 (→ $_151948 $_151954)) (→ (¬ (→ $_151930 (¬ $_151948))) $_151954)))
+[2026-09-01 12:11:27:986] [DEBUG] pc-rb: (: expi (-> (→ (¬ (→ $_151954 (¬ $_151972))) $_151978) (→ $_151954 (→ $_151972 $_151978))))
+[2026-09-01 12:11:27:987] [DEBUG] pc-rb: (: pm2.61d (-> (→ $_151930 (→ (¬ $_151960) $_151966)) (→ $_151930 (→ $_151960 $_151966)) (→ $_151930 $_151966)))
+[2026-09-01 12:11:27:987] [DEBUG] pc-rb: (: pm2.61d1 (-> (→ (¬ $_151942) $_151948) (→ $_151966 (→ $_151942 $_151948)) (→ $_151966 $_151948)))
+[2026-09-01 12:11:27:988] [DEBUG] pc-rb: (: pm2.61d2 (-> (→ $_151930 $_151936) (→ $_151954 (→ (¬ $_151930) $_151936)) (→ $_151954 $_151936)))
+[2026-09-01 12:11:27:989] [DEBUG] pc-rb: (: pm2.61i (-> (→ (¬ $_151942) $_151948) (→ $_151942 $_151948) $_151948))
+[2026-09-01 12:11:27:990] [DEBUG] pc-rb: (: pm2.61ii (-> (→ $_151930 $_151936) (→ $_151954 $_151936) (→ (¬ $_151954) (→ (¬ $_151930) $_151936)) $_151936))
+[2026-09-01 12:11:27:990] [DEBUG] pc-rb: (: pm2.61nii (-> (→ (¬ $_151942) $_151948) (→ (¬ $_151978) $_151948) (→ $_151978 (→ $_151942 $_151948)) $_151948))
+[2026-09-01 12:11:27:991] [DEBUG] pc-ab: (: ax-1 (→ $_153858 (→ $_153876 $_153858)))
+[2026-09-01 12:11:27:991] [DEBUG] pc-ab: (: ax-2 (→ (→ $_153870 (→ $_153888 $_153894)) (→ (→ $_153870 $_153888) (→ $_153870 $_153894))))
+[2026-09-01 12:11:27:992] [DEBUG] pc-ab: (: ax-3 (→ (→ (¬ $_153882) (¬ $_153900)) (→ $_153900 $_153882)))
+[2026-09-01 12:11:27:992] [DEBUG] pc-ab: (: id (→ $_153858 $_153858))
+[2026-09-01 12:11:27:992] [DEBUG] pc-ab: (: idALT (→ $_153858 $_153858))
+[2026-09-01 12:11:27:993] [DEBUG] pc-ab: (: idd (→ $_153858 (→ $_153876 $_153876)))
+[2026-09-01 12:11:27:993] [DEBUG] pc-ab: (: 2a1 (→ $_153858 (→ $_153876 (→ $_153894 $_153858))))
+[2026-09-01 12:11:27:993] [DEBUG] pc-ab: (: pm2.27 (→ $_153858 (→ (→ $_153858 $_153894) $_153894)))
+[2026-09-01 12:11:27:993] [DEBUG] pc-ab: (: pm2.43 (→ (→ $_153870 (→ $_153870 $_153894)) (→ $_153870 $_153894)))
+[2026-09-01 12:11:27:994] [DEBUG] pc-ab: (: imim2 (→ (→ $_153870 $_153876) (→ (→ $_153906 $_153870) (→ $_153906 $_153876))))
+[2026-09-01 12:11:27:994] [DEBUG] pc-ab: (: imim1 (→ (→ $_153870 $_153876) (→ (→ $_153876 $_153912) (→ $_153870 $_153912))))
+[2026-09-01 12:11:27:995] [DEBUG] pc-ab: (: pm2.83 (→ (→ $_153870 (→ $_153888 $_153894)) (→ (→ $_153870 (→ $_153894 $_153948)) (→ $_153870 (→ $_153888 $_153948)))))
+[2026-09-01 12:11:27:996] [DEBUG] pc-ab: (: peirceroll (→ (→ (→ (→ $_153894 $_153900) $_153894) $_153894) (→ (→ (→ $_153894 $_153900) $_153966) (→ (→ $_153966 $_153894) $_153894))))
+[2026-09-01 12:11:27:997] [DEBUG] pc-ab: (: pm2.04 (→ (→ $_153870 (→ $_153888 $_153894)) (→ $_153888 (→ $_153870 $_153894))))
+[2026-09-01 12:11:27:997] [DEBUG] pc-ab: (: imim12 (→ (→ $_153870 $_153876) (→ (→ $_153906 $_153912) (→ (→ $_153876 $_153906) (→ $_153870 $_153912)))))
+[2026-09-01 12:11:27:998] [DEBUG] pc-ab: (: jarr (→ (→ (→ $_153882 $_153888) $_153894) (→ $_153888 $_153894)))
+[2026-09-01 12:11:27:998] [DEBUG] pc-ab: (: pm2.86 (→ (→ (→ $_153882 $_153888) (→ $_153882 $_153912)) (→ $_153882 (→ $_153888 $_153912))))
+[2026-09-01 12:11:27:999] [DEBUG] pc-ab: (: loolin (→ (→ (→ $_153882 $_153888) (→ $_153888 $_153882)) (→ $_153888 $_153882)))
+[2026-09-01 12:11:27:999] [DEBUG] pc-ab: (: loowoz (→ (→ (→ $_153882 $_153888) (→ $_153882 $_153912)) (→ (→ $_153888 $_153882) (→ $_153888 $_153912))))
+[2026-09-01 12:11:27:000] [DEBUG] pc-ab: (: con4 (→ (→ (¬ $_153882) (¬ $_153900)) (→ $_153900 $_153882)))
+[2026-09-01 12:11:28:000] [DEBUG] pc-ab: (: pm2.21 (→ (¬ $_153870) (→ $_153870 $_153894)))
+[2026-09-01 12:11:28:000] [DEBUG] pc-ab: (: pm2.24 (→ $_153858 (→ (¬ $_153858) $_153894)))
+[2026-09-01 12:11:28:001] [DEBUG] pc-ab: (: jarl (→ (→ (→ $_153882 $_153888) $_153894) (→ (¬ $_153882) $_153894)))
+[2026-09-01 12:11:28:001] [DEBUG] pc-ab: (: pm2.18 (→ (→ (¬ $_153882) $_153882) $_153882))
+[2026-09-01 12:11:28:001] [DEBUG] pc-ab: (: notnotr (→ (¬ (¬ $_153882)) $_153882))
+[2026-09-01 12:11:28:001] [DEBUG] pc-ab: (: con2 (→ (→ $_153870 (¬ $_153888)) (→ $_153888 (¬ $_153870))))
+[2026-09-01 12:11:28:002] [DEBUG] pc-ab: (: notnot (→ $_153858 (¬ (¬ $_153858))))
+[2026-09-01 12:11:28:002] [DEBUG] pc-ab: (: con1 (→ (→ (¬ $_153882) $_153888) (→ (¬ $_153888) $_153882)))
+[2026-09-01 12:11:28:003] [DEBUG] pc-ab: (: con3 (→ (→ $_153870 $_153876) (→ (¬ $_153876) (¬ $_153870))))
+[2026-09-01 12:11:28:003] [DEBUG] pc-ab: (: pm3.2im (→ $_153858 (→ $_153876 (¬ (→ $_153858 (¬ $_153876))))))
+[2026-09-01 12:11:28:004] [DEBUG] pc-ab: (: jcn (→ $_153858 (→ (¬ $_153888) (¬ (→ $_153858 $_153888)))))
+[2026-09-01 12:11:28:004] [DEBUG] pc-ab: (: simprim (→ (¬ (→ $_153882 (¬ $_153900))) $_153900))
+[2026-09-01 12:11:28:005] [DEBUG] pc-ab: (: simplim (→ (¬ (→ $_153882 $_153888)) $_153882))
+[2026-09-01 12:11:28:005] [DEBUG] pc-ab: (: pm2.5g (→ (¬ (→ $_153882 $_153888)) (→ (¬ $_153882) $_153924)))
+[2026-09-01 12:11:28:006] [DEBUG] pc-ab: (: pm2.5 (→ (¬ (→ $_153882 $_153888)) (→ (¬ $_153882) $_153888)))
+[2026-09-01 12:11:28:007] [DEBUG] pc-ab: (: conax1 (→ (¬ (→ $_153882 $_153888)) (¬ $_153888)))
+[2026-09-01 12:11:28:007] [DEBUG] pc-ab: (: conax1k (→ (¬ (→ $_153882 $_153888)) (→ $_153906 (¬ $_153888))))
+[2026-09-01 12:11:28:007] [DEBUG] pc-ab: (: pm2.51 (→ (¬ (→ $_153882 $_153888)) (→ $_153882 (¬ $_153888))))
+[2026-09-01 12:11:28:008] [DEBUG] pc-ab: (: pm2.52 (→ (¬ (→ $_153882 $_153888)) (→ (¬ $_153882) (¬ $_153888))))
+[2026-09-01 12:11:28:009] [DEBUG] pc-ab: (: pm2.521g (→ (¬ (→ $_153882 $_153888)) (→ $_153888 $_153912)))
+[2026-09-01 12:11:28:009] [DEBUG] pc-ab: (: pm2.521g2 (→ (¬ (→ $_153882 $_153888)) (→ $_153906 $_153882)))
+[2026-09-01 12:11:28:009] [DEBUG] pc-ab: (: pm2.521 (→ (¬ (→ $_153882 $_153888)) (→ $_153888 $_153882)))
+[2026-09-01 12:11:28:010] [DEBUG] pc-ab: (: expt (→ (→ (¬ (→ $_153894 (¬ $_153912))) $_153918) (→ $_153894 (→ $_153912 $_153918))))
+[2026-09-01 12:11:28:010] [DEBUG] pc-ab: (: impt (→ (→ $_153870 (→ $_153888 $_153894)) (→ (¬ (→ $_153870 (¬ $_153888))) $_153894)))
+[2026-09-01 12:25:04:725] [INFO] Iteration 2: add axiom ax-mp
+[2026-09-01 12:25:04:754] [INFO] Iteration 3: add axiom ax-1
+[2026-09-01 12:25:04:756] [INFO] Iteration 4: add axiom ax-2
+[2026-09-01 12:25:04:758] [INFO] Iteration 5: add axiom ax-3
+[2026-09-01 12:25:04:759] [INFO] Iteration 6: ECAN-guided search proof of mp2 up to size 9
+[2026-09-01 12:25:09:358] [INFO]   [union] ecan=1 will=1 union=1
+[2026-09-01 12:25:09:359] [INFO]   [tier] focused=1 full=1 af-hit=true
+[2026-09-01 12:25:09:360] [INFO] Found proof: (λ mp2.3 mp2.2 mp2.1 (ax-mp (ax-mp mp2.3 mp2.1) mp2.2))
+[2026-09-01 12:25:09:367] [INFO] Iteration 7: ECAN-guided search proof of mp2b up to size 9
+[2026-09-01 12:25:09:380] [INFO]   [union] ecan=2 will=2 union=2
+[2026-09-01 12:25:09:381] [INFO]   [tier] focused=2 full=2 af-hit=true
+[2026-09-01 12:25:09:381] [INFO] Found proof: (λ mp2b.3 mp2b.2 mp2b.1 (ax-mp mp2b.3 (ax-mp mp2b.2 mp2b.1)))
+[2026-09-01 12:25:09:389] [INFO] Iteration 8: ECAN-guided search proof of a1i up to size 5
+[2026-09-01 12:25:09:405] [INFO]   [union] ecan=3 will=3 union=3
+[2026-09-01 12:25:09:406] [INFO]   [tier] focused=3 full=3 af-hit=true
+[2026-09-01 12:25:09:406] [INFO] Found proof: (λ a1i.1 (ax-mp ax-1 a1i.1))
+[2026-09-01 12:25:09:412] [INFO] Iteration 9: ECAN-guided search proof of 2a1i up to size 5
+[2026-09-01 12:25:09:431] [INFO]   [union] ecan=4 will=4 union=4
+[2026-09-01 12:25:09:432] [INFO]   [tier] focused=4 full=4 af-hit=true
+[2026-09-01 12:25:09:432] [INFO] Found proof: (λ 2a1i.1 (a1i (a1i 2a1i.1)))
+[2026-09-01 12:25:09:443] [INFO] Iteration 10: ECAN-guided search proof of mp1i up to size 7
+[2026-09-01 12:25:09:464] [INFO]   [union] ecan=5 will=5 union=5
+[2026-09-01 12:25:09:465] [INFO]   [tier] focused=5 full=5 af-hit=true
+[2026-09-01 12:25:09:465] [INFO] Found proof: (λ mp1i.2 mp1i.1 (a1i (ax-mp mp1i.2 mp1i.1)))
+[2026-09-01 12:25:09:478] [INFO] Iteration 11: ECAN-guided search proof of a2i up to size 5
+[2026-09-01 12:25:09:501] [INFO]   [union] ecan=6 will=6 union=6
+[2026-09-01 12:25:09:504] [INFO]   [tier] focused=6 full=6 af-hit=true
+[2026-09-01 12:25:09:505] [INFO] Found proof: (λ a2i.1 (ax-mp ax-2 a2i.1))
+[2026-09-01 12:25:09:513] [INFO] Iteration 12: ECAN-guided search proof of mpd up to size 7
+[2026-09-01 12:25:09:535] [INFO]   [union] ecan=7 will=7 union=7
+[2026-09-01 12:25:09:536] [INFO]   [tier] focused=7 full=7 af-hit=true
+[2026-09-01 12:25:09:536] [INFO] Found proof: (λ mpd.2 mpd.1 (ax-mp (a2i mpd.2) mpd.1))
+[2026-09-01 12:25:09:629] [INFO] Iteration 13: ECAN-guided search proof of imim2i up to size 5
+[2026-09-01 12:25:09:660] [INFO]   [union] ecan=8 will=8 union=8
+[2026-09-01 12:25:09:661] [INFO]   [tier] focused=8 full=8 af-hit=true
+[2026-09-01 12:25:09:661] [INFO] Found proof: (λ imim2i.1 (a2i (a1i imim2i.1)))
+[2026-09-01 12:25:09:671] [INFO] Iteration 14: ECAN-guided search proof of syl up to size 7
+[2026-09-01 12:25:09:701] [INFO]   [union] ecan=9 will=9 union=9
+[2026-09-01 12:25:09:703] [INFO]   [tier] focused=9 full=9 af-hit=true
+[2026-09-01 12:25:09:704] [INFO] Found proof: (λ syl.2 syl.1 (ax-mp (imim2i syl.2) syl.1))
+[2026-09-01 12:25:09:713] [INFO] Iteration 15: ECAN-guided search proof of 3syl up to size 9
+[2026-09-01 12:25:09:740] [INFO]   [union] ecan=10 will=10 union=10
+[2026-09-01 12:25:09:788] [INFO]   [tier] focused=10 full=10 af-hit=true
+[2026-09-01 12:25:09:788] [INFO] Found proof: (λ 3syl.3 3syl.2 3syl.1 (syl 3syl.3 (syl 3syl.2 3syl.1)))
+[2026-09-01 12:25:09:798] [INFO] Iteration 16: ECAN-guided search proof of 4syl up to size 11
+[2026-09-01 12:25:09:822] [INFO]   [union] ecan=11 will=11 union=11
+[2026-09-01 12:25:10:314] [INFO]   [tier] focused=11 full=11 af-hit=true
+[2026-09-01 12:25:10:323] [INFO] Found proof: (λ 4syl.4 4syl.3 4syl.2 4syl.1 (syl 4syl.4 (3syl 4syl.3 4syl.2 4syl.1)))
+[2026-09-01 12:25:10:360] [INFO] Iteration 17: ECAN-guided search proof of mpi up to size 7
+[2026-09-01 12:25:10:416] [INFO]   [union] ecan=12 will=12 union=12
+[2026-09-01 12:25:10:419] [INFO]   [tier] focused=12 full=12 af-hit=true
+[2026-09-01 12:25:10:422] [INFO] Found proof: (λ mpi.2 mpi.1 (mpd mpi.2 (a1i mpi.1)))
+[2026-09-01 12:25:10:432] [INFO] Iteration 18: ECAN-guided search proof of mpisyl up to size 9
+[2026-09-01 12:25:10:506] [INFO]   [union] ecan=13 will=13 union=13
+[2026-09-01 12:25:10:559] [INFO]   [tier] focused=13 full=13 af-hit=true
+[2026-09-01 12:25:10:560] [INFO] Found proof: (λ mpisyl.3 mpisyl.2 mpisyl.1 (syl (mpi mpisyl.3 mpisyl.2) mpisyl.1))
+[2026-09-01 12:25:10:641] [INFO] Iteration 19: ECAN-guided search proof of id up to size 3
+[2026-09-01 12:25:10:691] [INFO]   [union] ecan=14 will=14 union=14
+[2026-09-01 12:25:10:692] [INFO]   [tier] focused=14 full=14 af-hit=true
+[2026-09-01 12:25:10:692] [INFO] Found proof: (mpi ax-1 ax-1)
+[2026-09-01 12:25:10:696] [INFO] Iteration 20: ECAN-guided search proof of idALT up to size 5
+[2026-09-01 12:25:10:727] [INFO]   [union] ecan=14 will=14 union=14
+[2026-09-01 12:25:10:727] [INFO]   [tier] focused=14 full=14 af-hit=true
+[2026-09-01 12:25:10:727] [INFO] Found proof: id
+[2026-09-01 12:25:10:731] [INFO] Iteration 21: ECAN-guided search proof of idd up to size 2
+[2026-09-01 12:25:10:810] [INFO]   [union] ecan=14 will=14 union=14
+[2026-09-01 12:25:10:812] [INFO]   [tier] focused=14 full=14 af-hit=true
+[2026-09-01 12:25:10:812] [INFO] Found proof: (a1i id)
+[2026-09-01 12:25:10:820] [INFO] Iteration 22: ECAN-guided search proof of a1d up to size 5
+[2026-09-01 12:25:10:885] [INFO]   [union] ecan=14 will=14 union=14
+[2026-09-01 12:25:10:886] [INFO]   [tier] focused=14 full=14 af-hit=true
+[2026-09-01 12:25:10:886] [INFO] Found proof: (λ a1d.1 (syl ax-1 a1d.1))
+[2026-09-01 12:25:11:015] [INFO] Iteration 23: ECAN-guided search proof of 2a1d up to size 5
+[2026-09-01 12:25:11:067] [INFO]   [union] ecan=15 will=15 union=15
+[2026-09-01 12:25:11:068] [INFO]   [tier] focused=15 full=15 af-hit=true
+[2026-09-01 12:25:11:068] [INFO] Found proof: (λ 2a1d.1 (a1d (a1d 2a1d.1)))
+[2026-09-01 12:25:11:082] [INFO] Iteration 24: ECAN-guided search proof of a1i13 up to size 5
+[2026-09-01 12:25:11:114] [INFO]   [union] ecan=15 will=15 union=16
+[2026-09-01 12:25:11:115] [INFO]   [tier] focused=16 full=16 af-hit=true
+[2026-09-01 12:25:11:115] [INFO] Found proof: (λ a1i13.1 (a1i (a1d a1i13.1)))
+[2026-09-01 12:25:11:123] [INFO] Iteration 25: ECAN-guided search proof of 2a1 up to size 2
+[2026-09-01 12:25:11:175] [INFO]   [union] ecan=15 will=15 union=17
+[2026-09-01 12:25:11:175] [INFO]   [tier] focused=17 full=17 af-hit=true
+[2026-09-01 12:25:11:176] [INFO] Found proof: (a1d ax-1)
+[2026-09-01 12:25:11:181] [INFO] Iteration 26: ECAN-guided search proof of a2d up to size 5
+[2026-09-01 12:25:11:241] [INFO]   [union] ecan=15 will=15 union=17
+[2026-09-01 12:25:11:243] [INFO]   [tier] focused=17 full=17 af-hit=true
+[2026-09-01 12:25:11:243] [INFO] Found proof: (λ a2d.1 (syl ax-2 a2d.1))
+[2026-09-01 12:25:11:360] [INFO] Iteration 27: ECAN-guided search proof of sylcom up to size 7
+[2026-09-01 12:25:11:464] [INFO]   [union] ecan=15 will=15 union=17
+[2026-09-01 12:25:11:473] [INFO]   [tier] focused=17 full=18 af-hit=true
+[2026-09-01 12:25:11:473] [INFO] Found proof: (λ sylcom.2 sylcom.1 (syl (a2i sylcom.2) sylcom.1))
+[2026-09-01 12:25:11:480] [INFO] Iteration 28: ECAN-guided search proof of syl5com up to size 7
+[2026-09-01 12:25:11:551] [INFO]   [union] ecan=15 will=15 union=17
+[2026-09-01 12:25:11:592] [INFO]   [tier] focused=17 full=19 af-hit=true
+[2026-09-01 12:25:11:592] [INFO] Found proof: (λ syl5com.2 syl5com.1 (sylcom syl5com.2 (a1d syl5com.1)))
+[2026-09-01 12:25:11:663] [INFO] Iteration 29: ECAN-guided search proof of com12 up to size 5
+[2026-09-01 12:25:11:688] [INFO]   [union] ecan=15 will=15 union=19
+[2026-09-01 12:25:11:689] [INFO]   [tier] focused=19 full=20 af-hit=true
+[2026-09-01 12:25:11:690] [INFO] Found proof: (λ com12.1 (sylcom com12.1 ax-1))
+[2026-09-01 12:25:11:703] [INFO] Iteration 30: ECAN-guided search proof of syl11 up to size 7
+[2026-09-01 12:25:11:753] [INFO]   [union] ecan=15 will=15 union=17
+[2026-09-01 12:25:11:756] [INFO]   [tier] focused=17 full=21 af-hit=true
+[2026-09-01 12:25:11:756] [INFO] Found proof: (λ syl11.2 syl11.1 (com12 (syl syl11.1 syl11.2)))
+[2026-09-01 12:25:11:769] [INFO] Iteration 31: ECAN-guided search proof of syl5 up to size 7
+[2026-09-01 12:25:11:823] [INFO]   [union] ecan=15 will=15 union=18
+[2026-09-01 12:25:11:827] [INFO]   [tier] focused=18 full=22 af-hit=true
+[2026-09-01 12:25:11:828] [INFO] Found proof: (λ syl5.2 syl5.1 (com12 (syl5com syl5.2 syl5.1)))
+[2026-09-01 12:25:11:859] [INFO] Iteration 32: ECAN-guided search proof of syl6 up to size 7
+[2026-09-01 12:25:11:955] [INFO]   [union] ecan=15 will=15 union=19
+[2026-09-01 12:25:11:976] [INFO]   [tier] focused=19 full=23 af-hit=true
+[2026-09-01 12:25:11:977] [INFO] Found proof: (λ syl6.2 syl6.1 (syl (imim2i syl6.2) syl6.1))
+[2026-09-01 12:25:12:159] [INFO] Iteration 33: ECAN-guided search proof of syl56 up to size 9
+[2026-09-01 12:25:12:209] [INFO]   [union] ecan=15 will=15 union=20
+[2026-09-01 12:25:14:276] [INFO]   [tier] focused=20 full=24 af-hit=true
+[2026-09-01 12:25:14:277] [INFO] Found proof: (λ syl56.3 syl56.2 syl56.1 (syl6 syl56.3 (syl5 syl56.2 syl56.1)))
+[2026-09-01 12:25:14:309] [INFO] Iteration 34: ECAN-guided search proof of syl6com up to size 7
+[2026-09-01 12:25:14:349] [INFO]   [union] ecan=15 will=15 union=20
+[2026-09-01 12:25:14:354] [INFO]   [tier] focused=20 full=25 af-hit=true
+[2026-09-01 12:25:14:354] [INFO] Found proof: (λ syl6com.2 syl6com.1 (com12 (syl6 syl6com.2 syl6com.1)))
+[2026-09-01 12:25:14:367] [INFO] Iteration 35: ECAN-guided search proof of mpcom up to size 7
+[2026-09-01 12:25:14:398] [INFO]   [union] ecan=15 will=15 union=23
+[2026-09-01 12:25:14:423] [INFO]   [tier] focused=23 full=26 af-hit=true
+[2026-09-01 12:25:14:426] [INFO] Found proof: (λ mpcom.2 mpcom.1 (mpd (com12 mpcom.2) mpcom.1))
+[2026-09-01 12:25:14:435] [INFO] Iteration 36: ECAN-guided search proof of syli up to size 7
+[2026-09-01 12:25:14:489] [INFO]   [union] ecan=15 will=15 union=22
+[2026-09-01 12:25:14:523] [INFO]   [tier] focused=22 full=27 af-hit=true
+[2026-09-01 12:25:14:523] [INFO] Found proof: (λ syli.2 syli.1 (sylcom (com12 syli.2) syli.1))
+[2026-09-01 12:25:14:536] [INFO] Iteration 37: ECAN-guided search proof of syl2im up to size 9
+[2026-09-01 12:25:14:779] [INFO]   [union] ecan=15 will=15 union=22
+[2026-09-01 12:25:15:352] [INFO]   [tier] focused=22 full=28 af-hit=true
+[2026-09-01 12:25:15:354] [INFO] Found proof: (λ syl2im.3 syl2im.2 syl2im.1 (syl (syl5 syl2im.3 syl2im.2) syl2im.1))
+[2026-09-01 12:25:15:399] [INFO] Iteration 38: ECAN-guided search proof of syl2imc up to size 9
+[2026-09-01 12:25:15:488] [INFO]   [union] ecan=15 will=15 union=22
+[2026-09-01 12:25:15:681] [INFO]   [tier] focused=22 full=29 af-hit=true
+[2026-09-01 12:25:15:681] [INFO] Found proof: (λ syl2im.3 syl2im.2 syl2im.1 (com12 (syl2im syl2im.3 syl2im.2 syl2im.1)))
+[2026-09-01 12:25:15:798] [INFO] Iteration 39: ECAN-guided search proof of pm2.27 up to size 2
+[2026-09-01 12:25:15:908] [INFO]   [union] ecan=15 will=15 union=23
+[2026-09-01 12:25:15:913] [INFO]   [tier] focused=23 full=30 af-hit=true
+[2026-09-01 12:25:15:913] [INFO] Found proof: (com12 id)
+[2026-09-01 12:25:15:919] [INFO] Iteration 40: ECAN-guided search proof of mpdd up to size 7
+[2026-09-01 12:25:15:951] [INFO]   [union] ecan=15 will=15 union=22
+[2026-09-01 12:25:16:052] [INFO]   [tier] focused=22 full=30 af-hit=true
+[2026-09-01 12:25:16:053] [INFO] Found proof: (λ mpdd.2 mpdd.1 (mpd (a2d mpdd.2) mpdd.1))
+[2026-09-01 12:25:16:151] [INFO] Iteration 41: ECAN-guided search proof of mpid up to size 7
+[2026-09-01 12:25:16:184] [INFO]   [union] ecan=15 will=15 union=22
+[2026-09-01 12:25:16:297] [INFO]   [tier] focused=22 full=31 af-hit=true
+[2026-09-01 12:25:16:298] [INFO] Found proof: (λ mpid.2 mpid.1 (mpdd mpid.2 (a1d mpid.1)))
+[2026-09-01 12:25:16:326] [INFO] Iteration 42: ECAN-guided search proof of mpdi up to size 7
+[2026-09-01 12:25:16:378] [INFO]   [union] ecan=15 will=15 union=22
+[2026-09-01 12:25:16:438] [INFO]   [tier] focused=22 full=32 af-hit=true
+[2026-09-01 12:25:16:439] [INFO] Found proof: (λ mpdi.2 mpdi.1 (mpdd mpdi.2 (a1i mpdi.1)))
+[2026-09-01 12:25:16:553] [INFO] Iteration 43: ECAN-guided search proof of mpii up to size 7
+[2026-09-01 12:25:16:641] [INFO]   [union] ecan=15 will=15 union=23
+[2026-09-01 12:25:16:728] [INFO]   [tier] focused=23 full=33 af-hit=true
+[2026-09-01 12:25:16:728] [INFO] Found proof: (λ mpii.2 mpii.1 (mpdi mpii.2 (a1i mpii.1)))
+[2026-09-01 12:25:16:736] [INFO] Iteration 44: ECAN-guided search proof of syld up to size 7
+[2026-09-01 12:25:16:772] [INFO]   [union] ecan=15 will=15 union=25
+[2026-09-01 12:25:16:826] [INFO]   [tier] focused=25 full=34 af-hit=true
+[2026-09-01 12:25:16:826] [INFO] Found proof: (λ syld.2 syld.1 (mpdd (a1d syld.2) syld.1))
+[2026-09-01 12:25:16:899] [INFO] Iteration 45: ECAN-guided search proof of syldc up to size 7
+[2026-09-01 12:25:16:968] [INFO]   [union] ecan=15 will=15 union=24
+[2026-09-01 12:25:16:983] [INFO]   [tier] focused=24 full=35 af-hit=true
+[2026-09-01 12:25:16:985] [INFO] Found proof: (λ syld.2 syld.1 (com12 (syld syld.2 syld.1)))
+[2026-09-01 12:25:17:003] [INFO] Iteration 46: ECAN-guided search proof of mp2d up to size 9
+[2026-09-01 12:25:17:096] [INFO]   [union] ecan=15 will=15 union=24
+[2026-09-01 12:25:17:678] [INFO]   [tier] focused=24 full=36 af-hit=true
+[2026-09-01 12:25:17:679] [INFO] Found proof: (λ mp2d.3 mp2d.2 mp2d.1 (mpd (mpd mp2d.3 mp2d.1) mp2d.2))
+[2026-09-01 12:25:17:689] [INFO] Iteration 47: ECAN-guided search proof of a1dd up to size 5
+[2026-09-01 12:25:17:726] [INFO]   [union] ecan=15 will=15 union=23
+[2026-09-01 12:25:17:728] [INFO]   [tier] focused=23 full=37 af-hit=true
+[2026-09-01 12:25:17:729] [INFO] Found proof: (λ a1dd.1 (syl6 ax-1 a1dd.1))
+[2026-09-01 12:25:17:736] [INFO] Iteration 48: ECAN-guided search proof of 2a1dd up to size 5
+[2026-09-01 12:25:17:774] [INFO]   [union] ecan=15 will=15 union=23
+[2026-09-01 12:25:17:775] [INFO]   [tier] focused=23 full=38 af-hit=true
+[2026-09-01 12:25:17:776] [INFO] Found proof: (λ 2a1dd.1 (a1dd (a1dd 2a1dd.1)))
+[2026-09-01 12:25:17:783] [INFO] Iteration 49: ECAN-guided search proof of pm2.43i up to size 5
+[2026-09-01 12:25:17:817] [INFO]   [union] ecan=15 will=15 union=25
+[2026-09-01 12:25:17:818] [INFO]   [tier] focused=25 full=39 af-hit=true
+[2026-09-01 12:25:17:818] [INFO] Found proof: (λ pm2.43i.1 (mpd pm2.27 pm2.43i.1))
+[2026-09-01 12:25:17:825] [INFO] Iteration 50: ECAN-guided search proof of pm2.43d up to size 5
+[2026-09-01 12:25:17:867] [INFO]   [union] ecan=15 will=15 union=22
+[2026-09-01 12:25:17:869] [INFO]   [tier] focused=22 full=40 af-hit=true
+[2026-09-01 12:25:17:869] [INFO] Found proof: (λ pm2.43d.1 (mpdd pm2.43d.1 idd))
+[2026-09-01 12:25:17:989] [INFO] Iteration 51: ECAN-guided search proof of pm2.43a up to size 5
+[2026-09-01 12:25:18:074] [INFO]   [union] ecan=15 will=15 union=23
+[2026-09-01 12:25:18:082] [INFO]   [tier] focused=23 full=41 af-hit=true
+[2026-09-01 12:25:18:083] [INFO] Found proof: (λ pm2.43a.1 (mpdd pm2.43a.1 ax-1))
+[2026-09-01 12:25:18:106] [INFO] Iteration 52: ECAN-guided search proof of pm2.43b up to size 5
+[2026-09-01 12:25:18:174] [INFO]   [union] ecan=15 will=15 union=25
+[2026-09-01 12:25:18:176] [INFO]   [tier] focused=25 full=42 af-hit=true
+[2026-09-01 12:25:18:177] [INFO] Found proof: (λ pm2.43b.1 (com12 (pm2.43a pm2.43b.1)))
+[2026-09-01 12:25:18:188] [INFO] Iteration 53: ECAN-guided search proof of pm2.43 up to size 2
+[2026-09-01 12:25:18:271] [INFO]   [union] ecan=15 will=15 union=24
+[2026-09-01 12:25:18:272] [INFO]   [tier] focused=24 full=43 af-hit=true
+[2026-09-01 12:25:18:272] [INFO] Found proof: (a2i pm2.27)
+[2026-09-01 12:25:18:350] [INFO] Iteration 54: ECAN-guided search proof of imim2d up to size 5
+[2026-09-01 12:25:18:456] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:25:18:471] [INFO]   [tier] focused=26 full=43 af-hit=false
+[2026-09-01 12:25:18:476] [INFO] Found proof: (λ imim2d.1 (a2d (a1d imim2d.1)))
+[2026-09-01 12:25:18:505] [INFO] Iteration 55: ECAN-guided search proof of imim2 up to size 2
+[2026-09-01 12:25:18:612] [INFO]   [union] ecan=15 will=15 union=25
+[2026-09-01 12:25:18:613] [INFO]   [tier] focused=25 full=44 af-hit=false
+[2026-09-01 12:25:18:613] [INFO] Found proof: (a2d ax-1)
+[2026-09-01 12:25:18:677] [INFO] Iteration 56: ECAN-guided search proof of embantd up to size 7
+[2026-09-01 12:25:18:773] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:25:18:000] [INFO]   [tier] focused=27 full=44 af-hit=true
+[2026-09-01 12:25:19:002] [INFO] Found proof: (λ embantd.2 embantd.1 (mpid (imim2d embantd.2) embantd.1))
+[2026-09-01 12:25:19:204] [INFO] Iteration 57: ECAN-guided search proof of 3syld up to size 9
+[2026-09-01 12:25:19:483] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:25:26:865] [INFO]   [tier] focused=26 full=45 af-hit=true
+[2026-09-01 12:25:26:865] [INFO] Found proof: (λ 3syld.3 3syld.2 3syld.1 (syld 3syld.3 (syld 3syld.2 3syld.1)))
+[2026-09-01 12:25:26:878] [INFO] Iteration 58: ECAN-guided search proof of sylsyld up to size 9
+[2026-09-01 12:25:26:968] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:25:31:097] [INFO]   [tier] focused=26 full=46 af-hit=true
+[2026-09-01 12:25:31:098] [INFO] Found proof: (λ sylsyld.3 sylsyld.2 sylsyld.1 (syld (syl sylsyld.3 sylsyld.1) sylsyld.2))
+[2026-09-01 12:25:31:119] [INFO] Iteration 59: ECAN-guided search proof of imim12i up to size 7
+[2026-09-01 12:25:31:177] [INFO]   [union] ecan=15 will=15 union=24
+[2026-09-01 12:25:31:456] [INFO]   [tier] focused=24 full=47 af-hit=false
+[2026-09-01 12:25:31:937] [INFO] Found proof: (λ imim12i.2 imim12i.1 (syl5 (imim2i imim12i.2) imim12i.1))
+[2026-09-01 12:25:31:950] [INFO] Iteration 60: ECAN-guided search proof of imim1i up to size 5
+[2026-09-01 12:25:32:003] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:25:32:013] [INFO]   [tier] focused=26 full=48 af-hit=true
+[2026-09-01 12:25:32:013] [INFO] Found proof: (λ imim1i.1 (syl5 id imim1i.1))
+[2026-09-01 12:25:32:060] [INFO] Iteration 61: ECAN-guided search proof of imim3i up to size 5
+[2026-09-01 12:25:32:140] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:25:32:154] [INFO]   [tier] focused=26 full=49 af-hit=false
+[2026-09-01 12:25:32:155] [INFO] Found proof: (λ imim3i.1 (a2d (imim2i imim3i.1)))
+[2026-09-01 12:25:32:180] [INFO] Iteration 62: ECAN-guided search proof of sylc up to size 9
+[2026-09-01 12:25:32:250] [INFO]   [union] ecan=15 will=15 union=25
+[2026-09-01 12:25:32:793] [INFO]   [tier] focused=25 full=50 af-hit=true
+[2026-09-01 12:25:32:793] [INFO] Found proof: (λ sylc.3 sylc.2 sylc.1 (mpd (syl sylc.3 sylc.1) sylc.2))
+[2026-09-01 12:25:32:804] [INFO] Iteration 63: ECAN-guided search proof of syl3c up to size 11
+[2026-09-01 12:25:32:878] [INFO]   [union] ecan=15 will=15 union=28
+[2026-09-01 12:26:49:165] [INFO]   [tier] focused=28 full=51 af-hit=true
+[2026-09-01 12:26:49:166] [INFO] Found proof: (λ syl3c.4 syl3c.3 syl3c.2 syl3c.1 (mp2d (syl syl3c.4 syl3c.1) syl3c.3 syl3c.2))
+[2026-09-01 12:26:49:180] [INFO] Iteration 64: ECAN-guided search proof of syl6mpi up to size 9
+[2026-09-01 12:26:49:236] [INFO]   [union] ecan=15 will=15 union=24
+[2026-09-01 12:26:58:035] [INFO]   [tier] focused=24 full=52 af-hit=false
+[2026-09-01 12:27:54:997] [INFO] Found proof: (λ syl6mpi.3 syl6mpi.2 syl6mpi.1 (syl6 (mpi syl6mpi.3 syl6mpi.2) syl6mpi.1))
+[2026-09-01 12:27:55:009] [INFO] Iteration 65: ECAN-guided search proof of mpsyl up to size 9
+[2026-09-01 12:27:55:065] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:27:55:175] [INFO]   [tier] focused=26 full=53 af-hit=true
+[2026-09-01 12:27:55:175] [INFO] Found proof: (λ mpsyl.3 mpsyl.2 mpsyl.1 (syl (ax-mp mpsyl.3 mpsyl.1) mpsyl.2))
+[2026-09-01 12:27:55:332] [INFO] Iteration 66: ECAN-guided search proof of mpsylsyld up to size 9
+[2026-09-01 12:27:55:413] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:27:58:862] [INFO]   [tier] focused=26 full=54 af-hit=true
+[2026-09-01 12:27:58:863] [INFO] Found proof: (λ mpsylsyld.3 mpsylsyld.2 mpsylsyld.1 (syl6 (ax-mp mpsylsyld.3 mpsylsyld.1) mpsylsyld.2))
+[2026-09-01 12:27:58:880] [INFO] Iteration 67: ECAN-guided search proof of syl6c up to size 9
+[2026-09-01 12:27:59:032] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:28:01:611] [INFO]   [tier] focused=27 full=55 af-hit=true
+[2026-09-01 12:28:01:613] [INFO] Found proof: (λ syl6c.3 syl6c.2 syl6c.1 (mpdd (syl6 syl6c.3 syl6c.1) syl6c.2))
+[2026-09-01 12:28:01:625] [INFO] Iteration 68: ECAN-guided search proof of syl6ci up to size 9
+[2026-09-01 12:28:01:773] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:28:07:018] [INFO]   [tier] focused=26 full=56 af-hit=true
+[2026-09-01 12:28:07:019] [INFO] Found proof: (λ syl6ci.3 syl6ci.2 syl6ci.1 (syld (syl5com syl6ci.3 syl6ci.2) syl6ci.1))
+[2026-09-01 12:28:07:036] [INFO] Iteration 69: ECAN-guided search proof of syldd up to size 7
+[2026-09-01 12:28:07:101] [INFO]   [union] ecan=15 will=15 union=28
+[2026-09-01 12:28:07:338] [INFO]   [tier] focused=28 full=57 af-hit=true
+[2026-09-01 12:28:07:338] [INFO] Found proof: (λ syldd.2 syldd.1 (syl6c imim2 syldd.1 syldd.2))
+[2026-09-01 12:28:07:351] [INFO] Iteration 70: ECAN-guided search proof of syl5d up to size 7
+[2026-09-01 12:28:07:418] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:28:07:583] [INFO]   [tier] focused=27 full=58 af-hit=true
+[2026-09-01 12:28:07:585] [INFO] Found proof: (λ syl5d.2 syl5d.1 (syldd syl5d.2 (a1d syl5d.1)))
+[2026-09-01 12:28:07:634] [INFO] Iteration 71: ECAN-guided search proof of syl7 up to size 7
+[2026-09-01 12:28:07:748] [INFO]   [union] ecan=15 will=15 union=29
+[2026-09-01 12:28:08:044] [INFO]   [tier] focused=29 full=59 af-hit=true
+[2026-09-01 12:28:08:044] [INFO] Found proof: (λ syl7.2 syl7.1 (syl5d syl7.2 (a1i syl7.1)))
+[2026-09-01 12:28:08:060] [INFO] Iteration 72: ECAN-guided search proof of syl6d up to size 7
+[2026-09-01 12:28:08:137] [INFO]   [union] ecan=15 will=15 union=25
+[2026-09-01 12:28:08:351] [INFO]   [tier] focused=25 full=60 af-hit=true
+[2026-09-01 12:28:08:352] [INFO] Found proof: (λ syl6d.2 syl6d.1 (syld (imim2d syl6d.2) syl6d.1))
+[2026-09-01 12:28:08:488] [INFO] Iteration 73: ECAN-guided search proof of syl8 up to size 7
+[2026-09-01 12:28:08:652] [INFO]   [union] ecan=15 will=15 union=29
+[2026-09-01 12:28:09:156] [INFO]   [tier] focused=29 full=61 af-hit=true
+[2026-09-01 12:28:09:156] [INFO] Found proof: (λ syl8.2 syl8.1 (syl6d (a1i syl8.2) syl8.1))
+[2026-09-01 12:28:09:321] [INFO] Iteration 74: ECAN-guided search proof of syl9 up to size 7
+[2026-09-01 12:28:09:423] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:28:09:653] [INFO]   [tier] focused=27 full=62 af-hit=true
+[2026-09-01 12:28:09:654] [INFO] Found proof: (λ syl9.2 syl9.1 (syl5d (a1i syl9.2) syl9.1))
+[2026-09-01 12:28:09:666] [INFO] Iteration 75: ECAN-guided search proof of syl9r up to size 7
+[2026-09-01 12:28:09:743] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:28:09:923] [INFO]   [tier] focused=27 full=63 af-hit=true
+[2026-09-01 12:28:09:924] [INFO] Found proof: (λ syl9r.2 syl9r.1 (syl5 (imim2d syl9r.2) syl9r.1))
+[2026-09-01 12:28:09:990] [INFO] Iteration 76: ECAN-guided search proof of syl10 up to size 9
+[2026-09-01 12:28:10:075] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:28:16:651] [INFO]   [tier] focused=26 full=64 af-hit=true
+[2026-09-01 12:28:16:652] [INFO] Found proof: (λ syl10.3 syl10.2 syl10.1 (syldd (syl6 syl10.3 syl10.1) syl10.2))
+[2026-09-01 12:28:16:700] [INFO] Iteration 77: ECAN-guided search proof of a1ddd up to size 5
+[2026-09-01 12:28:16:767] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:28:16:775] [INFO]   [tier] focused=26 full=65 af-hit=false
+[2026-09-01 12:28:16:845] [INFO] Found proof: (λ a1ddd.1 (syl8 ax-1 a1ddd.1))
+[2026-09-01 12:28:16:896] [INFO] Iteration 78: ECAN-guided search proof of imim12d up to size 7
+[2026-09-01 12:28:17:026] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:28:17:297] [INFO]   [tier] focused=27 full=66 af-hit=true
+[2026-09-01 12:28:17:297] [INFO] Found proof: (λ imim12d.2 imim12d.1 (syl5d (imim2d imim12d.2) imim12d.1))
+[2026-09-01 12:28:17:311] [INFO] Iteration 79: ECAN-guided search proof of imim1d up to size 5
+[2026-09-01 12:28:17:421] [INFO]   [union] ecan=15 will=15 union=28
+[2026-09-01 12:28:17:433] [INFO]   [tier] focused=28 full=67 af-hit=true
+[2026-09-01 12:28:17:433] [INFO] Found proof: (λ imim1d.1 (syl5d idd imim1d.1))
+[2026-09-01 12:28:17:526] [INFO] Iteration 80: ECAN-guided search proof of imim1 up to size 2
+[2026-09-01 12:28:17:604] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:28:17:605] [INFO]   [tier] focused=27 full=68 af-hit=true
+[2026-09-01 12:28:17:608] [INFO] Found proof: (com12 imim2)
+[2026-09-01 12:28:17:622] [INFO] Iteration 81: ECAN-guided search proof of pm2.83 up to size 2
+[2026-09-01 12:28:17:778] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:28:17:779] [INFO]   [tier] focused=26 full=68 af-hit=true
+[2026-09-01 12:28:17:779] [INFO] Found proof: (imim3i imim1)
+[2026-09-01 12:28:17:955] [INFO] Iteration 82: ECAN-guided search proof of peirceroll up to size 3
+[2026-09-01 12:28:18:077] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:28:18:087] [INFO]   [tier] focused=26 full=68 af-hit=true
+[2026-09-01 12:28:18:089] [INFO] Found proof: (syl5 imim2 imim1)
+[2026-09-01 12:28:18:103] [INFO] Iteration 83: ECAN-guided search proof of com23 up to size 5
+[2026-09-01 12:28:18:212] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:28:18:221] [INFO]   [tier] focused=27 full=68 af-hit=false
+[2026-09-01 12:28:18:311] [INFO] Found proof: (λ com3.1 (syl9 pm2.27 com3.1))
+[2026-09-01 12:28:18:339] [INFO] Iteration 84: ECAN-guided search proof of com3r up to size 5
+[2026-09-01 12:28:18:420] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:28:18:421] [INFO]   [tier] focused=27 full=69 af-hit=true
+[2026-09-01 12:28:18:422] [INFO] Found proof: (λ com3.1 (com12 (com23 com3.1)))
+[2026-09-01 12:28:18:441] [INFO] Iteration 85: ECAN-guided search proof of com13 up to size 5
+[2026-09-01 12:28:18:536] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:28:18:538] [INFO]   [tier] focused=27 full=70 af-hit=true
+[2026-09-01 12:28:18:538] [INFO] Found proof: (λ com3.1 (com23 (com3r com3.1)))
+[2026-09-01 12:28:18:555] [INFO] Iteration 86: ECAN-guided search proof of com3l up to size 5
+[2026-09-01 12:28:18:923] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:28:18:923] [INFO]   [tier] focused=27 full=71 af-hit=true
+[2026-09-01 12:28:18:924] [INFO] Found proof: (λ com3.1 (com12 (com13 com3.1)))
+[2026-09-01 12:28:19:313] [INFO] Iteration 87: ECAN-guided search proof of pm2.04 up to size 2
+[2026-09-01 12:28:19:669] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:28:19:670] [INFO]   [tier] focused=27 full=72 af-hit=true
+[2026-09-01 12:28:19:670] [INFO] Found proof: (com23 id)
+[2026-09-01 12:28:19:802] [INFO] Iteration 88: ECAN-guided search proof of com34 up to size 5
+[2026-09-01 12:28:19:987] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:28:19:991] [INFO]   [tier] focused=27 full=72 af-hit=true
+[2026-09-01 12:28:19:991] [INFO] Found proof: (λ com4.1 (syl6 pm2.04 com4.1))
+[2026-09-01 12:28:20:004] [INFO] Iteration 89: ECAN-guided search proof of com4l up to size 5
+[2026-09-01 12:28:20:211] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:28:20:223] [INFO]   [tier] focused=27 full=73 af-hit=false
+[2026-09-01 12:28:20:229] [INFO] Found proof: (λ com4.1 (com34 (com3l com4.1)))
+[2026-09-01 12:28:20:285] [INFO] Iteration 90: ECAN-guided search proof of com4t up to size 5
+[2026-09-01 12:28:20:404] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:28:20:405] [INFO]   [tier] focused=26 full=74 af-hit=true
+[2026-09-01 12:28:20:405] [INFO] Found proof: (λ com4.1 (com4l (com4l com4.1)))
+[2026-09-01 12:28:20:425] [INFO] Iteration 91: ECAN-guided search proof of com4r up to size 5
+[2026-09-01 12:28:20:821] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:28:20:827] [INFO]   [tier] focused=26 full=75 af-hit=true
+[2026-09-01 12:28:20:831] [INFO] Found proof: (λ com4.1 (com4l (com4t com4.1)))
+[2026-09-01 12:28:20:886] [INFO] Iteration 92: ECAN-guided search proof of com24 up to size 5
+[2026-09-01 12:28:21:170] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:28:21:206] [INFO]   [tier] focused=26 full=76 af-hit=false
+[2026-09-01 12:28:21:216] [INFO] Found proof: (λ com4.1 (com13 (com4t com4.1)))
+[2026-09-01 12:28:21:254] [INFO] Iteration 93: ECAN-guided search proof of com14 up to size 5
+[2026-09-01 12:28:21:377] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:28:21:398] [INFO]   [tier] focused=26 full=77 af-hit=false
+[2026-09-01 12:28:21:410] [INFO] Found proof: (λ com4.1 (com3r (com4l com4.1)))
+[2026-09-01 12:28:21:444] [INFO] Iteration 94: ECAN-guided search proof of com45 up to size 5
+[2026-09-01 12:28:21:748] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:28:21:788] [INFO]   [tier] focused=27 full=78 af-hit=false
+[2026-09-01 12:28:21:870] [INFO] Found proof: (λ com5.1 (syl8 pm2.04 com5.1))
+[2026-09-01 12:28:22:273] [INFO] Iteration 95: ECAN-guided search proof of com35 up to size 6
+[2026-09-01 12:28:22:365] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:28:22:396] [INFO]   [tier] focused=27 full=79 af-hit=true
+[2026-09-01 12:28:22:397] [INFO] Found proof: (λ com5.1 (com4l (com45 (com4r com5.1))))
+[2026-09-01 12:28:22:418] [INFO] Iteration 96: ECAN-guided search proof of com25 up to size 6
+[2026-09-01 12:28:22:628] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:28:22:661] [INFO]   [tier] focused=27 full=80 af-hit=true
+[2026-09-01 12:28:22:661] [INFO] Found proof: (λ com5.1 (com4l (com35 (com4r com5.1))))
+[2026-09-01 12:28:22:671] [INFO] Iteration 97: ECAN-guided search proof of com5l up to size 5
+[2026-09-01 12:28:22:761] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:28:22:764] [INFO]   [tier] focused=27 full=81 af-hit=true
+[2026-09-01 12:28:22:764] [INFO] Found proof: (λ com5.1 (com45 (com4l com5.1)))
+[2026-09-01 12:28:22:773] [INFO] Iteration 98: ECAN-guided search proof of com15 up to size 5
+[2026-09-01 12:28:22:923] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:28:22:926] [INFO]   [tier] focused=26 full=82 af-hit=true
+[2026-09-01 12:28:22:929] [INFO] Found proof: (λ com5.1 (com4r (com5l com5.1)))
+[2026-09-01 12:28:23:013] [INFO] Iteration 99: ECAN-guided search proof of com52l up to size 5
+[2026-09-01 12:28:23:145] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:28:23:152] [INFO]   [tier] focused=26 full=83 af-hit=true
+[2026-09-01 12:28:23:152] [INFO] Found proof: (λ com5.1 (com5l (com5l com5.1)))
+[2026-09-01 12:28:23:177] [INFO] Iteration 100: ECAN-guided search proof of com52r up to size 5
+[2026-09-01 12:28:23:403] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:28:23:411] [INFO]   [tier] focused=26 full=84 af-hit=true
+[2026-09-01 12:28:23:413] [INFO] Found proof: (λ com5.1 (com5l (com52l com5.1)))
+[2026-09-01 12:28:23:437] [INFO] Iteration 101: ECAN-guided search proof of com5r up to size 5
+[2026-09-01 12:28:23:536] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:28:23:539] [INFO]   [tier] focused=26 full=85 af-hit=true
+[2026-09-01 12:28:23:540] [INFO] Found proof: (λ com5.1 (com5l (com52r com5.1)))
+[2026-09-01 12:28:23:554] [INFO] Iteration 102: ECAN-guided search proof of imim12 up to size 3
+[2026-09-01 12:28:23:716] [INFO]   [union] ecan=15 will=15 union=29
+[2026-09-01 12:28:23:729] [INFO]   [tier] focused=29 full=86 af-hit=true
+[2026-09-01 12:28:23:729] [INFO] Found proof: (syl9 imim2 imim1)
+[2026-09-01 12:28:23:828] [INFO] Iteration 103: ECAN-guided search proof of jarr up to size 2
+[2026-09-01 12:28:24:057] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:28:24:057] [INFO]   [tier] focused=27 full=86 af-hit=true
+[2026-09-01 12:28:24:058] [INFO] Found proof: (imim1i ax-1)
+[2026-09-01 12:28:24:061] [INFO] Iteration 104: ECAN-guided search proof of jarri up to size 5
+[2026-09-01 12:28:24:203] [INFO]   [union] ecan=15 will=15 union=28
+[2026-09-01 12:28:24:204] [INFO]   [tier] focused=28 full=86 af-hit=true
+[2026-09-01 12:28:24:204] [INFO] Found proof: (λ jarri.1 (syl jarri.1 ax-1))
+[2026-09-01 12:28:24:221] [INFO] Iteration 105: ECAN-guided search proof of pm2.86d up to size 6
+[2026-09-01 12:28:24:544] [INFO]   [union] ecan=15 will=15 union=30
+[2026-09-01 12:28:24:621] [INFO]   [tier] focused=30 full=87 af-hit=true
+[2026-09-01 12:28:24:622] [INFO] Found proof: (λ pm2.86d.1 (com23 (syl jarr pm2.86d.1)))
+[2026-09-01 12:28:24:646] [INFO] Iteration 106: ECAN-guided search proof of pm2.86 up to size 2
+[2026-09-01 12:28:24:873] [INFO]   [union] ecan=15 will=15 union=29
+[2026-09-01 12:28:24:873] [INFO]   [tier] focused=29 full=88 af-hit=true
+[2026-09-01 12:28:24:873] [INFO] Found proof: (com23 jarr)
+[2026-09-01 12:28:25:550] [INFO] Iteration 107: ECAN-guided search proof of pm2.86i up to size 5
+[2026-09-01 12:28:25:749] [INFO]   [union] ecan=15 will=15 union=28
+[2026-09-01 12:28:25:751] [INFO]   [tier] focused=28 full=88 af-hit=true
+[2026-09-01 12:28:25:752] [INFO] Found proof: (λ pm2.86i.1 (ax-mp pm2.86 pm2.86i.1))
+[2026-09-01 12:28:25:759] [INFO] Iteration 108: ECAN-guided search proof of loolin up to size 2
+[2026-09-01 12:28:25:921] [INFO]   [union] ecan=15 will=15 union=28
+[2026-09-01 12:28:25:922] [INFO]   [tier] focused=28 full=89 af-hit=true
+[2026-09-01 12:28:25:922] [INFO] Found proof: (pm2.43d jarr)
+[2026-09-01 12:28:26:023] [INFO] Iteration 109: ECAN-guided search proof of loowoz up to size 2
+[2026-09-01 12:28:26:243] [INFO]   [union] ecan=15 will=15 union=29
+[2026-09-01 12:28:26:244] [INFO]   [tier] focused=29 full=89 af-hit=true
+[2026-09-01 12:28:26:244] [INFO] Found proof: (a2d jarr)
+[2026-09-01 12:28:26:264] [INFO] Iteration 110: ECAN-guided search proof of con4 up to size 1
+[2026-09-01 12:28:26:477] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:28:26:478] [INFO]   [tier] focused=27 full=89 af-hit=true
+[2026-09-01 12:28:26:478] [INFO] Found proof: ax-3
+[2026-09-01 12:28:26:500] [INFO] Iteration 111: ECAN-guided search proof of con4i up to size 5
+[2026-09-01 12:28:26:640] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:28:26:641] [INFO]   [tier] focused=26 full=89 af-hit=true
+[2026-09-01 12:28:26:641] [INFO] Found proof: (λ con4i.1 (ax-mp ax-3 con4i.1))
+[2026-09-01 12:28:26:650] [INFO] Iteration 112: ECAN-guided search proof of con4d up to size 5
+[2026-09-01 12:28:26:750] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:28:26:750] [INFO]   [tier] focused=26 full=90 af-hit=true
+[2026-09-01 12:28:26:751] [INFO] Found proof: (λ con4d.1 (syl ax-3 con4d.1))
+[2026-09-01 12:28:26:832] [INFO] Iteration 113: ECAN-guided search proof of mt4 up to size 7
+[2026-09-01 12:28:27:072] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:28:27:073] [INFO]   [tier] focused=26 full=91 af-hit=true
+[2026-09-01 12:28:27:073] [INFO] Found proof: (λ mt4.2 mt4.1 (ax-mp (con4i mt4.2) mt4.1))
+[2026-09-01 12:28:27:204] [INFO] Iteration 114: ECAN-guided search proof of mt4d up to size 7
+[2026-09-01 12:28:27:356] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:28:27:397] [INFO]   [tier] focused=27 full=92 af-hit=true
+[2026-09-01 12:28:27:397] [INFO] Found proof: (λ mt4d.2 mt4d.1 (mpd (con4d mt4d.2) mt4d.1))
+[2026-09-01 12:28:27:407] [INFO] Iteration 115: ECAN-guided search proof of mt4i up to size 7
+[2026-09-01 12:28:27:487] [INFO]   [union] ecan=15 will=15 union=27
+[2026-09-01 12:28:27:721] [INFO]   [tier] focused=27 full=93 af-hit=true
+[2026-09-01 12:28:27:721] [INFO] Found proof: (λ mt4i.2 mt4i.1 (mt4d mt4i.2 (a1i mt4i.1)))
+[2026-09-01 12:28:27:818] [INFO] Iteration 116: ECAN-guided search proof of pm2.21i up to size 5
+[2026-09-01 12:28:28:099] [INFO]   [union] ecan=15 will=15 union=26
+[2026-09-01 12:28:28:109] [INFO]   [tier] focused=26 full=94 af-hit=true
+[2026-09-01 12:28:28:110] [INFO] Found proof: (λ pm2.21i.1 (con4i (a1i pm2.21i.1)))
+[2026-09-01 12:28:28:140] [INFO] Iteration 117: ECAN-guided search proof of pm2.24ii up to size 7
+[2026-09-01 12:28:28:400] [INFO]   [union] ecan=16 will=16 union=26
+[2026-09-01 12:28:28:405] [INFO]   [tier] focused=26 full=95 af-hit=true
+[2026-09-01 12:28:28:405] [INFO] Found proof: (λ pm2.24ii.2 pm2.24ii.1 (ax-mp (pm2.21i pm2.24ii.2) pm2.24ii.1))
+[2026-09-01 12:28:28:619] [INFO] Iteration 118: ECAN-guided search proof of pm2.21d up to size 5
+[2026-09-01 12:28:28:786] [INFO]   [union] ecan=16 will=16 union=28
+[2026-09-01 12:28:28:788] [INFO]   [tier] focused=28 full=96 af-hit=true
+[2026-09-01 12:28:28:788] [INFO] Found proof: (λ pm2.21d.1 (con4d (a1d pm2.21d.1)))
+[2026-09-01 12:28:28:803] [INFO] Iteration 119: ECAN-guided search proof of pm2.21ddALT up to size 7
+[2026-09-01 12:28:28:908] [INFO]   [union] ecan=16 will=16 union=28
+[2026-09-01 12:28:29:030] [INFO]   [tier] focused=28 full=97 af-hit=true
+[2026-09-01 12:28:29:030] [INFO] Found proof: (λ pm2.21ddALT.2 pm2.21ddALT.1 (mpd (pm2.21d pm2.21ddALT.2) pm2.21ddALT.1))
+[2026-09-01 12:28:29:045] [INFO] Iteration 120: ECAN-guided search proof of pm2.21 up to size 2
+[2026-09-01 12:28:29:124] [INFO]   [union] ecan=16 will=16 union=28
+[2026-09-01 12:28:29:125] [INFO]   [tier] focused=28 full=98 af-hit=true
+[2026-09-01 12:28:29:126] [INFO] Found proof: (con4d ax-1)
+[2026-09-01 12:28:29:132] [INFO] Iteration 121: ECAN-guided search proof of pm2.24 up to size 2
+[2026-09-01 12:28:29:223] [INFO]   [union] ecan=16 will=16 union=27
+[2026-09-01 12:28:29:224] [INFO]   [tier] focused=27 full=98 af-hit=true
+[2026-09-01 12:28:29:224] [INFO] Found proof: (com12 pm2.21)
+[2026-09-01 12:28:29:338] [INFO] Iteration 122: ECAN-guided search proof of jarl up to size 2
+[2026-09-01 12:28:29:452] [INFO]   [union] ecan=16 will=16 union=28
+[2026-09-01 12:28:29:454] [INFO]   [tier] focused=28 full=98 af-hit=true
+[2026-09-01 12:28:29:454] [INFO] Found proof: (imim1i pm2.21)
+[2026-09-01 12:28:29:462] [INFO] Iteration 123: ECAN-guided search proof of jarli up to size 5
+[2026-09-01 12:28:29:566] [INFO]   [union] ecan=16 will=16 union=28
+[2026-09-01 12:28:29:568] [INFO]   [tier] focused=28 full=98 af-hit=true
+[2026-09-01 12:28:29:568] [INFO] Found proof: (λ jarli.1 (syl jarli.1 pm2.21))
+[2026-09-01 12:28:29:578] [INFO] Iteration 124: ECAN-guided search proof of pm2.18d up to size 7
+[2026-09-01 12:28:29:712] [INFO]   [union] ecan=16 will=16 union=28
+[2026-09-01 12:28:40:009] [INFO]   [tier] focused=28 full=99 af-hit=false
+[2026-09-01 12:28:41:414] [INFO] Found proof: (λ pm2.18d.1 (pm2.43i (con4d (sylcom pm2.21 pm2.18d.1))))
+[2026-09-01 12:28:41:537] [INFO] Iteration 125: ECAN-guided search proof of pm2.18 up to size 2
+[2026-09-01 12:28:41:759] [INFO]   [union] ecan=17 will=17 union=31
+[2026-09-01 12:28:41:760] [INFO]   [tier] focused=31 full=100 af-hit=false
+[2026-09-01 12:28:41:760] [INFO] Found proof: (pm2.18d id)
+[2026-09-01 12:28:41:870] [INFO] Iteration 126: ECAN-guided search proof of pm2.18i up to size 5
+[2026-09-01 12:28:42:169] [INFO]   [union] ecan=17 will=17 union=31
+[2026-09-01 12:28:42:170] [INFO]   [tier] focused=31 full=100 af-hit=true
+[2026-09-01 12:28:42:174] [INFO] Found proof: (λ pm2.18i.1 (ax-mp pm2.18 pm2.18i.1))
+[2026-09-01 12:28:42:310] [INFO] Iteration 127: ECAN-guided search proof of notnotr up to size 2
+[2026-09-01 12:28:42:440] [INFO]   [union] ecan=17 will=17 union=30
+[2026-09-01 12:28:42:441] [INFO]   [tier] focused=30 full=101 af-hit=false
+[2026-09-01 12:28:42:442] [INFO] Found proof: (jarli pm2.18)
+[2026-09-01 12:28:42:452] [INFO] Iteration 128: ECAN-guided search proof of notnotri up to size 6
+[2026-09-01 12:28:42:606] [INFO]   [union] ecan=17 will=17 union=30
+[2026-09-01 12:28:42:609] [INFO]   [tier] focused=30 full=101 af-hit=true
+[2026-09-01 12:28:42:610] [INFO] Found proof: (λ notnotri.1 (ax-mp notnotr notnotri.1))
+[2026-09-01 12:28:42:757] [INFO] Iteration 129: ECAN-guided search proof of notnotriALT up to size 5
+[2026-09-01 12:28:42:856] [INFO]   [union] ecan=17 will=17 union=30
+[2026-09-01 12:28:42:857] [INFO]   [tier] focused=30 full=102 af-hit=true
+[2026-09-01 12:28:42:857] [INFO] Found proof: (λ notnotri.1 (ax-mp notnotr notnotri.1))
+[2026-09-01 12:28:42:868] [INFO] Iteration 130: ECAN-guided search proof of notnotrd up to size 5
+[2026-09-01 12:28:43:050] [INFO]   [union] ecan=17 will=17 union=33
+[2026-09-01 12:28:43:052] [INFO]   [tier] focused=33 full=103 af-hit=true
+[2026-09-01 12:28:43:054] [INFO] Found proof: (λ notnotrd.1 (pm2.18d (pm2.21d notnotrd.1)))
+[2026-09-01 12:28:43:233] [INFO] Iteration 131: ECAN-guided search proof of con2d up to size 6
+[2026-09-01 12:28:43:486] [INFO]   [union] ecan=17 will=17 union=29
+[2026-09-01 12:28:43:608] [INFO]   [tier] focused=29 full=104 af-hit=true
+[2026-09-01 12:28:43:608] [INFO] Found proof: (λ con2d.1 (con4d (syl5 con2d.1 notnotr)))
+[2026-09-01 12:28:43:642] [INFO] Iteration 132: ECAN-guided search proof of con2 up to size 2
+[2026-09-01 12:28:43:895] [INFO]   [union] ecan=17 will=17 union=30
+[2026-09-01 12:28:43:896] [INFO]   [tier] focused=30 full=105 af-hit=true
+[2026-09-01 12:28:43:896] [INFO] Found proof: (con2d id)
+[2026-09-01 12:28:44:037] [INFO] Iteration 133: ECAN-guided search proof of mt2d up to size 7
+[2026-09-01 12:28:44:139] [INFO]   [union] ecan=17 will=17 union=29
+[2026-09-01 12:28:44:535] [INFO]   [tier] focused=29 full=105 af-hit=true
+[2026-09-01 12:28:44:536] [INFO] Found proof: (λ mt2d.2 mt2d.1 (mpd (con2d mt2d.2) mt2d.1))
+[2026-09-01 12:28:44:572] [INFO] Iteration 134: ECAN-guided search proof of mt2i up to size 7
+[2026-09-01 12:28:45:215] [INFO]   [union] ecan=18 will=18 union=30
+[2026-09-01 12:28:45:944] [INFO]   [tier] focused=30 full=106 af-hit=true
+[2026-09-01 12:28:45:946] [INFO] Found proof: (λ mt2i.2 mt2i.1 (mt2d mt2i.2 (a1i mt2i.1)))
+[2026-09-01 12:28:46:298] [INFO] Iteration 135: ECAN-guided search proof of nsyl3 up to size 7
+[2026-09-01 12:28:46:429] [INFO]   [union] ecan=18 will=18 union=30
+[2026-09-01 12:28:47:007] [INFO]   [tier] focused=30 full=107 af-hit=true
+[2026-09-01 12:28:47:008] [INFO] Found proof: (λ nsyl3.2 nsyl3.1 (mt2d (a1i nsyl3.1) nsyl3.2))
+[2026-09-01 12:28:47:023] [INFO] Iteration 136: ECAN-guided search proof of con2i up to size 5
+[2026-09-01 12:28:47:285] [INFO]   [union] ecan=18 will=18 union=32
+[2026-09-01 12:28:47:298] [INFO]   [tier] focused=32 full=108 af-hit=true
+[2026-09-01 12:28:47:301] [INFO] Found proof: (λ con2i.a (ax-mp con2 con2i.a))
+[2026-09-01 12:28:47:414] [INFO] Iteration 137: ECAN-guided search proof of nsyl up to size 7
+[2026-09-01 12:28:47:707] [INFO]   [union] ecan=18 will=18 union=31
+[2026-09-01 12:28:47:728] [INFO]   [tier] focused=31 full=109 af-hit=true
+[2026-09-01 12:28:47:729] [INFO] Found proof: (λ nsyl.2 nsyl.1 (con2i (nsyl3 nsyl.2 nsyl.1)))
+[2026-09-01 12:28:48:134] [INFO] Iteration 138: ECAN-guided search proof of nsyl2 up to size 7
+[2026-09-01 12:28:48:420] [INFO]   [union] ecan=18 will=18 union=29
+[2026-09-01 12:28:48:489] [INFO]   [tier] focused=29 full=110 af-hit=true
+[2026-09-01 12:28:48:494] [INFO] Found proof: (λ nsyl2.2 nsyl2.1 (con4i (nsyl3 nsyl2.2 nsyl2.1)))
+[2026-09-01 12:28:48:690] [INFO] Iteration 139: ECAN-guided search proof of notnot up to size 2
+[2026-09-01 12:28:48:940] [INFO]   [union] ecan=18 will=18 union=32
+[2026-09-01 12:28:48:941] [INFO]   [tier] focused=32 full=111 af-hit=true
+[2026-09-01 12:28:48:944] [INFO] Found proof: (con2i id)
+[2026-09-01 12:28:49:199] [INFO] Iteration 140: ECAN-guided search proof of notnoti up to size 5
+[2026-09-01 12:28:49:454] [INFO]   [union] ecan=18 will=18 union=32
+[2026-09-01 12:28:49:455] [INFO]   [tier] focused=32 full=111 af-hit=true
+[2026-09-01 12:28:49:455] [INFO] Found proof: (λ notnoti.1 (ax-mp notnot notnoti.1))
+[2026-09-01 12:28:49:665] [INFO] Iteration 141: ECAN-guided search proof of notnotd up to size 5
+[2026-09-01 12:28:50:376] [INFO]   [union] ecan=19 will=19 union=32
+[2026-09-01 12:28:50:384] [INFO]   [tier] focused=32 full=112 af-hit=true
+[2026-09-01 12:28:50:384] [INFO] Found proof: (λ notnotd.1 (syl notnot notnotd.1))
+[2026-09-01 12:28:50:536] [INFO] Iteration 142: ECAN-guided search proof of con1d up to size 6
+[2026-09-01 12:28:50:681] [INFO]   [union] ecan=19 will=19 union=32
+[2026-09-01 12:28:50:730] [INFO]   [tier] focused=32 full=113 af-hit=true
+[2026-09-01 12:28:50:731] [INFO] Found proof: (λ con1d.1 (con4d (syl6 notnot con1d.1)))
+[2026-09-01 12:28:50:755] [INFO] Iteration 143: ECAN-guided search proof of con1 up to size 2
+[2026-09-01 12:28:51:115] [INFO]   [union] ecan=19 will=19 union=32
+[2026-09-01 12:28:51:116] [INFO]   [tier] focused=32 full=114 af-hit=true
+[2026-09-01 12:28:51:116] [INFO] Found proof: (con1d id)
+[2026-09-01 12:28:51:126] [INFO] Iteration 144: ECAN-guided search proof of con1i up to size 5
+[2026-09-01 12:28:51:387] [INFO]   [union] ecan=19 will=19 union=32
+[2026-09-01 12:28:51:390] [INFO]   [tier] focused=32 full=114 af-hit=true
+[2026-09-01 12:28:51:392] [INFO] Found proof: (λ con1i.1 (con4i (notnotd con1i.1)))
+[2026-09-01 12:28:51:572] [INFO] Iteration 145: ECAN-guided search proof of mt3d up to size 7
+[2026-09-01 12:28:51:926] [INFO]   [union] ecan=19 will=19 union=31
+[2026-09-01 12:28:52:180] [INFO]   [tier] focused=31 full=115 af-hit=true
+[2026-09-01 12:28:52:181] [INFO] Found proof: (λ mt3d.2 mt3d.1 (mpd (con1d mt3d.2) mt3d.1))
+[2026-09-01 12:28:52:193] [INFO] Iteration 146: ECAN-guided search proof of mt3i up to size 7
+[2026-09-01 12:28:52:433] [INFO]   [union] ecan=19 will=19 union=31
+[2026-09-01 12:28:53:695] [INFO]   [tier] focused=31 full=116 af-hit=true
+[2026-09-01 12:28:53:695] [INFO] Found proof: (λ mt3i.2 mt3i.1 (mt3d mt3i.2 (a1i mt3i.1)))
+[2026-09-01 12:28:53:745] [INFO] Iteration 147: ECAN-guided search proof of pm2.24i up to size 5
+[2026-09-01 12:28:54:021] [INFO]   [union] ecan=19 will=19 union=34
+[2026-09-01 12:28:54:024] [INFO]   [tier] focused=34 full=117 af-hit=true
+[2026-09-01 12:28:54:024] [INFO] Found proof: (λ pm2.24i.1 (pm2.21i (notnoti pm2.24i.1)))
+[2026-09-01 12:28:54:119] [INFO] Iteration 148: ECAN-guided search proof of pm2.24d up to size 5
+[2026-09-01 12:28:54:339] [INFO]   [union] ecan=20 will=20 union=34
+[2026-09-01 12:28:54:343] [INFO]   [tier] focused=34 full=118 af-hit=true
+[2026-09-01 12:28:54:344] [INFO] Found proof: (λ pm2.24d.1 (con1d (a1d pm2.24d.1)))
+[2026-09-01 12:28:54:649] [INFO] Iteration 149: ECAN-guided search proof of con3d up to size 6
+[2026-09-01 12:28:54:918] [INFO]   [union] ecan=20 will=20 union=33
+[2026-09-01 12:28:55:019] [INFO]   [tier] focused=33 full=119 af-hit=true
+[2026-09-01 12:28:55:021] [INFO] Found proof: (λ con3d.1 (con1d (syl5 con3d.1 notnotr)))
+[2026-09-01 12:28:55:099] [INFO] Iteration 150: ECAN-guided search proof of con3 up to size 2
+[2026-09-01 12:28:55:305] [INFO]   [union] ecan=20 will=20 union=33
+[2026-09-01 12:28:55:309] [INFO]   [tier] focused=33 full=120 af-hit=true
+[2026-09-01 12:28:55:309] [INFO] Found proof: (con3d id)
+[2026-09-01 12:28:55:513] [INFO] Iteration 151: ECAN-guided search proof of con3i up to size 5
+[2026-09-01 12:28:55:734] [INFO]   [union] ecan=20 will=20 union=32
+[2026-09-01 12:28:55:735] [INFO]   [tier] focused=32 full=120 af-hit=true
+[2026-09-01 12:28:55:735] [INFO] Found proof: (λ con3i.a (con2i (notnotd con3i.a)))
+[2026-09-01 12:28:55:950] [INFO] Iteration 152: ECAN-guided search proof of con3rr3 up to size 5
+[2026-09-01 12:28:56:100] [INFO]   [union] ecan=20 will=20 union=32
+[2026-09-01 12:28:56:101] [INFO]   [tier] focused=32 full=121 af-hit=true
+[2026-09-01 12:28:56:101] [INFO] Found proof: (λ con3rr3.1 (com12 (con3d con3rr3.1)))
+[2026-09-01 12:28:56:112] [INFO] Iteration 153: ECAN-guided search proof of nsyld up to size 7
+[2026-09-01 12:28:56:215] [INFO]   [union] ecan=20 will=20 union=35
+[2026-09-01 12:28:56:601] [INFO]   [tier] focused=35 full=122 af-hit=true
+[2026-09-01 12:28:56:602] [INFO] Found proof: (λ nsyld.2 nsyld.1 (syld (con3d nsyld.2) nsyld.1))
+[2026-09-01 12:28:56:616] [INFO] Iteration 154: ECAN-guided search proof of nsyli up to size 7
+[2026-09-01 12:28:56:883] [INFO]   [union] ecan=20 will=20 union=34
+[2026-09-01 12:28:57:423] [INFO]   [tier] focused=34 full=123 af-hit=true
+[2026-09-01 12:28:57:423] [INFO] Found proof: (λ nsyli.2 nsyli.1 (syl5 (con3d nsyli.1) nsyli.2))
+[2026-09-01 12:28:57:433] [INFO] Iteration 155: ECAN-guided search proof of nsyl4 up to size 7
+[2026-09-01 12:28:57:514] [INFO]   [union] ecan=21 will=21 union=35
+[2026-09-01 12:28:57:598] [INFO]   [tier] focused=35 full=124 af-hit=true
+[2026-09-01 12:28:57:599] [INFO] Found proof: (λ nsyl4.2 nsyl4.1 (syl nsyl4.1 (con1i nsyl4.2)))
+[2026-09-01 12:28:57:608] [INFO] Iteration 156: ECAN-guided search proof of nsyl5 up to size 7
+[2026-09-01 12:28:57:858] [INFO]   [union] ecan=21 will=21 union=36
+[2026-09-01 12:28:57:892] [INFO]   [tier] focused=36 full=125 af-hit=true
+[2026-09-01 12:28:57:892] [INFO] Found proof: (λ nsyl4.2 nsyl4.1 (con1i (nsyl4 nsyl4.2 nsyl4.1)))
+[2026-09-01 12:28:57:902] [INFO] Iteration 157: ECAN-guided search proof of pm3.2im up to size 2
+[2026-09-01 12:28:57:985] [INFO]   [union] ecan=21 will=21 union=34
+[2026-09-01 12:28:57:986] [INFO]   [tier] focused=34 full=126 af-hit=true
+[2026-09-01 12:28:57:986] [INFO] Found proof: (con2d pm2.27)
+[2026-09-01 12:28:57:990] [INFO] Iteration 158: ECAN-guided search proof of jc up to size 7
+[2026-09-01 12:28:58:109] [INFO]   [union] ecan=21 will=21 union=35
+[2026-09-01 12:28:59:466] [INFO]   [tier] focused=35 full=126 af-hit=false
+[2026-09-01 12:29:23:520] [INFO] Found proof: (λ jc.2 jc.1 (sylc pm3.2im jc.2 jc.1))
+[2026-09-01 12:29:23:544] [INFO] Iteration 159: ECAN-guided search proof of jcn up to size 2
+[2026-09-01 12:29:23:694] [INFO]   [union] ecan=21 will=21 union=37
+[2026-09-01 12:29:23:695] [INFO]   [tier] focused=37 full=127 af-hit=true
+[2026-09-01 12:29:23:695] [INFO] Found proof: (con3d pm2.27)
+[2026-09-01 12:29:23:699] [INFO] Iteration 160: ECAN-guided search proof of jcnd up to size 7
+[2026-09-01 12:29:23:960] [INFO]   [union] ecan=21 will=21 union=37
+[2026-09-01 12:29:26:765] [INFO]   [tier] focused=37 full=127 af-hit=false
+[2026-09-01 12:29:53:091] [INFO] Found proof: (λ jcnd.2 jcnd.1 (sylc jcn jcnd.2 jcnd.1))
+[2026-09-01 12:29:53:105] [INFO] Iteration 161: ECAN-guided search proof of impi up to size 5
+[2026-09-01 12:29:53:237] [INFO]   [union] ecan=21 will=21 union=40
+[2026-09-01 12:29:53:251] [INFO]   [tier] focused=40 full=128 af-hit=true
+[2026-09-01 12:29:53:251] [INFO] Found proof: (λ impi.1 (con1i (con3rr3 impi.1)))
+[2026-09-01 12:29:53:477] [INFO] Iteration 162: ECAN-guided search proof of expi up to size 5
+[2026-09-01 12:29:54:315] [INFO]   [union] ecan=21 will=21 union=39
+[2026-09-01 12:29:54:333] [INFO]   [tier] focused=39 full=129 af-hit=true
+[2026-09-01 12:29:54:334] [INFO] Found proof: (λ expi.1 (syl6 expi.1 pm3.2im))
+[2026-09-01 12:29:54:348] [INFO] Iteration 163: ECAN-guided search proof of simprim up to size 2
+[2026-09-01 12:29:54:494] [INFO]   [union] ecan=22 will=22 union=42
+[2026-09-01 12:29:54:495] [INFO]   [tier] focused=42 full=130 af-hit=true
+[2026-09-01 12:29:54:495] [INFO] Found proof: (con1i ax-1)
+[2026-09-01 12:29:54:500] [INFO] Iteration 164: ECAN-guided search proof of simplim up to size 2
+[2026-09-01 12:29:54:642] [INFO]   [union] ecan=22 will=22 union=42
+[2026-09-01 12:29:54:643] [INFO]   [tier] focused=42 full=130 af-hit=true
+[2026-09-01 12:29:54:643] [INFO] Found proof: (con1i pm2.21)
+[2026-09-01 12:29:54:947] [INFO] Iteration 165: ECAN-guided search proof of pm2.5g up to size 2
+[2026-09-01 12:29:55:108] [INFO]   [union] ecan=22 will=22 union=43
+[2026-09-01 12:29:55:109] [INFO]   [tier] focused=43 full=130 af-hit=true
+[2026-09-01 12:29:55:109] [INFO] Found proof: (jarli jarl)
+[2026-09-01 12:29:55:116] [INFO] Iteration 166: ECAN-guided search proof of pm2.5 up to size 1
+[2026-09-01 12:29:55:361] [INFO]   [union] ecan=22 will=22 union=42
+[2026-09-01 12:29:55:362] [INFO]   [tier] focused=42 full=130 af-hit=true
+[2026-09-01 12:29:55:363] [INFO] Found proof: pm2.5g
+[2026-09-01 12:29:55:584] [INFO] Iteration 167: ECAN-guided search proof of conax1 up to size 2
+[2026-09-01 12:29:56:566] [INFO]   [union] ecan=22 will=22 union=42
+[2026-09-01 12:29:56:577] [INFO]   [tier] focused=42 full=130 af-hit=true
+[2026-09-01 12:29:56:577] [INFO] Found proof: (con3i ax-1)
+[2026-09-01 12:29:56:639] [INFO] Iteration 168: ECAN-guided search proof of conax1k up to size 2
+[2026-09-01 12:29:57:244] [INFO]   [union] ecan=22 will=22 union=40
+[2026-09-01 12:29:57:251] [INFO]   [tier] focused=40 full=130 af-hit=true
+[2026-09-01 12:29:57:252] [INFO] Found proof: (a1d conax1)
+[2026-09-01 12:29:57:494] [INFO] Iteration 169: ECAN-guided search proof of pm2.51 up to size 1
+[2026-09-01 12:29:57:593] [INFO]   [union] ecan=22 will=22 union=40
+[2026-09-01 12:29:57:594] [INFO]   [tier] focused=40 full=130 af-hit=true
+[2026-09-01 12:29:57:594] [INFO] Found proof: conax1k
+[2026-09-01 12:29:57:599] [INFO] Iteration 170: ECAN-guided search proof of pm2.52 up to size 1
+[2026-09-01 12:29:57:742] [INFO]   [union] ecan=22 will=22 union=41
+[2026-09-01 12:29:57:743] [INFO]   [tier] focused=41 full=130 af-hit=true
+[2026-09-01 12:29:57:743] [INFO] Found proof: pm2.5g
+[2026-09-01 12:29:58:011] [INFO] Iteration 171: ECAN-guided search proof of pm2.521g up to size 2
+[2026-09-01 12:29:58:206] [INFO]   [union] ecan=22 will=22 union=40
+[2026-09-01 12:29:58:207] [INFO]   [tier] focused=40 full=130 af-hit=true
+[2026-09-01 12:29:58:207] [INFO] Found proof: (con4d conax1k)
+[2026-09-01 12:29:58:216] [INFO] Iteration 172: ECAN-guided search proof of pm2.521g2 up to size 2
+[2026-09-01 12:29:58:419] [INFO]   [union] ecan=22 will=22 union=41
+[2026-09-01 12:29:58:422] [INFO]   [tier] focused=41 full=130 af-hit=true
+[2026-09-01 12:29:58:423] [INFO] Found proof: (a1d simplim)
+[2026-09-01 12:29:58:529] [INFO] Iteration 173: ECAN-guided search proof of pm2.521 up to size 1
+[2026-09-01 12:29:58:730] [INFO]   [union] ecan=22 will=22 union=41
+[2026-09-01 12:29:58:730] [INFO]   [tier] focused=41 full=130 af-hit=true
+[2026-09-01 12:29:58:730] [INFO] Found proof: pm2.521g
+[2026-09-01 12:29:58:737] [INFO] Iteration 174: ECAN-guided search proof of expt up to size 3
+[2026-09-01 12:29:58:946] [INFO]   [union] ecan=22 will=22 union=41
+[2026-09-01 12:29:59:076] [INFO]   [tier] focused=41 full=130 af-hit=true
+[2026-09-01 12:29:59:077] [INFO] Found proof: (syl5 imim2 pm3.2im)
+[2026-09-01 12:29:59:224] [INFO] Iteration 175: ECAN-guided search proof of impt up to size 4
+[2026-09-01 12:29:59:432] [INFO]   [union] ecan=22 will=22 union=40
+[2026-09-01 12:29:59:451] [INFO]   [tier] focused=40 full=130 af-hit=true
+[2026-09-01 12:29:59:451] [INFO] Found proof: (com12 (impi (com23 pm2.27)))
+[2026-09-01 12:29:59:457] [INFO] Iteration 176: ECAN-guided search proof of pm2.61d up to size 8
+[2026-09-01 12:29:59:819] [INFO]   [union] ecan=22 will=22 union=39
+[2026-09-01 12:30:02:355] [INFO]   [tier] focused=39 full=130 af-hit=true
+[2026-09-01 12:30:02:357] [INFO] Found proof: (λ pm2.61d.2 pm2.61d.1 (pm2.18d (syld pm2.61d.2 (con3d pm2.61d.1))))
+[2026-09-01 12:30:02:584] [INFO] Iteration 177: ECAN-guided search proof of pm2.61d1 up to size 7
+[2026-09-01 12:30:02:722] [INFO]   [union] ecan=22 will=22 union=41
+[2026-09-01 12:30:03:840] [INFO]   [tier] focused=41 full=131 af-hit=false
+[2026-09-01 12:30:15:802] [INFO] Found proof: (λ pm2.61d1.2 pm2.61d1.1 (pm2.61d (a1i pm2.61d1.2) pm2.61d1.1))
+[2026-09-01 12:30:15:932] [INFO] Iteration 178: ECAN-guided search proof of pm2.61d2 up to size 7
+[2026-09-01 12:30:16:063] [INFO]   [union] ecan=22 will=22 union=41
+[2026-09-01 12:30:17:142] [INFO]   [tier] focused=41 full=132 af-hit=false
+[2026-09-01 12:30:30:798] [INFO] Found proof: (λ pm2.61d2.2 pm2.61d2.1 (pm2.61d pm2.61d2.1 (a1i pm2.61d2.2)))
+[2026-09-01 12:30:30:815] [INFO] Iteration 179: ECAN-guided search proof of pm2.61i up to size 7
+[2026-09-01 12:30:31:591] [INFO]   [union] ecan=22 will=22 union=44
+[2026-09-01 12:30:31:620] [INFO]   [tier] focused=44 full=133 af-hit=true
+[2026-09-01 12:30:31:620] [INFO] Found proof: (λ pm2.61i.2 pm2.61i.1 (pm2.18i (nsyl4 pm2.61i.2 pm2.61i.1)))
+[2026-09-01 12:30:31:630] [INFO] Iteration 180: ECAN-guided search proof of pm2.61ii up to size 9
+[2026-09-01 12:30:31:726] [INFO]   [union] ecan=22 will=22 union=41
+[2026-09-01 12:30:42:958] [INFO]   [tier] focused=41 full=134 af-hit=true
+[2026-09-01 12:30:42:958] [INFO] Found proof: (λ pm2.61ii.3 pm2.61ii.2 pm2.61ii.1 (pm2.61i (pm2.61d2 pm2.61ii.3 pm2.61ii.1) pm2.61ii.2))
+[2026-09-01 12:30:42:974] [INFO] Iteration 181: ECAN-guided search proof of pm2.61nii up to size 9
+[2026-09-01 12:30:43:379] [INFO]   [union] ecan=22 will=22 union=40
+[2026-09-01 12:30:52:421] [INFO]   [tier] focused=40 full=135 af-hit=true
+[2026-09-01 12:30:52:421] [INFO] Found proof: (λ pm2.61nii.3 pm2.61nii.2 pm2.61nii.1 (pm2.61i pm2.61nii.2 (pm2.61d1 pm2.61nii.3 pm2.61nii.1)))
+[2026-09-01 12:30:52:433] [INFO] Iteration 182: ECAN-guided search proof of pm2.61iii up to size 13
+[2026-09-01 12:30:52:545] [INFO]   [union] ecan=23 will=23 union=43
