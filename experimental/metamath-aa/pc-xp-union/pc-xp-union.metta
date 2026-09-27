@@ -76,6 +76,14 @@
 ;; at the first one.
 (= (search-all-proofs) False)
 
+;; Shared wall-clock budget for the focused and full-KB tiers of one theorem.
+;; The full tier receives only the time left after the focused tier finishes.
+(= (theorem-timeout-seconds) 60)
+
+;; Premise selector used to build the focused rule base.  Supported values:
+;; ecan, william, union.  Every mode receives exactly (ecan-focus-size) slots.
+(= (selector-mode) union)
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; ECAN Parameters ;;
 ;;;;;;;;;;;;;;;;;;;;;
@@ -264,8 +272,14 @@
         (translatePredicate (atomic_list_concat ($this-dir "/repos") $repos-dir))
         (git-import! "https://github.com/ngeiswei/petta_lib_logger" "" $repos-dir))
 !(progn (translatePredicate (working_dir $bg-dir))
-        (translatePredicate (atomic_list_concat ($bg-dir "/../pc-xp-ECAN/viz/ecan_bg.pl") $bg-pl))
+        (translatePredicate (atomic_list_concat ($bg-dir "/../pc-xp-ECAN/ecan_bg.pl") $bg-pl))
         (translatePredicate (ensure_loaded $bg-pl)))
+
+;; Run both proof-search tiers in an abortable worker under one deadline.
+!(progn (translatePredicate (working_dir $timed-dir))
+  (translatePredicate (atomic_list_concat ($timed-dir "/pc_xp_timed.pl") $timed-pl))
+  (translatePredicate (consult $timed-pl)))
+!(translatePredicate (register_fun timed_obc_tiers_once))
 
 !(import_prolog_functions_from_file (library petta_lib_logger lib_logger.pl)
                                     (logger-set-filepath
@@ -1071,6 +1085,18 @@
        (cons-atom (car-atom $tuple)
                   (take-n (- $n 1) (cdr-atom $tuple)))))
 
+;; Alternate two ranked tuples.  Deduplicating and truncating this result
+;; gives neither selector priority and fills overlap-created vacancies.
+(= (interleave-atom $x $y)
+   (if (== $x ())
+     $y
+     (if (== $y ())
+       $x
+       (cons-atom (car-atom $x)
+            (cons-atom (car-atom $y)
+                 (interleave-atom (cdr-atom $x)
+                          (cdr-atom $y)))))))
+
 ;; Focus ranking score: short-term importance (what is hot now, driven by
 ;; recency seeding and stimulation) plus normalised long-term importance
 ;; (what has repeatedly proved useful).  Negated so a plain ascending
@@ -1358,50 +1384,78 @@
               ($rest (william-zip $pt $st)))
          (cons-atom (W $neg $lbl) $rest))))
 
-;; WILLIAM's nomination: the top (ecan-focus-size) labels for this goal.
-;; Returns a plain tuple of labels, or () if the predictor is unavailable --
-;; in which case the union degrades to plain ECAN rather than failing.
-(= (william-top-labels $goal)
+;; WILLIAM's complete ranking for this goal.  Returns a plain tuple of labels,
+;; or () if the predictor is unavailable.
+(= (william-ranked-labels $goal)
    (let $pairs (collapse (match &pc-rb (: $l $t)
                            (let $s (match &pc-orig (Orig $l $os) $os) (P $l $s))))
      (if (== $pairs ())
          ()
-         (let $raw
+         (let* (($rule-labels (collapse (match &pc-rb (: $rl $rt) $rl)))
+                ($axiom-labels (collapse (match &pc-ab (: $al $at) $al)))
+                ($theory-labels (concat-atom $rule-labels $axiom-labels))
+                ($raw
              (catch
-              (let* (($scores (py-call (william_rank.score (repr $goal) (repr $pairs))))
+              (let* (($scores (py-call (william_rank.score (repr $goal)
+                                                           (repr $pairs)
+                                                           (repr $theory-labels))))
                      ($scored (william-zip $pairs $scores))
-                     ($sorted (sort-atom $scored))
-                     ($top-n (take-n (union-nominate-size) $sorted)))
-                (collapse (let (W $neg $lbl) (superpose $top-n) $lbl))))
+                   ($sorted (sort-atom $scored)))
+                 (collapse (let (W $neg $lbl) (superpose $sorted) $lbl))))))
            (if (and (is-expression $raw) (== (car-atom $raw) Error)) () $raw)))))
 
-;; ECAN's nomination, as a plain tuple of labels.
-(= (ecan-top-labels)
+          ;; ECAN's complete ranking, as a plain tuple of labels.
+          (= (ecan-ranked-labels)
    (let* (($scored (ecan-scored-rules))
-          ($sorted (sort-atom $scored))
-          ($top-n (take-n (union-nominate-size) $sorted)))
-     (collapse (let ($neg-sti $lbl $typ) (superpose $top-n) $lbl))))
+              ($sorted (sort-atom $scored)))
+            (collapse (let ($neg-sti $lbl $typ) (superpose $sorted) $lbl))))
 
-;; Rebuild &pc-rb-af as the UNION of the two nominations.
-;; unique-atom deduplicates, so a rule both selectors pick is added once.
-(= (union-rebuild-focused-rb $goal)
+          ;; Install one selector result and emit aggregate and full-ranking data.
+          (= (install-focused-rb $idx $theorem-label $mode
+                     $e-ranked $w-ranked $e-nominated $w-nominated $selected)
    (progn
     (let $old (collapse (match &pc-rb-af $e $e))
       (collapse (let $e (superpose $old) (remove-atom &pc-rb-af $e))))
     (updateAttentionParam MAX_AF_SIZE (ecan-focus-size))
-    (let* (($e-lbls (ecan-top-labels))
-           ($w-lbls (william-top-labels $goal))
-           ($all (unique-atom (concat-atom $e-lbls $w-lbls))))
-      (progn
-       (collapse
-        (let $lbl (superpose $all)
-          (let $ty (match &pc-rb (: $lbl $t) $t)
-            (add-atom &pc-rb-af (: $lbl $ty)))))
-       ;; Overlap diagnostics: how much the two selectors actually agree.
-       (if (ecan-log-tier)
-           (logger-infof "  [union] ecan=%w will=%w union=%w"
-                         ((size-atom $e-lbls) (size-atom $w-lbls) (size-atom $all)))
-           ())))))
+              (collapse
+            (let $lbl (superpose $selected)
+              (let $ty (match &pc-rb (: $lbl $t) $t)
+                (add-atom &pc-rb-af (: $lbl $ty)))))
+              (if (ecan-log-tier)
+               (progn
+                (logger-infof "  [union] ecan=%w will=%w union=%w"
+                     ((size-atom $e-nominated)
+                      (size-atom $w-nominated)
+                      (size-atom $selected)))
+                (logger-infof "  [ranking] index=%w theorem=%w mode=%w budget=%w ecan=%w william=%w selected=%w"
+                     ($idx $theorem-label $mode (ecan-focus-size)
+                      $e-ranked $w-ranked $selected)))
+               ())))
+
+          ;; Rebuild &pc-rb-af with exactly the same dynamic budget in all three modes.
+          ;; Union alternates full rankings before deduplication, then fills to budget.
+          (= (union-rebuild-focused-rb $idx $theorem-label $goal)
+             (if (== (selector-mode) ecan)
+              (let* (($e-ranked (ecan-ranked-labels))
+                  ($selected (take-n (ecan-focus-size) $e-ranked)))
+                (install-focused-rb $idx $theorem-label ecan
+                        $e-ranked () $selected () $selected))
+              (if (== (selector-mode) william)
+               (let* (($w-ranked (william-ranked-labels $goal))
+                   ($selected (take-n (ecan-focus-size) $w-ranked)))
+                 (install-focused-rb $idx $theorem-label william
+                         () $w-ranked () $selected $selected))
+               (let* (($e-ranked (ecan-ranked-labels))
+                   ($w-ranked (william-ranked-labels $goal))
+                   ($nominate-n (union-nominate-size))
+                   ($e-nominated (take-n $nominate-n $e-ranked))
+                   ($w-nominated (take-n $nominate-n $w-ranked))
+                   ($interleaved (interleave-atom $e-ranked $w-ranked))
+                   ($selected (take-n (ecan-focus-size)
+                          (unique-atom $interleaved))))
+                 (install-focused-rb $idx $theorem-label union
+                         $e-ranked $w-ranked
+                         $e-nominated $w-nominated $selected)))))
 
 ;;;;;;;;;;;;;;;;;;;;;;
 ;; Backward chainer ;;
@@ -1832,9 +1886,9 @@
 ;; Each tier is wrapped in `collapse` so a miss yields () (a value)
 ;; rather than a hard Prolog failure -- and each obc call is the only
 ;; one inside its own collapse.
-(= (rediscover-proofs-ecan $bound $proof $thrm)
+(= (rediscover-proofs-ecan $idx $label $bound $proof $thrm)
    (if (ecan-use-agents)
-       (rediscover-proofs-focused $bound $proof $thrm)
+  (rediscover-proofs-focused $idx $label $bound $proof $thrm)
        ;; Switch off: the base experiment's single search over the full rule
        ;; base, with no focus rebuilt and no tier logged.
        (let $proof-wo-bdy (replace-body-by-variable $proof)
@@ -1843,37 +1897,59 @@
               (obc &pc-rb &pc-ab callback $bound (: $proof-wo-bdy $thrm))
               (once (obc &pc-rb &pc-ab callback $bound (: $proof-wo-bdy $thrm))))))))
 
-(= (rediscover-proofs-focused $bound $proof $thrm)
+(= (rediscover-proofs-focused $idx $label $bound $proof $thrm)
    (let $proof-wo-bdy (replace-body-by-variable $proof)
      ;; Rebuild the focused rule base from the current attentional focus.
-     (let $_ (catch (union-rebuild-focused-rb $thrm))
-       ;; Tier 1: search the attention-focused rule base.
-       (let $af-result-raw
-           (catch
-            (collapse
-             (if (search-all-proofs)
-                 (obc &pc-rb-af &pc-ab callback $bound (: $proof-wo-bdy $thrm))
-                 (once (obc &pc-rb-af &pc-ab callback $bound (: $proof-wo-bdy $thrm))))))
-         ;; Normalize a caught error to an empty result.
-         (let $af-result
-             (if (and (is-expression $af-result-raw)
-                      (== (car-atom $af-result-raw) Error))
-                 ()
-                 $af-result-raw)
-         ;; Tier diagnostics: focused rule count, full rule count, Tier-1 hit.
-         (let $_log (if (ecan-log-tier)
-                        (logger-infof "  [tier] focused=%w full=%w af-hit=%w"
-                                      ((size-atom (collapse (match &pc-rb-af (: $la $ta) $la)))
-                                       (size-atom (collapse (match &pc-rb (: $lb $tb) $lb)))
-                                       (not (== $af-result ()))))
-                        ())
-         (if (not (== $af-result ()))
-             $af-result
-             ;; Tier 2: fall back to the full rule base.
-             (collapse
-              (if (search-all-proofs)
-                  (obc &pc-rb &pc-ab callback $bound (: $proof-wo-bdy $thrm))
-                  (once (obc &pc-rb &pc-ab callback $bound (: $proof-wo-bdy $thrm))))))))))))
+     (let $_ (catch (union-rebuild-focused-rb $idx $label $thrm))
+       (let $timed-result
+           (timed_obc_tiers_once &pc-rb-af &pc-rb &pc-ab callback $bound
+                                 (: $proof-wo-bdy $thrm)
+                                 (theorem-timeout-seconds))
+         (case $timed-result
+           (((focused (: $p $t) $focus-seconds)
+             (progn
+              (logger-infof "  [tier] focused=%w full=%w af-hit=true"
+                            ((size-atom (collapse (match &pc-rb-af (: $la $ta) $la)))
+                             (size-atom (collapse (match &pc-rb (: $lb $tb) $lb)))))
+              (logger-infof "  [timing] focus-seconds=%w fallback-seconds=0.0 timeout=none"
+                            ($focus-seconds))
+              (list (: $p $t))))
+            ((fallback (: $p $t) $focus-seconds $total-seconds)
+             (progn
+              (logger-infof "  [tier] focused=%w full=%w af-hit=false"
+                            ((size-atom (collapse (match &pc-rb-af (: $la $ta) $la)))
+                             (size-atom (collapse (match &pc-rb (: $lb $tb) $lb)))))
+              (logger-infof "  [timing] focus-seconds=%w fallback-seconds=%w timeout=none"
+                            ($focus-seconds (- $total-seconds $focus-seconds)))
+              (list (: $p $t))))
+            ((not_found $focus-seconds $total-seconds)
+             (progn
+              (logger-infof "  [tier] focused=%w full=%w af-hit=false"
+                            ((size-atom (collapse (match &pc-rb-af (: $la $ta) $la)))
+                             (size-atom (collapse (match &pc-rb (: $lb $tb) $lb)))))
+              (logger-infof "  [timing] focus-seconds=%w fallback-seconds=%w timeout=none"
+                            ($focus-seconds (- $total-seconds $focus-seconds)))
+              ()))
+            ((timeout focused $focus-seconds $total-seconds)
+             (progn
+              (logger-infof "  [tier] focused=%w full=%w af-hit=false"
+                            ((size-atom (collapse (match &pc-rb-af (: $la $ta) $la)))
+                             (size-atom (collapse (match &pc-rb (: $lb $tb) $lb)))))
+              (logger-infof "  [timing] focus-seconds=%w fallback-seconds=0.0 timeout=focused"
+                            ($total-seconds))
+              (logger-infof "Search timed out after %ws in focused tier"
+                            ((theorem-timeout-seconds)))
+              SearchTimeout))
+            ((timeout fallback $focus-seconds $total-seconds)
+             (progn
+              (logger-infof "  [tier] focused=%w full=%w af-hit=false"
+                            ((size-atom (collapse (match &pc-rb-af (: $la $ta) $la)))
+                             (size-atom (collapse (match &pc-rb (: $lb $tb) $lb)))))
+              (logger-infof "  [timing] focus-seconds=%w fallback-seconds=%w timeout=fallback"
+                            ($focus-seconds (- $total-seconds $focus-seconds)))
+              (logger-infof "Search timed out after %ws in fallback tier"
+                            ((theorem-timeout-seconds)))
+              SearchTimeout))))))))
 
 ;; Process the theorem of a given index by rediscovering its proof, if
 ;; it succeeds then insert its alongside its proof(s) into the
@@ -1884,9 +1960,20 @@
 ;; (: process-theorem-search (-> Number Number Assertion (Maybe Number)))
 (= (process-theorem-search $idx $bound (MkTheorem $label $proof $thrm))
    (progn
-    (logger-infof "Iteration %w: ECAN-guided search proof of %w up to size %w"
-                  ($idx $label $bound))
-    (let $prfs-thrms (rediscover-proofs-ecan $bound $proof $thrm)
+    (logger-infof "Iteration %w: %w-guided search proof of %w up to size %w"
+            ($idx (selector-mode) $label $bound))
+    (let $prfs-thrms (rediscover-proofs-ecan $idx $label $bound $proof $thrm)
+      (if (== $prfs-thrms SearchTimeout)
+          ;; Keep later candidate sets identical across modes.  The theorem
+          ;; statement becomes available, but its proof does not stimulate
+          ;; ECAN or contribute oracle proof-usage information.
+          (progn
+           (logger-info "Timed-out theorem skipped; continuing")
+             (if (== (selector-mode) ecan)
+               ()
+               (py-call (william_rank.observe (repr ()))))
+           (add-to-kbs $label $thrm)
+           (Just (+ $idx 1)))
       (if (== $prfs-thrms ())
           ;; No proof
           (progn (logger-info "No proof found")
@@ -1902,6 +1989,10 @@
                  (progn
                   (logger-infof "Found proof%w %w" (: $p))
                   (add-to-labels $p $t $label)
+                    (if (== (selector-mode) ecan)
+                      ()
+                      (py-call (william_rank.observe
+                          (repr (ecan-proof-kb-labels $p)))))
                   (if (ecan-use-agents)
                       (progn
                        (ecan-stimulate-proof $p)
@@ -1913,7 +2004,7 @@
            ;; running them continuously on its own thread.
            (if (ecan-background) () (ecan-run-agents))
            ;; Output next index
-           (Just (+ $idx 1)))))))
+           (Just (+ $idx 1))))))))
 
 ;; Process the theorem of a given index, that is either check or
 ;; rediscover its proof, if it succeeds then insert it alongside its

@@ -1,1 +1,5 @@
 *~
+__pycache__/
+metta-attention/
+experimental/metamath-aa/pc-xp-union/*.log
+experimental/metamath-aa/pc-xp-union/repos/
