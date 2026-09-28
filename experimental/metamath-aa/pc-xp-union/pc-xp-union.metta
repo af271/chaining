@@ -270,7 +270,8 @@
 !(import! &self (library lib_import))
 !(progn (translatePredicate (working_dir $this-dir))
         (translatePredicate (atomic_list_concat ($this-dir "/repos") $repos-dir))
-        (git-import! "https://github.com/ngeiswei/petta_lib_logger" "" $repos-dir))
+        (git-import! "https://github.com/ngeiswei/petta_lib_logger" "" $repos-dir
+               "4601951eb84cbec9ac9966974f3b87d0849c16e4"))
 !(progn (translatePredicate (working_dir $bg-dir))
         (translatePredicate (atomic_list_concat ($bg-dir "/../pc-xp-ECAN/ecan_bg.pl") $bg-pl))
         (translatePredicate (ensure_loaded $bg-pl)))
@@ -1348,29 +1349,6 @@
 ;; predict_cli inside the venv, so the system python needs no extra packages).
 !(import! &self ../pc-xp-william/william_rank.py)
 
-;; HOW MANY EACH SELECTOR NOMINATES.
-;;
-;; Deliberately smaller than (ecan-focus-size).  Measured on the first union
-;; run: with each nominating 40 the two agreed on only 11 rules -- 28% -- so
-;; the union came to ~69 and every tier-1 search paid for 69 rules instead of
-;; 40.  That bought the best coverage of any variant (96.0% hits, 7 misses)
-;; but cost time: 7m24s against ECAN's 4m42s on its own 40.
-;;
-;; So shrink each nomination until the UNION is about 40, the same search
-;; budget ECAN uses alone.  With ~28% agreement, union ~= 1.725 * n, so
-;; n ~= 23 lands the union near 40.  0.17 * 135 = 22.
-;;
-;; This isolates the question the first run could not answer: is the union's
-;; advantage the DIVERSITY of two disagreeing rankings, or just a bigger
-;; focus?  At an equal budget, only diversity is left to explain a win.
-(= (union-nominate-fraction) 0.17)
-(= (union-nominate-min) 15)
-
-(= (union-nominate-size)
-   (let $n (size-atom (collapse (match &pc-rb (: $l $t) $l)))
-     (max (union-nominate-min)
-          (trunc-math (* (union-nominate-fraction) $n)))))
-
 ;; Pair each probability with its label, negated, so a plain ascending
 ;; sort-atom puts the most probable first.  W-tagged so a label colliding
 ;; with a builtin (the corpus label `id') cannot reduce the tuple away.
@@ -1410,6 +1388,26 @@
               ($sorted (sort-atom $scored)))
             (collapse (let ($neg-sti $lbl $typ) (superpose $sorted) $lbl))))
 
+          ;; Keep only labels allowed by ECAN while preserving WILLIAM order.
+          (= (filter-ranking $ranking $allowed)
+             (if (== $ranking ())
+                 ()
+                 (let* ((($head $tail) (decons-atom $ranking))
+                         ($rest (filter-ranking $tail $allowed)))
+                   (if (contains $allowed $head)
+                       (cons-atom $head $rest)
+                       $rest))))
+
+          ;; Safe cascade: ECAN owns membership; WILLIAM only changes order.
+          ;; Append any unscored labels in ECAN order so predictor failures or
+          ;; incomplete output can never reduce the focused rule set.
+          (= (william-rerank-ecan $e-selected $w-ranked)
+             (if (== $w-ranked ())
+                 $e-selected
+                 (let $reranked (filter-ranking $w-ranked $e-selected)
+                   (concat-atom $reranked
+                                (subtraction-atom $e-selected $reranked)))))
+
           ;; Install one selector result and emit aggregate and full-ranking data.
           (= (install-focused-rb $idx $theorem-label $mode
                      $e-ranked $w-ranked $e-nominated $w-nominated $selected)
@@ -1433,7 +1431,7 @@
                ())))
 
           ;; Rebuild &pc-rb-af with exactly the same dynamic budget in all three modes.
-          ;; Union alternates full rankings before deduplication, then fills to budget.
+          ;; Union keeps ECAN's top-k membership and lets WILLIAM order that set.
           (= (union-rebuild-focused-rb $idx $theorem-label $goal)
              (if (== (selector-mode) ecan)
               (let* (($e-ranked (ecan-ranked-labels))
@@ -1447,15 +1445,11 @@
                          () $w-ranked () $selected $selected))
                (let* (($e-ranked (ecan-ranked-labels))
                    ($w-ranked (william-ranked-labels $goal))
-                   ($nominate-n (union-nominate-size))
-                   ($e-nominated (take-n $nominate-n $e-ranked))
-                   ($w-nominated (take-n $nominate-n $w-ranked))
-                   ($interleaved (interleave-atom $e-ranked $w-ranked))
-                   ($selected (take-n (ecan-focus-size)
-                          (unique-atom $interleaved))))
+                   ($e-selected (take-n (ecan-focus-size) $e-ranked))
+                   ($selected (william-rerank-ecan $e-selected $w-ranked)))
                  (install-focused-rb $idx $theorem-label union
                          $e-ranked $w-ranked
-                         $e-nominated $w-nominated $selected)))))
+                     $e-selected $selected $selected)))))
 
 ;;;;;;;;;;;;;;;;;;;;;;
 ;; Backward chainer ;;
