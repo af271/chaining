@@ -9,7 +9,6 @@ import re
 import subprocess
 from pathlib import Path
 
-
 HERE = Path(__file__).resolve().parent
 SOURCE = HERE / "pc-xp-union.metta"
 

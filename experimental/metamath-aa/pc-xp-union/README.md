@@ -23,7 +23,7 @@ The reported result was produced on Linux with:
 - William 0.2.4
 - PeTTa commit `ae66fa8e41dcd5539d614706bd4e5cfb34f9608d`
 - metta-attention commit `5c6e71cf1488b13504199d4687f3fe840f67445f`
-- infcontrol commit `08ff5bbe45cd56f665c5efc259a1da1679743e20`
+- infcontrol commit `648f26d5b64cda9a4f9fee88077cf408a0ee3ea1`
 - petta_lib_logger commit `4601951eb84cbec9ac9966974f3b87d0849c16e4`
 
 Other recent revisions may work, but these are the revisions actually tested.
@@ -73,7 +73,7 @@ git clone https://github.com/Bitseat/metta-attention.git \
   chaining-pc-xp-benchmark/metta-attention
 
 git -C PeTTa checkout ae66fa8e41dcd5539d614706bd4e5cfb34f9608d
-git -C infcontrol checkout 08ff5bbe45cd56f665c5efc259a1da1679743e20
+git -C infcontrol checkout 648f26d5b64cda9a4f9fee88077cf408a0ee3ea1
 git -C chaining-pc-xp-benchmark/metta-attention checkout \
   5c6e71cf1488b13504199d4687f3fe840f67445f
 ```
@@ -317,6 +317,11 @@ and sample standard deviation:
 "$WILLIAM_PYTHON" summarize_benchmark.py --run-label model03 --repeat 3
 ```
 
+The summary prints both `search_seconds`, including timeouts, and
+`solved_seconds`, the sum for proof-producing theorem attempts only. The latter
+is useful for separating useful solved work from a timeout shared by all modes;
+it must always be reported together with proof and timeout counts.
+
 Use medians because the ECAN background daemon is concurrent and individual
 wall-clock observations contain scheduler noise. Compare only runs with the
 same theorem range, timeout, model, and focus policy.
@@ -350,6 +355,42 @@ indicates that model03's learned structural and historical relevance can
 improve search order after ECAN has supplied a coverage-safe candidate set.
 The raw logs are generated artifacts and are not versioned; the commands above
 recreate them and the parser checks that each measured run completed.
+
+### Reproducing the 300-second comparison
+
+The same stable cascade was also run once with a 300-second shared deadline:
+
+```bash
+cd "$BENCHMARK_DIR"
+python3 run_benchmark.py \
+  --modes ecan union \
+  --repeat 1 \
+  --run-label timeout300 \
+  --up-to-index 183 \
+  --theorem-timeout 300 \
+  --petta-runner "$PETTA_RUNNER"
+
+"$WILLIAM_PYTHON" summarize_benchmark.py \
+  --modes ecan union \
+  --run-label timeout300 \
+  --repeat 1
+```
+
+Both selectors found 176 proofs and timed out on the same final theorem,
+`pm2.61iii`. Including that common 300-second timeout, ECAN used 353.388
+seconds and the cascade used 329.422 seconds of proof-search time. For the 176
+successfully solved theorem attempts, `solved_seconds` was:
+
+| Selector | Proofs | Timeouts | Search time | Solved search time |
+| --- | ---: | ---: | ---: | ---: |
+| ECAN | 176 | 1 | 353.388 s | 53.387 s |
+| ECAN → WILLIAM cascade | 176 | 1 | 329.422 s | **29.420 s** |
+
+Thus the cascade used about 44.9% less search time on solved attempts in this
+single 300-second run, or ECAN took about 1.81 times as long. This is a useful
+diagnostic result, not a repeated-run estimate: the timeout-inclusive reduction
+was about 6.8%, and the three-run 60-second result above remains the primary
+stability measurement.
 
 ## Interpretation and limitations
 

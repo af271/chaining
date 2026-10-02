@@ -17,3 +17,11 @@ This repository contains various experiments on chaining, including
 It also contains a MeTTa module of backward and forward chaining
 prepared by Hedra Seid Yusuf, though I don't know how well maintained
 it is.
+
+## Inference-control benchmark
+
+The reproducible equal-budget comparison of ECAN, the contextual WILLIAM
+premise ranker, and their hybrid union is documented in
+[`experimental/metamath-aa/pc-xp-union/README.md`](experimental/metamath-aa/pc-xp-union/README.md).
+That guide covers installation, pinned dependencies, preflight checks, the
+full benchmark command, log analysis, reported results, and limitations.
