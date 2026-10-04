@@ -31,18 +31,29 @@ Python IPC, logging, startup, and orchestration overhead.
 - William 0.2.4
 - PeTTa `ae66fa8e41dcd5539d614706bd4e5cfb34f9608d`
 - infcontrol `648f26d5b64cda9a4f9fee88077cf408a0ee3ea1`
+- chaining benchmark tag `william-cascade-benchmark-v1`
 - metta-attention `5c6e71cf1488b13504199d4687f3fe840f67445f`
 - petta_lib_logger `4601951eb84cbec9ac9966974f3b87d0849c16e4`
 
-Keep `PeTTa`, `infcontrol`, and this repository as siblings. Clone
-`metta-attention` inside this repository:
+Create the complete tested checkout from an empty directory:
 
-```text
-hyperon-benchmark/
-  PeTTa/
-  infcontrol/
-  chaining-pc-xp-benchmark/
-    metta-attention/
+```bash
+mkdir hyperon-benchmark
+cd hyperon-benchmark
+
+git clone https://github.com/trueagi-io/PeTTa.git
+git -C PeTTa checkout ae66fa8e41dcd5539d614706bd4e5cfb34f9608d
+
+git clone https://github.com/af271/infcontrol.git
+git -C infcontrol checkout 648f26d5b64cda9a4f9fee88077cf408a0ee3ea1
+
+git clone --branch william-cascade-benchmark-v1 \
+  https://github.com/af271/chaining.git chaining-pc-xp-benchmark
+
+git clone https://github.com/Bitseat/metta-attention.git \
+  chaining-pc-xp-benchmark/metta-attention
+git -C chaining-pc-xp-benchmark/metta-attention checkout \
+  5c6e71cf1488b13504199d4687f3fe840f67445f
 ```
 
 Create the Python environment:
